@@ -17,6 +17,7 @@ io.on('connection', function(socket) {
     message = message.trim();
     if (message === '') return;
     message = message.substring(0, 150);
+    
     console.log('Message: ' + message);
     io.emit('message', message);
   });
