@@ -4,10 +4,11 @@ $(function() {
   
   $('form').submit(function(event) {
     event.preventDefault();
-    var message = $('input').val();
+    var $input = $('input[type="text"]');
+    var message = $input.val();
     socket.emit('message', message);
-    $('input').val('');
-    $('input').focus();
+    $input.val('');
+    $input.focus();
   });
 
 });
