@@ -10,5 +10,9 @@ $(function() {
     $input.val('');
     $input.focus();
   });
+  
+  socket.on('message', function(message) {
+    $('<li></li>').text(message).appendTo('ul');
+  });
 
 });
