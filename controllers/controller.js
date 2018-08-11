@@ -1,4 +1,3 @@
-const path = require("path");
 const low = require("lowdb");
 const FileAsync = require("lowdb/adapters/FileAsync");
 const adapter = new FileAsync('db.json');
@@ -10,10 +9,6 @@ low(adapter)
       
       socketcontroller(io,db);
       router(app);
-  
-      
-  
-  
   
       return db
         .defaults({projects:[], available:[], registrations:[]})
