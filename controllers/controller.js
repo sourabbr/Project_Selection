@@ -17,9 +17,10 @@ low(adapter)
 
         socket.on('message', function(message) {
           message = message.trim();
-          if (message === '') return;
+          if (message === '') 
+            return;
           message = message.substring(0, 150);
-          console.log('Message: ' + message);
+          console.log('Message: "%s" [%s]', message, headers['x-forwarded-for']);
           io.emit('message', message);
         });
         
