@@ -4,11 +4,13 @@ $(function() {
   
   $('form').submit(function(event) {
     event.preventDefault();
-    var $input = $('input[type="text"]');
-    var message = $input.val();
+    let guide = $('input[name="Guide"]').val();
+    let title = $('input[name="Title"]').val();
+    if(guide==""
+    
+    const message = {guide, title}
+    console.log(message);
     socket.emit('message', message);
-    $input.val('');
-    $input.focus();
   });
   
   socket.on('message', function(message) {
