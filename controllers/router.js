@@ -6,7 +6,7 @@ module.exports=function(app){
   });
   
   app.get("/admin", function (request, response) {
-    response.sendFile(path.join(__dirname,'../views/admin.html'));
+    response.redirect('/admin.html');
   });
 
 }
