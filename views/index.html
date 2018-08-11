@@ -26,6 +26,34 @@
             crossorigin="anonymous"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/client.js"></script>
-
+    <script>
+    $(document).ready(function(){
+      $('#contact-form').bootstrapValidator({
+          // live: 'enabled',
+          message: 'This value is not valid',
+          feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+          },
+          fields: {
+            Guide: {
+              validators: {
+                notEmpty: {
+                  message: 'The Guide Name is required and cannot be empty'
+                }
+              }
+            },
+            Title: {
+              validators: {
+                notEmpty: {
+                  message: 'The Project Title is required and cannot be empty'
+                }
+              }
+            }
+          }
+        });
+    });
+    </script>
   </body>
 </html>
