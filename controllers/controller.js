@@ -11,8 +11,8 @@ low(adapter)
       });
       
       io.on('connection', function(socket) {
-        const  clientIP = socket.handshake.headers;
-        console.log('User connected : ',clientIP);
+        const headers = socket.handshake.headers;
+        console.log("User connected : [ IP: %s, PORTS: %s]", headers['x-forwarded-for'], headers['x-forwarded-port']);
 
         socket.on('message', function(message) {
           message = message.trim();
@@ -23,7 +23,7 @@ low(adapter)
           io.emit('message', message);
         });
         socket.on('disconnect', function(){
-          console.log('User disconnected');
+          console.log("User disconnected : [ IP: %s, PORTS: %s]", headers['x-forwarded-for'], headers['x-forwarded-port']);
         });
       });
   
