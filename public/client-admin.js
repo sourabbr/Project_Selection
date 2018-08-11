@@ -26,7 +26,7 @@ $(function() {
   });
   
   socket.on('message', function(message) {
-    $('<li></li>').text(message).appendTo('ul');
+    $('#list').text(message.title).appendTo('ul');
   });
 
 });
