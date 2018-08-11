@@ -31,7 +31,7 @@ low(adapter)
   
   
       return db
-        .defaults({projects:[], registrations:[]})
+        .defaults({projects:[], available:[], registrations:[]})
         .write();
     })
     .catch(err => {
