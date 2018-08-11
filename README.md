@@ -1,5 +1,3 @@
-Ash Socket Template
+Live selection form
 =========================
-A basic template that uses [socket.io](//socket.io).
-
-Mimics a basic "chat client" type functionality.
+A live selection form that uses [socket.io](//socket.io).
