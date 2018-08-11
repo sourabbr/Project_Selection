@@ -20,7 +20,7 @@ low(adapter)
           if (message === '') 
             return;
           message = message.substring(0, 150);
-          console.log('Message: "%s" [%s]', message, headers['x-forwarded-for']);
+          console.log('Message: "%s" from [%s]', message, headers['x-forwarded-for']);
           io.emit('message', message);
         });
         
