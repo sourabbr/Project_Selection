@@ -6,11 +6,11 @@ $(function() {
     event.preventDefault();
     let $guide = $('#Guide');
     let $title = $('#Title');
-    if($guide.val()==""){
+    if($guide.val()==''){
       $guide.focus();
       return;
     }
-    if($title.val()==""){
+    if($title.val()==''){
       $title.focus();
       return;
     }
@@ -21,12 +21,14 @@ $(function() {
     }
     
     console.log(message);
-    socket.emit('message', message);
+    socket.emit('message', message.title);
+    $title.val('');
+    $title.focus();
     
   });
   
   socket.on('message', function(message) {
-    $('#list').text(message.title).appendTo('ul');
+    $('<li></li>').text(message).appendTo('#list');
   });
 
 });
