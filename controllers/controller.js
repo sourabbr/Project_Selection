@@ -11,7 +11,8 @@ low(adapter)
       });
       
       io.on('connection', function(socket) {
-        console.log('User connected');
+        const  clientIP = socket.handshake.headers;
+        console.log('User connected : ',clientIP);
 
         socket.on('message', function(message) {
           message = message.trim();
@@ -20,6 +21,9 @@ low(adapter)
 
           console.log('Message: ' + message);
           io.emit('message', message);
+        });
+        socket.on('disconnect', function(){
+          console.log('User disconnected');
         });
       });
   
