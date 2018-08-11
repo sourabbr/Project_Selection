@@ -7,9 +7,10 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.x",
-    "socket.io": "^2.x",
-    "lowdb": "^1.x"
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1",
+    "lowdb": "^1.0.0",
+    "shortid": "^2.2.12"
   },
   "engines": {
     "node": "10.x"
