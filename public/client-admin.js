@@ -4,13 +4,25 @@ $(function() {
   
   $('form').submit(function(event) {
     event.preventDefault();
-    let guide = $('input[name="Guide"]').val();
-    let title = $('input[name="Title"]').val();
-    if(guide==""
+    let $guide = $('#Guide');
+    let $title = $('#Title');
+    if($guide.val()==""){
+      $guide.focus();
+      return;
+    }
+    if($title.val()==""){
+      $title.focus();
+      return;
+    }
+     
+    const message = {
+      guide: $guide.val(), 
+      title: $title.val()
+    }
     
-    const message = {guide, title}
     console.log(message);
     socket.emit('message', message);
+    
   });
   
   socket.on('message', function(message) {
