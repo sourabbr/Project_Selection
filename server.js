@@ -7,6 +7,6 @@ app.use(express.static('public'));
 controller(app,io);
 const listener = server.listen(process.env.PORT, function () {
   console.log('Listening on port ' + listener.address().port);
-});stener.address().port);
+})stener.address().port);
 });
 
