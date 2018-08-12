@@ -23,10 +23,10 @@ $(function() {
   });
   
   socket.on('projects', function(projects) {
-    let guides=[...new Set(projects.map(project => project.guide))];
-    for(let project of projects){
-      $(`<h4>${project.guide}</h4>
-         <fieldset class="${project.guide.split(' ').join('-')}"></fieldset>
+    $('#projectSelectionForm').html('');
+    for(let guide of getUnique(projects,'guide')){
+      $(`<h4>${guide}</h4>
+         <fieldset class="${guide.split(' ').join('-')}"></fieldset>
         `)
         .appendTo('#projectSelectionForm');
     }
@@ -37,9 +37,6 @@ $(function() {
          </div>
         `)
         .appendTo(`fieldset.${project.guide.split(' ').join('-')}`);
-      
-      
-      $('<li></li>').text().appendTo('ul');
     }
     
   });
