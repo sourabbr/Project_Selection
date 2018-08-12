@@ -21,6 +21,7 @@ $(function() {
     }
     
     console.log(message);
+    socket.emit('newProject',message);
     socket.emit('message', message.title);
     $title.val('');
     $title.focus();
