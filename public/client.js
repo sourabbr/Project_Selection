@@ -18,7 +18,7 @@ $(function() {
   socket.on('projects', function(projects) {
     
     for(let project of projects){
-      
+      $(`.${project.guide.split(' ').join('-')}`).text
       $('<li></li>').text().appendTo('ul');
     }
     
