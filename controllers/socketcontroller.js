@@ -19,8 +19,8 @@ let socketcontroller = (io,db) => {
       db.get("projects")
       .upsert(newProject)
       .write();
-      
     });
+    
     
     socket.on('disconnect', () => {
       console.log("User disconnected : [ IP: %s, PORTS: %s]", headers['x-forwarded-for'], headers['x-forwarded-port']);
