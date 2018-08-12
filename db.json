@@ -1,4 +1,25 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "guide": "Jane Doe",
+      "title": "Lorem Ipsum",
+      "available": true
+    },
+    {
+      "guide": "John Doe",
+      "title": "Dolor Sit Amet",
+      "available": true
+    },
+    {
+      "guide": "Jane Doe",
+      "title": "Draco Dormiens",
+      "available": true
+    },
+    {
+      "guide": "Jane Doe",
+      "title": "Nunquam Tittillandus",
+      "available": true
+    }
+  ],
   "registrations": []
 }
