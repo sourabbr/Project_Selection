@@ -17,7 +17,7 @@ let socketcontroller = (io,db) => {
     
     socket.on('newProject', newProject => {
       db.get("projects")
-      .push({id:shortId.generate(),...newProject})
+      .upsert(newProject)
       .write();
       
     });

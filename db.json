@@ -1,16 +1,5 @@
 {
-  "projects": [
-    {
-      "id": "b1y7u-KTq",
-      "guide": "John Doe",
-      "title": "Lorem Ipsum"
-    },
-    {
-      "id": "uY8DNb9z3",
-      "guide": "John Doe",
-      "title": "Dolor sit amet"
-    }
-  ],
+  "projects": [],
   "available": [],
   "registrations": []
 }

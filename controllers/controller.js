@@ -7,19 +7,18 @@ const controller = function (app,io) {
 low(adapter)
     .then(db => {
   
-      // db._.mixin({
-      //   upsert: function(collection, obj, key) {
-      //     key = key || 'id';
-      //     for (let i = 0; i < collection.length; i++) {
-      //       let el = collection[i];
-      //       if(el[key] === obj[key]){
-      //         collection[i] = obj;
-      //         return collection;
-      //       }
-      //     };
-      //     collection.push(obj);
-      //   }
-      // });
+      db._.mixin({
+        upsert: function(collection, obj, key) {
+          for (let i = 0; i < collection.length; i++) {
+            let el = collection[i];
+            if(el === obj){
+              collection[i] = obj;
+              return collection;
+            }
+          };
+          collection.push(obj);
+        }
+      });
   
       socketcontroller(io,db);
       router(app);
