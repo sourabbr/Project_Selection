@@ -1,11 +1,14 @@
-let socketcontroller = function(io,db){
+const Guide = require("../classes/guide.js");
+const Project = require("../classes/project.js");
 
-  io.on('connection', function(socket) {
+let socketcontroller = (io,db) => {
+
+  io.on('connection', socket => {
 
     const headers = socket.handshake.headers;
     console.log("User connected : [ IP: %s, PORTS: %s]", headers['x-forwarded-for'], headers['x-forwarded-port']);
 
-    socket.on('message', function(message) {
+    socket.on('message', message => {
       message = message.trim();
       if (message === '') 
         return;
@@ -13,8 +16,14 @@ let socketcontroller = function(io,db){
       console.log('Message: "%s" from [%s]', message, headers['x-forwarded-for']);
       io.emit('message', message);
     });
-
-    socket.on('disconnect', function(){
+    
+    socket.on('newProject', newProject => {
+      
+      db.get("projects")
+      
+    });
+    
+    socket.on('disconnect', () => {
       console.log("User disconnected : [ IP: %s, PORTS: %s]", headers['x-forwarded-for'], headers['x-forwarded-port']);
     });
 

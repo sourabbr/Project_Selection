@@ -15,14 +15,14 @@ $(function() {
       return;
     }
      
-    const message = {
+    const newProject = {
       guide: $guide.val(), 
       title: $title.val()
     }
     
-    console.log(message);
-    socket.emit('newProject',message);
-    socket.emit('message', message.title);
+    console.log(newProject);
+    socket.emit('newProject',newProject);
+    socket.emit('message', newProject.title);
     $title.val('');
     $title.focus();
     
