@@ -21,6 +21,19 @@ let socketcontroller = (io,db) => {
       .write();
     });
     
+    socket.on('registeredProject', registeredProject => {
+      db.get("registrations")
+      .upsert(registeredProject)
+      .write()
+      .then(()=>{
+        io.emit('registeredProject', registeredProject);
+      })
+      .catch(error=>{
+        console.err(error);
+      });
+    });
+    
+    
     
     socket.on('disconnect', () => {
       console.log("User disconnected : [ IP: %s, PORTS: %s]", headers['x-forwarded-for'], headers['x-forwarded-port']);
