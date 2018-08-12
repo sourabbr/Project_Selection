@@ -1,6 +1,4 @@
-const Guide = require("../classes/guide.js");
-const Project = require("../classes/project.js");
-
+const shortId = require('shortid');
 let socketcontroller = (io,db) => {
 
   io.on('connection', socket => {
@@ -18,8 +16,9 @@ let socketcontroller = (io,db) => {
     });
     
     socket.on('newProject', newProject => {
-      
-      db.get("projects")
+      db.get("guides")
+      .upsert({})
+      .write();
       
     });
     
