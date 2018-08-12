@@ -16,9 +16,17 @@ $(function() {
   });
   
   socket.on('projects', function(projects) {
+    for(let project of projects){
+      $('<li></li>').text().appendTo('ul');
+    }
     
     for(let project of projects){
-      $(`.${project.guide.split(' ').join('-')}`).text
+      $(`<div class="radio">
+         <label><input type="radio" name="selectedProject" value="${project.title}">${project.title}</label>
+         </div>`)
+        .appendTo(`.${project.guide.split(' ').join('-')}`);
+      
+      
       $('<li></li>').text().appendTo('ul');
     }
     
@@ -26,7 +34,7 @@ $(function() {
   
   
   socket.on('registeredProject', function(registeredProject) {
-    $('<li></li>').text(message).appendTo('ul');
+    $('<li></li>').text(registeredProject).appendTo('ul');
   });
   
   
