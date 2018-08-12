@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/style.css">
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
   </head>
   <body>
@@ -18,19 +18,27 @@
         <h1>Select Project</h1>
       </div>
       <form action="">
-        <div id="projectSelectionForm">
-          <img style="align:center;height:20em" src="https://cdn.glitch.com/c2f40f93-8c0e-4ea1-ab79-d03ffc9797cf%2Floading.gif?1534094470198">
+        <div class="row">
+          <div class="col">
+            <div id="projectSelectionForm">
+              <img style="display:block; margin-left:auto; margin-right:auto; height:20em" 
+                   src="https://cdn.glitch.com/c2f40f93-8c0e-4ea1-ab79-d03ffc9797cf%2Floading.gif?1534094470198">
+            </div>
+          </div>
+          <div class="col">
+            <div id="registeredProjectsList">
+            </div>
+          </div>
         </div>
+        
         <br><br>
         <input type="submit" class="btn btn-success form-control">
       </form>
     </div>
     <!-- Your web-app is https, so your scripts need to be too -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
-            crossorigin="anonymous"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+   
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/client.js"></script>
   </body>
