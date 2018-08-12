@@ -1,8 +1,11 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "id": "b1y7u-KTq",
+      "guide": "John Doe",
+      "title": "Lorem Ipsum"
+    }
+  ],
   "available": [],
-  "registrations": [],
-  "guideavailable": [],
-  "guidesavailable": [],
-  "guides": {}
+  "registrations": []
 }
