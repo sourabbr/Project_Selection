@@ -10,8 +10,9 @@ low(adapter)
       db._.mixin({
         upsert: function(collection, obj, key) {
           for (let i = 0; i < collection.length; i++) {
+            key = key || 'title'
             let el = collection[i];
-            if(el === obj){
+            if(el[key] === obj[key]){
               collection[i] = obj;
               return collection;
             }
@@ -32,4 +33,4 @@ low(adapter)
     });
 
 }
-module.exports=controller;
+module.exports = controller;

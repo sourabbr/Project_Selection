@@ -1,5 +1,18 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "guide": "abcd",
+      "title": "def"
+    },
+    {
+      "guide": "abc",
+      "title": "abc"
+    },
+    {
+      "guide": "abcd",
+      "title": "fed"
+    }
+  ],
   "available": [],
   "registrations": []
 }
