@@ -17,7 +17,8 @@ $(function() {
      
     const newProject = {
       guide: $guide.val(), 
-      title: $title.val()
+      title: $title.val(),
+      available: true
     }
     
     console.log(newProject);

@@ -15,8 +15,14 @@ $(function() {
     $('<li></li>').text(message).appendTo('ul');
   });
   
+  socket.on('projects', function(message) {
+    $('<li></li>').text(message).appendTo('ul');
+  });
+  
+  
   socket.on('registeredProject', function(registeredProject) {
     $('<li></li>').text(message).appendTo('ul');
   });
-
+  
+  
 });

@@ -25,7 +25,7 @@ low(adapter)
       router(app);
   
       return db
-        .defaults({projects:[], available:[], registrations:[]})
+        .defaults({projects:[], registrations:[]})
         .write();
     })
     .catch(err => {
