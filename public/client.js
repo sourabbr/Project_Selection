@@ -1,3 +1,10 @@
+function getUnique(array, key){
+  return array.reduce(function(carry, item){
+    if(item[key] && !~carry.indexOf(item[key])) carry.push(item[key]);
+    return carry;
+  }, []);
+}
+
 $(function() {
   
   var socket = io();
@@ -16,12 +23,12 @@ $(function() {
   });
   
   socket.on('projects', function(projects) {
-    
+    let guides=[...new Set(projects.map(project => project.guide))];
     for(let project of projects){
       $(`<h4>${project.guide}</h4>
          <fieldset class="${project.guide.split(' ').join('-')}"></fieldset>
         `)
-        .appendTo('.projectSelectionForm');
+        .appendTo('#projectSelectionForm');
     }
     
     for(let project of projects){
