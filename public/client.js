@@ -16,15 +16,20 @@ $(function() {
   });
   
   socket.on('projects', function(projects) {
+    
     for(let project of projects){
-      $('<li></li>').text().appendTo('ul');
+      $(`<h4>${project.guide}</h4>
+         <fieldset class="${project.guide.split(' ').join('-')}"></fieldset>
+        `)
+        .appendTo('.projectSelectionForm');
     }
     
     for(let project of projects){
       $(`<div class="radio">
          <label><input type="radio" name="selectedProject" value="${project.title}">${project.title}</label>
-         </div>`)
-        .appendTo(`.${project.guide.split(' ').join('-')}`);
+         </div>
+        `)
+        .appendTo(`fieldset.${project.guide.split(' ').join('-')}`);
       
       
       $('<li></li>').text().appendTo('ul');
