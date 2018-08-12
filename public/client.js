@@ -18,10 +18,6 @@ $(function() {
     $input.focus();
   });
   
-  socket.on('message', function(message) {
-    $('<li></li>').text(message).appendTo('ul');
-  });
-  
   socket.on('projects', function(projects) {
     $('#projectSelectionForm').html('');
     for(let guide of getUnique(projects,'guide')){

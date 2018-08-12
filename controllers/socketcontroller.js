@@ -6,8 +6,10 @@ let socketcontroller = (io,db) => {
     const headers = socket.handshake.headers;
     console.log("User connected : [ IP: %s, PORTS: %s]", headers['x-forwarded-for'], headers['x-forwarded-port']);
     
-    io.emit('projects',db.get('projects').value());
     
+    io.emit('projects',db.get('projects').value());
+  
+              
     socket.on('message', message => {
       message = message.trim();
       if (message === '') 
