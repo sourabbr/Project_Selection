@@ -7,12 +7,12 @@ function getUnique(array, key){
 
 $(function() {
   
-  const socket = io();
+  var socket = io();
   
   $('form').submit(function(event) {
     event.preventDefault();
-    let $selectedProject = $('form input[name=selectedProject]:checked')
-    let title = $selectedProject.val();
+    var $selectedProject = $('form input[name=selectedProject]:checked');
+    var title = $selectedProject.val();
     socket.emit('registeredProject', registeredProject);
     $selectedProject.val('');
     $selectedProject.focus();
@@ -20,14 +20,14 @@ $(function() {
   
   socket.on('loadProjects', function(projects) {
     $('#projectSelectionForm').html('');
-    for(let guide of getUnique(projects,'guide')){
+    for(var guide of getUnique(projects,'guide')){
       $(`<hr><h6>Guide: ${guide}</h6>
-         <fieldset class="${guide.split(' ').join('-')}"></fieldset>
+         <fieldset value="${guide}" class="${guide.split(' ').join('-')}"></fieldset>
         `)
         .appendTo('#projectSelectionForm');
     }
     
-    for(let project of projects){
+    for(var project of projects){
       $(`<div class="radio">
          <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
          </div>
