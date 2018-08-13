@@ -11,7 +11,7 @@ $(function() {
   
   $('form').submit(function(event) {
     event.preventDefault();
-    var $input = $('input[type="text"]');
+    var $input = $('form input[name=selectedProject]:checked')
     var message = $input.val();
     socket.emit('message', message);
     $input.val('');
