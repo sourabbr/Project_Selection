@@ -18,7 +18,12 @@ $(function() {
       return;
     }
     var guide = $selectedProject.parent().parent().parent().attr('value');
-    var teamMembers = $('textarea#team-members').val().split('\n');
+    var $team = $('textarea#team-members')
+    if($team.val().trim().length===0){
+      $team.focus();
+      return;
+    }
+    var teamMembers = $team.val().split('\n');
     socket.emit('registeredProject', {title,guide,teamMembers});
   });
   

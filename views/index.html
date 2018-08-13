@@ -15,31 +15,33 @@
     <div class="container">
       <h1>Select Project</h1>
       <form action="">
-        <div class="row">
-          <div class="col jumbotron m-4 pt-3 pb-3">
-            <h2>Available Projects</h2>
-            <div id="projectSelectionForm">
-              <img style="display:block; margin-left:auto; margin-right:auto; height:20em" 
-                   src="https://cdn.glitch.com/c2f40f93-8c0e-4ea1-ab79-d03ffc9797cf%2Floading.gif?1534094470198">
+          <div class="row">
+            <div class="col jumbotron m-4 pt-3 pb-3">
+              <h2>Available Projects</h2>
+              <div id="projectSelectionForm">
+                <img style="display:block; margin-left:auto; margin-right:auto; height:20em" 
+                     src="https://cdn.glitch.com/c2f40f93-8c0e-4ea1-ab79-d03ffc9797cf%2Floading.gif?1534094470198">
+              </div>
+            </div>
+            <div class="col jumbotron m-4 pt-3 pb-3">
+              <h2>Taken Projects</h2>
+              <hr>
+              <div>
+                <ul id="registeredProjectsList">
+
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="col jumbotron m-4 pt-3 pb-3">
-            <h2>Taken Projects</h2>
-            <hr>
-            <div>
-              <ul id="registeredProjectsList">
-                
-              </ul>
-            </div>
+
+          <h2>Enter Team Members</h2>
+          <textarea rows="4" id="team-members" class=""></textarea>
+          <div class="form-group">
+          <label for="team-members">Comment:</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
           </div>
-        </div>
-        
-        <h2>Enter Team Members</h2>
-        <textarea id="team-members" class="form-control"></textarea>
-  
-        
-        <br><br>
-        <input type="submit" class="btn btn-success form-control">
+          <br><br>
+          <input type="submit" class="btn btn-success form-control">
       </form>
     </div>
    

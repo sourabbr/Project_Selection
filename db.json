@@ -30,6 +30,13 @@
         "b",
         "c"
       ]
+    },
+    {
+      "title": "Lorem Ipsum",
+      "guide": "Jane Doe",
+      "teamMembers": [
+        " "
+      ]
     }
   ]
 }
