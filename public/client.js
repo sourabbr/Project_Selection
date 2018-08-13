@@ -11,11 +11,11 @@ $(function() {
   
   $('form').submit(function(event) {
     event.preventDefault();
-    var $input = $('form input[name=selectedProject]:checked')
-    var message = $input.val();
+    var $selectedProject = $('form input[name=selectedProject]:checked')
+    var message = $selectedProject.val();
     socket.emit('message', message);
-    $input.val('');
-    $input.focus();
+    $selectedProject.val('');
+    $selectedProject.focus();
   });
   
   socket.on('projects', function(projects) {
