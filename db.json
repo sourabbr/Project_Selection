@@ -26,30 +26,28 @@
       "title": "Draco Dormiens",
       "guide": "Jane Doe",
       "teamMembers": [
-        "l"
+        "B"
       ]
     },
     {
       "title": "Lorem Ipsum",
       "guide": "Jane Doe",
       "teamMembers": [
-        "a",
-        ""
+        "B"
       ]
     },
     {
       "title": "Nunquam Tittillandus",
       "guide": "Jane Doe",
       "teamMembers": [
-        "a"
+        "B"
       ]
     },
     {
       "title": "Dolor Sit Amet",
       "guide": "John Doe",
       "teamMembers": [
-        "a",
-        ""
+        "A"
       ]
     }
   ]

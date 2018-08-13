@@ -8,7 +8,7 @@ function getUnique(array, key){
 $(function() {
   
   var socket = io();
-  
+  window.addEventListener("focus", () => socket.connect());
   $('form').submit(function(event) {
     event.preventDefault();
     var $selectedProject = $('form input[name=selectedProject]:checked');
@@ -37,8 +37,8 @@ $(function() {
     }
     
     for(var project of projects){
-      $(`<div class="radio">
-         <label><input type="radio" name="selectedProject" id="${project.title.split(' ').join('-')}" value="${project.title}"> ${project.title}</label>
+      $(`<div class="radio" id="${project.title.split(' ').join('-')}">
+         <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
          </div>
         `)
         .appendTo(`fieldset.${project.guide.split(' ').join('-')}`);
