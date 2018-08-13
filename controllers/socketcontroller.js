@@ -7,7 +7,7 @@ let socketcontroller = (io,db) => {
     console.log("User connected : [ IP: %s, PORTS: %s]", headers['x-forwarded-for'], headers['x-forwarded-port']);
     
     
-    io.emit('projects',db.get('projects').value());
+    io.emit('loadProjects',db.get('projects').value());
   
               
     socket.on('message', message => {

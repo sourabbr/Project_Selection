@@ -7,18 +7,18 @@ function getUnique(array, key){
 
 $(function() {
   
-  var socket = io();
+  const socket = io();
   
   $('form').submit(function(event) {
     event.preventDefault();
-    var $selectedProject = $('form input[name=selectedProject]:checked')
-    var message = $selectedProject.val();
-    socket.emit('message', message);
+    let $selectedProject = $('form input[name=selectedProject]:checked')
+    let title = $selectedProject.val();
+    socket.emit('registeredProject', registeredProject);
     $selectedProject.val('');
     $selectedProject.focus();
   });
   
-  socket.on('projects', function(projects) {
+  socket.on('loadProjects', function(projects) {
     $('#projectSelectionForm').html('');
     for(let guide of getUnique(projects,'guide')){
       $(`<hr><h6>Guide: ${guide}</h6>
