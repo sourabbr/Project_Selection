@@ -13,9 +13,9 @@ $(function() {
     event.preventDefault();
     var $selectedProject = $('form input[name=selectedProject]:checked');
     var title = $selectedProject.val();
-    socket.emit('registeredProject', registeredProject);
-    $selectedProject.val('');
-    $selectedProject.focus();
+    var guide = $selectedProject.parent().parent().parent().attr('value');
+    var teamMembers = $('textarea#team-members').val().split('\n');
+    socket.emit('registeredProject', {title,guide,teamMembers});
   });
   
   socket.on('loadProjects', function(projects) {

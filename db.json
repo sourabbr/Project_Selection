@@ -21,5 +21,15 @@
       "available": true
     }
   ],
-  "registrations": []
+  "registrations": [
+    {
+      "title": "Draco Dormiens",
+      "guide": "Jane Doe",
+      "teamMembers": [
+        "a",
+        "b",
+        "c"
+      ]
+    }
+  ]
 }
