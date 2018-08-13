@@ -24,7 +24,10 @@ $(function() {
       return;
     }
     var teamMembers = $team.val().split('\n');
+    // if(confirm("I confirm that I have verified my details and understand that my choice is finalized")===false)
+    //   return;
     socket.emit('registeredProject', {title,guide,teamMembers});
+    $('input').remove();
   });
   
   socket.on('loadProjects', function(projects) {
