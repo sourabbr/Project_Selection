@@ -13,18 +13,19 @@
   <body>
     <br><br>
     <div class="container">
-      <h1>Select Project</h1>
+      <label>Select Project</label>
       <form action="">
           <div class="row">
             <div class="col jumbotron m-4 pt-3 pb-3">
-              <h2>Available Projects</h2>
+              <b>Available Projects</b>
               <div id="projectSelectionForm">
-                <img style="display:block; margin-left:auto; margin-right:auto; height:20em" 
+                <hr>
+                <img style="display:block; margin-left:auto; margin-right:auto; height:15em" 
                      src="https://cdn.glitch.com/c2f40f93-8c0e-4ea1-ab79-d03ffc9797cf%2Floading.gif?1534094470198">
               </div>
             </div>
             <div class="col jumbotron m-4 pt-3 pb-3">
-              <h2>Taken Projects</h2>
+              <b>Taken Projects</b>
               <hr>
               <div>
                 <ul id="registeredProjectsList">
@@ -33,12 +34,9 @@
               </div>
             </div>
           </div>
-
-          <h2>Enter Team Members</h2>
-          <textarea rows="4" id="team-members" class=""></textarea>
           <div class="form-group">
-          <label for="team-members">Comment:</label>
-            <textarea class="form-control" rows="5" id="comment"></textarea>
+          <label for="team-members">Enter Team Members</label>
+            <textarea class="form-control" rows="5" id="team-members"></textarea>
           </div>
           <br><br>
           <input type="submit" class="btn btn-success form-control">
