@@ -19,6 +19,11 @@
       "guide": "Jane Doe",
       "title": "Nunquam Tittillandus",
       "available": true
+    },
+    {
+      "guide": "John Doe",
+      "title": "Canis Majoris",
+      "available": true
     }
   ],
   "registrations": [
@@ -26,7 +31,7 @@
       "title": "Draco Dormiens",
       "guide": "Jane Doe",
       "teamMembers": [
-        "AD"
+        "b"
       ]
     },
     {
