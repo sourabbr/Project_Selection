@@ -21,7 +21,7 @@ $(function() {
   socket.on('projects', function(projects) {
     $('#projectSelectionForm').html('');
     for(let guide of getUnique(projects,'guide')){
-      $(`<hr><h4>Guide: ${guide}</h4>
+      $(`<hr><h6>Guide: ${guide}</h6>
          <fieldset class="${guide.split(' ').join('-')}"></fieldset>
         `)
         .appendTo('#projectSelectionForm');
@@ -29,7 +29,7 @@ $(function() {
     
     for(let project of projects){
       $(`<div class="radio">
-         <label><input type="radio" name="selectedProject" value="${project.title}">${project.title}</label>
+         <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
          </div>
         `)
         .appendTo(`fieldset.${project.guide.split(' ').join('-')}`);
@@ -39,7 +39,7 @@ $(function() {
   
   
   socket.on('registeredProject', function(registeredProject) {
-    $('<li></li>').text(registeredProject).appendTo('ul');
+    $('<li></li>').text(registeredProject).appendTo('ul#registeredProjectsList');
   });
   
   
