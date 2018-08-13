@@ -13,6 +13,10 @@ $(function() {
     event.preventDefault();
     var $selectedProject = $('form input[name=selectedProject]:checked');
     var title = $selectedProject.val();
+    if(title===undefined){
+      alert("Please Select a Project");
+      return;
+    }
     var guide = $selectedProject.parent().parent().parent().attr('value');
     var teamMembers = $('textarea#team-members').val().split('\n');
     socket.emit('registeredProject', {title,guide,teamMembers});
@@ -39,7 +43,7 @@ $(function() {
   
   
   socket.on('registeredProject', function(registeredProject) {
-    $('<li></li>').text(registeredProject).appendTo('ul#registeredProjectsList');
+    $('<li></li>').text(registeredProject.title).appendTo('ul#registeredProjectsList');
   });
   
   
