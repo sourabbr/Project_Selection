@@ -14,10 +14,11 @@ low(adapter)
             let el = collection[i];
             if(el[key] === obj[key]){
               collection[i] = obj;
-              return collection;
+              return true;
             }
           };
           collection.push(obj);
+          return false;
         },
         insertIfNotExists: function(collection, obj, key) {
           for (let i = 0; i < collection.length; i++) {

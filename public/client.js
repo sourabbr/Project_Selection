@@ -29,7 +29,10 @@ $(function() {
     socket.emit('registerProject', {title,guide,teamMembers});
   });
   
-  socket.on('successfullyRegistered'
+  socket.on('successfullyRegistered', function(){
+    $('input').hide(500, function(){ $(this).remove();});
+    alert("Successfully Registered Project");
+  });
   
   socket.on('loadState', function(state) {
     $('#projectSelectionForm').html('');

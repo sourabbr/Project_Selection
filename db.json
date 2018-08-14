@@ -28,42 +28,18 @@
   ],
   "registrations": [
     {
-      "title": "Draco Dormiens",
-      "guide": "Jane Doe",
-      "teamMembers": [
-        "Z",
-        "X"
-      ]
-    },
-    {
       "title": "Lorem Ipsum",
       "guide": "Jane Doe",
       "teamMembers": [
-        "A",
-        "B"
+        "Nischal",
+        "Lahcsin"
       ]
     },
     {
-      "title": "Nunquam Tittillandus",
+      "title": "Draco Dormiens",
       "guide": "Jane Doe",
       "teamMembers": [
-        "A"
-      ]
-    },
-    {
-      "title": "Dolor Sit Amet",
-      "guide": "John Doe",
-      "teamMembers": [
-        "A"
-      ]
-    },
-    {
-      "title": "Canis Majoris",
-      "guide": "John Doe",
-      "teamMembers": [
-        "B",
-        "C",
-        "D"
+        "Lahcsin"
       ]
     }
   ]
