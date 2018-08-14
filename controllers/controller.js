@@ -24,7 +24,7 @@ low(adapter)
             key = key || 'title'
             let el = collection[i];
             if(el[key] === obj[key]){
-              return collection;
+              throw "projectTaken";
             }
           };
           collection.push(obj);

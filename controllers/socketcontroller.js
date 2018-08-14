@@ -28,12 +28,13 @@ let socketcontroller = (io,db) => {
     
     socket.on('registerProject', project => {
       db.get("registrations")
-      .upsert(project)
+      .insertIfNotExists(project)
       .write()
       .then(()=>{
         io.emit('takenProject', project);
       })
       .catch(error=>{
+        if(error==="projectTaken")
         console.err(error);
       });
     });
