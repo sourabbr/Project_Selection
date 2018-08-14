@@ -33,12 +33,10 @@ let socketcontroller = (io,db) => {
       .then(err=>{
         if (err){
           io.to(`${socket.id}`).emit('projectAlreadyTaken');
-          
         }
         else{
           io.emit('takenProject', project);
           io.to(`${socket.id}`).emit('successfullyRegistered');
-          ;
         }
       })
       .catch(err=>{

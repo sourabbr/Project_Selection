@@ -31,7 +31,8 @@ $(function() {
   
   socket.on('successfullyRegistered', function(){
     $('input').hide(500, function(){ $(this).remove();});
-    alert("Successfully Registered Project");
+    setTimeout(function(){
+    alert("Successfully Registered Project");},500)
   });
   
   socket.on('loadState', function(state) {
