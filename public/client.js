@@ -85,8 +85,8 @@ $(function() {
     `).appendTo('ul#takenProjectsList').show(500);
   });
   
-  socket.on('projectAlreadyTaken', function() {
-    alert("Project already taken");
+  socket.on('alert', function(message) {
+    alert(message);
   });
   
 });

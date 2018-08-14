@@ -1,4 +1,3 @@
-const shortId = require('shortid');
 let socketcontroller = (io,db) => {
 
   io.on('connection', socket => {
@@ -29,8 +28,9 @@ let socketcontroller = (io,db) => {
     socket.on('registerProject', project => {
       let usnList=db.get("RegisteredUSNs").value();
       for(let usn of project.team){
-        if(usnlist.contains(usn)){
-          
+        if(usnList.contains(usn)){
+          io.to(`${socket.id}`).emit('alert',`${usn} already registered`);
+          return;
         }
       }
       
@@ -39,12 +39,16 @@ let socketcontroller = (io,db) => {
       .write()
       .then(err=>{
         if (err){
-          io.to(`${socket.id}`).emit('projectAlreadyTaken');
+          io.to(`${socket.id}`).emit('alert',"Project already taken");
+          return;
         }
-        else{
-          db.get("projects")
-          .find({title:project.title})
-          .assign({available:false})
+        db.get("projects")
+        .find({title:project.title})
+        .assign({available:false})
+        .write()
+        .then(()=>{
+          db.get("registeredUSNs")
+          .push(...project.team)
           .write()
           .then(()=>{
             io.emit('takenProject', project);
@@ -53,14 +57,15 @@ let socketcontroller = (io,db) => {
           .catch(err=>{
             console.error(err);
           });
-        }
+        })
+        .catch(err=>{
+          console.error(err);
+        });        
       })
       .catch(err=>{
         console.error(err);
       });
     });
-    
-    
     
     socket.on('disconnect', () => {
       console.log("User disconnected : [ IP: %s, PORTS: %s]", headers['x-forwarded-for'], headers['x-forwarded-port']);
