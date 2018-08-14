@@ -28,12 +28,12 @@ let socketcontroller = (io,db) => {
       });
     });
     
-    socket.on('registeredProject', project => {
+    socket.on('registerProject', project => {
       db.get("registrations")
       .upsert(project)
       .write()
       .then(()=>{
-        io.emit('registeredProject', project);
+        io.emit('takenProject', project);
       })
       .catch(error=>{
         console.err(error);

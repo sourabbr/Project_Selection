@@ -31,7 +31,7 @@
       "title": "Draco Dormiens",
       "guide": "Jane Doe",
       "teamMembers": [
-        "A"
+        "a"
       ]
     },
     {
@@ -45,7 +45,8 @@
       "title": "Nunquam Tittillandus",
       "guide": "Jane Doe",
       "teamMembers": [
-        "A"
+        "A",
+        ""
       ]
     },
     {

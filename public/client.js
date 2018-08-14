@@ -26,8 +26,8 @@ $(function() {
     var teamMembers = $team.val().split('\n');
     // if(confirm("I confirm that I have verified my details and understand that my choice is finalized")===false)
     //   return;
-    socket.emit('registeredProject', {title,guide,teamMembers});
-    $('input').remove();
+    socket.emit('registerProject', {title,guide,teamMembers});
+    $('input').hide(500, function(){ $(this).remove();});
   });
   
   socket.on('loadProjects', function(projects) {
@@ -56,9 +56,9 @@ $(function() {
         .appendTo(`fieldset.${project.guide.split(' ').join('-')}`);
   });
   
-  socket.on('registeredProject', function(project) {
-    $(`#${project.title.split(' ').join('-')}`).remove(2000);
-    $('<li></li>').text(project.title).appendTo('ul#registeredProjectsList');
+  socket.on('takenProject', function(project) {
+    $(`#${project.title.split(' ').join('-')}`).hide(500, function(){ $(this).remove();});
+    $('<li style="display: none;"></li>').text(project.title).appendTo('ul#takenProjectsList').show(500);
   });
   
   
