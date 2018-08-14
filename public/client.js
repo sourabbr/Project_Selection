@@ -77,5 +77,8 @@ $(function() {
     `).appendTo('ul#takenProjectsList').show(500);
   });
   
+  socket.on('projectAlreadyTaken'), function(project) {
+    alert(project.title+" already taken");
+  }
   
 });

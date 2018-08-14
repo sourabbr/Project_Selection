@@ -30,11 +30,13 @@ let socketcontroller = (io,db) => {
       db.get("registrations")
       .insertIfNotExists(project)
       .write()
-      .then(()=>{
-        io.emit('takenProject', project);
+      .then(collection=>{
+        if (collection.includes(project))
+          io.to(`${socket.id}`).emit('projectAlreadyTaken',project);
+        else
+          io.emit('takenProject', project);
       })
       .catch(error=>{
-        if(error==="projectTaken")
         console.err(error);
       });
     });
