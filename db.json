@@ -59,7 +59,9 @@
       "title": "Canis Majoris",
       "guide": "John Doe",
       "teamMembers": [
-        "A"
+        "B",
+        "C",
+        "D"
       ]
     }
   ]
