@@ -27,8 +27,9 @@ $(function() {
     // if(confirm("I confirm that I have verified my details and understand that my choice is finalized")===false)
     //   return;
     socket.emit('registerProject', {title,guide,teamMembers});
-    $('input').hide(500, function(){ $(this).remove();});
   });
+  
+  socket.on('successfullyRegistered'
   
   socket.on('loadState', function(state) {
     $('#projectSelectionForm').html('');
@@ -77,8 +78,8 @@ $(function() {
     `).appendTo('ul#takenProjectsList').show(500);
   });
   
-  socket.on('projectAlreadyTaken'), function(project) {
-    alert(project.title+" already taken");
-  }
+  socket.on('projectAlreadyTaken', function() {
+    alert("Project already taken");
+  });
   
 });

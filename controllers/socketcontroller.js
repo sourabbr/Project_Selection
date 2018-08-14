@@ -31,10 +31,12 @@ let socketcontroller = (io,db) => {
       .insertIfNotExists(project)
       .write()
       .then(collection=>{
-        if (collection.includes(project))
-          io.to(`${socket.id}`).emit('projectAlreadyTaken',project);
-        else
+        if (collection.includes(project)){
           io.emit('takenProject', project);
+        }
+        else{
+          io.to(`${socket.id}`).emit('projectAlreadyTaken');
+        }
       })
       .catch(error=>{
         console.err(error);
