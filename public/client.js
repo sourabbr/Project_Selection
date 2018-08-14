@@ -33,18 +33,22 @@ $(function() {
   socket.on('loadState', function(state) {
     $('#projectSelectionForm').html('');
     for(var guide of getUnique(state.projects,'guide')){
-      $(`<hr><h6>Guide: ${guide}</h6>
+      $(`<hr><h6 style="display: none;">Guide: ${guide}</h6>
          <fieldset value="${guide}" class="${guide.split(' ').join('-')}"></fieldset>
         `)
-        .appendTo('#projectSelectionForm');
+        .appendTo('#projectSelectionForm').show(500);
     }
     for(var project of state.projects){
-      $(`<div class="radio" id="${project.title.split(' ').join('-')}">
+      $(`<div style="display: none;" class="radio" id="${project.title.split(' ').join('-')}">
          <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
          </div>
         `)
-        .appendTo(`fieldset.${project.guide.split(' ').join('-')}`);
+        .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
     }
+    for(var project of state.registrations){
+      $('<li style="display: none;"></li>').text(project.title).appendTo('ul#takenProjectsList').show(500);
+    }
+    
     
   });
   
