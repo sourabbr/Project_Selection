@@ -29,6 +29,31 @@
       "guide": "John Doe",
       "title": "Sirius Arcturus",
       "available": false
+    },
+    {
+      "guide": "Minerva",
+      "title": "Transfiguration",
+      "available": true
+    },
+    {
+      "guide": "Minerva",
+      "title": "Dark arts",
+      "available": true
+    },
+    {
+      "guide": "Minerva",
+      "title": "Portions",
+      "available": true
+    },
+    {
+      "guide": "Minerva",
+      "title": "Herbology",
+      "available": true
+    },
+    {
+      "guide": "Minerva",
+      "title": "Astronomy",
+      "available": true
     }
   ],
   "registrations": [
