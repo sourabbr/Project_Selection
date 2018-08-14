@@ -30,15 +30,15 @@ $(function() {
     $('input').hide(500, function(){ $(this).remove();});
   });
   
-  socket.on('loadProjects', function(projects) {
+  socket.on('loadState', function(state) {
     $('#projectSelectionForm').html('');
-    for(var guide of getUnique(projects,'guide')){
+    for(var guide of getUnique(state.projects,'guide')){
       $(`<hr><h6>Guide: ${guide}</h6>
          <fieldset value="${guide}" class="${guide.split(' ').join('-')}"></fieldset>
         `)
         .appendTo('#projectSelectionForm');
     }
-    for(var project of projects){
+    for(var project of state.projects){
       $(`<div class="radio" id="${project.title.split(' ').join('-')}">
          <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
          </div>
