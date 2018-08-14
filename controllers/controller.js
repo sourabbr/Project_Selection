@@ -8,7 +8,7 @@ low(adapter)
     .then(db => {
   
       db._.mixin({
-        upsert: function(collection, obj, key) {
+        upsert: function(collection, obj, key) { //update if present, else insert
           for (let i = 0; i < collection.length; i++) {
             key = key || 'title'
             let el = collection[i];
@@ -24,7 +24,7 @@ low(adapter)
             key = key || 'title'
             let el = collection[i];
             if(el[key] === obj[key]){
-              return true;
+              return true; // err: Already exists
             }
           };
           collection.push(obj);

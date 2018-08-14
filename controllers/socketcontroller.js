@@ -27,6 +27,13 @@ let socketcontroller = (io,db) => {
     });
     
     socket.on('registerProject', project => {
+      let usnList=db.get("RegisteredUSNs").value();
+      for(let usn of project.team){
+        if(usnlist.contains(usn)){
+          
+        }
+      }
+      
       db.get("registrations")
       .insertIfNotExists(project)
       .write()

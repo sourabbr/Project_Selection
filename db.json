@@ -26,13 +26,5 @@
       "available": true
     }
   ],
-  "registrations": [
-    {
-      "title": "Lorem Ipsum",
-      "guide": "Jane Doe",
-      "teamMembers": [
-        "Anc"
-      ]
-    }
-  ]
+  "registrations": []
 }
