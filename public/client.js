@@ -40,14 +40,19 @@ $(function() {
     }
     for(var project of state.projects){
       $(`<div style="display: none;" class="radio" id="${project.title.split(' ').join('-')}">
-         <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
+           <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
          </div>
         `)
         .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
     }
     for(var project of state.registrations){
-      $(`<li style="display: none;">${project.title}<ul><li>Guide: ${project.guide}</li><li>Team: ${project.teamMembers.join(', ')}</li></ul></li>`)
-        .appendTo('ul#takenProjectsList').show(500);
+      $(` <li style="display: none;">${project.title}
+          <ul>
+            <li>Guide: ${project.guide}</li>
+            <li>Team: ${project.teamMembers.join(', ')}</li>
+          </ul>
+        </li>
+    `).appendTo('ul#takenProjectsList').show(500);
     }
     
     
@@ -63,7 +68,13 @@ $(function() {
   
   socket.on('takenProject', function(project) {
     $(`#${project.title.split(' ').join('-')}`).hide(500, function(){ $(this).remove();});
-    $(`<li style="display: none;">${project.title}<ul><li>Guide: ${project.guide}</li><li>Team: ${project.teamMembers.join(', ')}</li></ul></li>`).appendTo('ul#takenProjectsList').show(500);
+    $(` <li style="display: none;">${project.title}
+          <ul>
+            <li>Guide: ${project.guide}</li>
+            <li>Team: ${project.teamMembers.join(', ')}</li>
+          </ul>
+        </li>
+    `).appendTo('ul#takenProjectsList').show(500);
   });
   
   

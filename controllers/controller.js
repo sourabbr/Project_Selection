@@ -18,6 +18,16 @@ low(adapter)
             }
           };
           collection.push(obj);
+        },
+        insertIfNotExists: function(collection, obj, key) {
+          for (let i = 0; i < collection.length; i++) {
+            key = key || 'title'
+            let el = collection[i];
+            if(el[key] === obj[key]){
+              return collection;
+            }
+          };
+          collection.push(obj);
         }
       });
   
