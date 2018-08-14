@@ -38,7 +38,6 @@ $(function() {
         `)
         .appendTo('#projectSelectionForm');
     }
-    
     for(var project of projects){
       $(`<div class="radio" id="${project.title.split(' ').join('-')}">
          <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
@@ -49,9 +48,16 @@ $(function() {
     
   });
   
+  socket.on('addProject', function(project){
+    $(`<div class="radio" id="${project.title.split(' ').join('-')}">
+         <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
+         </div>
+        `)
+        .appendTo(`fieldset.${project.guide.split(' ').join('-')}`);
+  });
   
   socket.on('registeredProject', function(project) {
-    $(`#${project.title.split(' ').join('-')}`).remove();
+    $(`#${project.title.split(' ').join('-')}`).remove(2000);
     $('<li></li>').text(project.title).appendTo('ul#registeredProjectsList');
   });
   

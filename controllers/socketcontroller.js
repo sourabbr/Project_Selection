@@ -19,18 +19,21 @@ let socketcontroller = (io,db) => {
       io.emit('message', message);
     });
     
-    socket.on('newProject', newProject => {
+    socket.on('newProject', project => {
       db.get("projects")
-      .upsert(newProject)
-      .write();
-    });
-    
-    socket.on('registeredProject', registeredProject => {
-      db.get("registrations")
-      .upsert(registeredProject)
+      .upsert(project)
       .write()
       .then(()=>{
-        io.emit('registeredProject', registeredProject);
+        io.emit('addProject',project);
+      });
+    });
+    
+    socket.on('registeredProject', project => {
+      db.get("registrations")
+      .upsert(project)
+      .write()
+      .then(()=>{
+        io.emit('registeredProject', project);
       })
       .catch(error=>{
         console.err(error);
