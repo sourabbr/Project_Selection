@@ -3,7 +3,7 @@
     {
       "guide": "Jane Doe",
       "title": "Lorem Ipsum",
-      "available": false
+      "available": true
     },
     {
       "guide": "John Doe",

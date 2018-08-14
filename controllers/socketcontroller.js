@@ -26,14 +26,15 @@ let socketcontroller = (io,db) => {
     });
     
     socket.on('registerProject', project => {
-      let usnList=db.get("RegisteredUSNs").value();
-      for(let usn of project.team){
-        if(usnList.contains(usn)){
+      let usnList=db.get("registeredUSNs").value();
+      for(let usn of project.teamMembers){
+        if(usnList.includes(usn)){
           io.to(`${socket.id}`).emit('alert',`${usn} already registered`);
           return;
         }
-      }
-      
+      } 
+     
+
       db.get("registrations")
       .insertIfNotExists(project)
       .write()
@@ -48,7 +49,7 @@ let socketcontroller = (io,db) => {
         .write()
         .then(()=>{
           db.get("registeredUSNs")
-          .push(...project.team)
+          .push(...project.teamMembers)
           .write()
           .then(()=>{
             io.emit('takenProject', project);
