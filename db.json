@@ -26,5 +26,20 @@
       "available": true
     }
   ],
-  "registrations": []
+  "registrations": [
+    {
+      "title": "Lorem Ipsum",
+      "guide": "Jane Doe",
+      "teamMembers": [
+        "Abc"
+      ]
+    },
+    {
+      "title": "Draco Dormiens",
+      "guide": "Jane Doe",
+      "teamMembers": [
+        "def"
+      ]
+    }
+  ]
 }

@@ -30,9 +30,10 @@ $(function() {
   });
   
   socket.on('successfullyRegistered', function(){
-    $('input').hide(500, function(){ $(this).remove();});
+    $('input').hide(500, function(){ $(this).remove(); $('textarea').attr('disabled','disabled');});
     setTimeout(function(){
-    alert("Successfully Registered Project");},500)
+      alert("Successfully Registered Project");
+    },1000);
   });
   
   socket.on('loadState', function(state) {
