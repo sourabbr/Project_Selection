@@ -33,7 +33,6 @@ low(adapter)
   
       socketcontroller(io,db);
       router(app);
-  
       return db
         .defaults({projects:[], registrations:[], registeredUSNs:[]})
         .write();
