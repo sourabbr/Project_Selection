@@ -45,11 +45,13 @@ $(function() {
         .appendTo('#projectSelectionForm').show(500);
     }
     for(var project of state.projects){
-      $(`<div style="display: none;" class="radio" id="${project.title.split(' ').join('-')}">
-           <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
-         </div>
-        `)
-        .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
+      if(project.available){
+        $(`<div style="display: none;" class="radio" id="${project.title.split(' ').join('-')}">
+             <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
+           </div>
+          `)
+          .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
+      }
     }
     for(var project of state.registrations){
       $(` <li style="display: none;">${project.title}

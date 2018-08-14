@@ -1,3 +1,5 @@
-Live selection form
+Realtime selection form
 =========================
-A live selection form that uses [socket.io](//socket.io).
+A realtime selection form that uses [socket.io](//socket.io).
+
+Author: Nischal Tonthanahal <nischal@nthacks.com>

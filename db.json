@@ -3,7 +3,7 @@
     {
       "guide": "Jane Doe",
       "title": "Lorem Ipsum",
-      "available": true
+      "available": false
     },
     {
       "guide": "John Doe",
@@ -31,14 +31,7 @@
       "title": "Lorem Ipsum",
       "guide": "Jane Doe",
       "teamMembers": [
-        "Abc"
-      ]
-    },
-    {
-      "title": "Draco Dormiens",
-      "guide": "Jane Doe",
-      "teamMembers": [
-        "def"
+        "Anc"
       ]
     }
   ]

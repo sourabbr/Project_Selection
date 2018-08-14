@@ -35,8 +35,17 @@ let socketcontroller = (io,db) => {
           io.to(`${socket.id}`).emit('projectAlreadyTaken');
         }
         else{
-          io.emit('takenProject', project);
-          io.to(`${socket.id}`).emit('successfullyRegistered');
+          db.get("projects")
+          .find({title:project.title})
+          .assign({available:false})
+          .write()
+          .then(()=>{
+            io.emit('takenProject', project);
+            io.to(`${socket.id}`).emit('successfullyRegistered');
+          })
+          .catch(err=>{
+            console.error(err);
+          });
         }
       })
       .catch(err=>{
