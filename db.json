@@ -45,12 +45,18 @@
       "title": "Nunquam Tittillandus",
       "guide": "Jane Doe",
       "teamMembers": [
-        "A",
-        ""
+        "A"
       ]
     },
     {
       "title": "Dolor Sit Amet",
+      "guide": "John Doe",
+      "teamMembers": [
+        "A"
+      ]
+    },
+    {
+      "title": "Canis Majoris",
       "guide": "John Doe",
       "teamMembers": [
         "A"
