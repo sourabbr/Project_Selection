@@ -1,5 +1,54 @@
 {
-  "projects": [],
-  "registrations": [],
-  "registeredUSNs": []
+  "projects": [
+    {
+      "guide": "Minerva",
+      "title": "Transfiguration",
+      "available": true
+    },
+    {
+      "guide": "Snape",
+      "title": "Potions\nDark Arts",
+      "available": false
+    },
+    {
+      "guide": "Hagrid",
+      "title": "Care of Magical Creatures",
+      "available": false
+    },
+    {
+      "guide": "Flitwick",
+      "title": "Charms",
+      "available": true
+    }
+  ],
+  "registrations": [
+    {
+      "title": "Potions\nDark Arts",
+      "guide": "Snape",
+      "teamMembers": [
+        "1DS15IS001",
+        "1DS15IS002",
+        "1DS15IS003",
+        ""
+      ]
+    },
+    {
+      "title": "Care of Magical Creatures",
+      "guide": "Hagrid",
+      "teamMembers": [
+        "1DS15IS004",
+        "1DS15IS005",
+        "1DS15IS006"
+      ]
+    }
+  ],
+  "registeredUSNs": [
+    "1DS15IS001",
+    "1DS15IS002",
+    "1DS15IS003",
+    "",
+    "1DS15IS004",
+    "1DS15IS005",
+    "1DS15IS006"
+  ]
 }
