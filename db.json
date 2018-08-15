@@ -18,6 +18,31 @@
     {
       "guide": "Flitwick",
       "title": "Charms",
+      "available": false
+    },
+    {
+      "guide": "Snape",
+      "title": "Defence Against The Dark Arts",
+      "available": true
+    },
+    {
+      "guide": "Snape",
+      "title": "Killing Dumbledore 101",
+      "available": true
+    },
+    {
+      "guide": "Snape",
+      "title": "How to betray the most evil Wizard of all time while keeping a straight face",
+      "available": false
+    },
+    {
+      "guide": "Minerva",
+      "title": "How to bring statues to life",
+      "available": true
+    },
+    {
+      "guide": "Minerva",
+      "title": "How to deal with Umbridge 101",
       "available": true
     }
   ],
@@ -40,6 +65,21 @@
         "1DS15IS005",
         "1DS15IS006"
       ]
+    },
+    {
+      "title": "Charms",
+      "guide": "Flitwick",
+      "teamMembers": [
+        "Guide: HOHO",
+        "Team: 1DS15IS019, 1DS15IS007, 1DS15IS021"
+      ]
+    },
+    {
+      "title": "How to betray the most evil Wizard of all time while keeping a straight face",
+      "guide": "Snape",
+      "teamMembers": [
+        "NISCHAL"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -49,6 +89,9 @@
     "",
     "1DS15IS004",
     "1DS15IS005",
-    "1DS15IS006"
+    "1DS15IS006",
+    "Guide: HOHO",
+    "Team: 1DS15IS019, 1DS15IS007, 1DS15IS021",
+    "NISCHAL"
   ]
 }
