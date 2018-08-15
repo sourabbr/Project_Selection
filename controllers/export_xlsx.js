@@ -1,4 +1,3 @@
-const path = require("path");
 const os = require('os');
 const fs = require('fs');
 const xlsx = require('better-xlsx');
@@ -27,10 +26,10 @@ module.exports = response => {
 
   file
     .saveAs()
-    .pipe(fs.createWriteStream(os.tmpdir + '/registrations.xlsx'))
+    .pipe(fs.createWriteStream('/registrations.xlsx'))
     .on('finish', () => {
       console.log('Done.');
-      response.sendFile(path.join(os.tmpdir(),'registrations.xlsx'));  
+      response.redirect('/exports/registrations.xlsx');  
     });
   
 }
