@@ -32,7 +32,7 @@ low(adapter)
       });
   
       socketcontroller(io,db);
-      router(app);
+      router(app,db);
   
       return db
         .defaults({projects:[], registrations:[], registeredUSNs:[]})
