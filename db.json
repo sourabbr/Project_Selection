@@ -8,17 +8,17 @@
     {
       "guide": "Snape",
       "title": "Potions",
-      "available": false
+      "available": true
     },
     {
       "guide": "Hagrid",
       "title": "Care of Magical Creatures",
-      "available": false
+      "available": true
     },
     {
       "guide": "Flitwick",
       "title": "Charms",
-      "available": false
+      "available": true
     },
     {
       "guide": "Snape",
@@ -33,7 +33,7 @@
     {
       "guide": "Snape",
       "title": "How to betray the most evil Wizard of all time while keeping a straight face",
-      "available": false
+      "available": true
     },
     {
       "guide": "Minerva",
@@ -44,54 +44,13 @@
       "guide": "Minerva",
       "title": "How to deal with Umbridge 101",
       "available": true
-    }
-  ],
-  "registrations": [
-    {
-      "title": "Potions",
-      "guide": "Snape",
-      "teamMembers": [
-        "1DS15IS001",
-        "1DS15IS002",
-        "1DS15IS003",
-        ""
-      ]
     },
     {
-      "title": "Care of Magical Creatures",
       "guide": "Hagrid",
-      "teamMembers": [
-        "1DS15IS004",
-        "1DS15IS005",
-        "1DS15IS006"
-      ]
-    },
-    {
-      "title": "Charms",
-      "guide": "Flitwick",
-      "teamMembers": [
-        "Guide: HOHO",
-        "Team: 1DS15IS019, 1DS15IS007, 1DS15IS021"
-      ]
-    },
-    {
-      "title": "How to betray the most evil Wizard of all time while keeping a straight face",
-      "guide": "Snape",
-      "teamMembers": [
-        "NISCHAL"
-      ]
+      "title": "How to raise a dragon",
+      "available": true
     }
   ],
-  "registeredUSNs": [
-    "1DS15IS001",
-    "1DS15IS002",
-    "1DS15IS003",
-    "",
-    "1DS15IS004",
-    "1DS15IS005",
-    "1DS15IS006",
-    "Guide: HOHO",
-    "Team: 1DS15IS019, 1DS15IS007, 1DS15IS021",
-    "NISCHAL"
-  ]
+  "registrations": [],
+  "registeredUSNs": []
 }

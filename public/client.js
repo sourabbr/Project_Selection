@@ -29,10 +29,12 @@ $(function() {
     }
     var teamMembers = $team.val().split('\n');
     for(var i=0;i<teamMembers.length;i++){
-      
       if(!validateUSN(teamMembers[i])){
         alert("Please Enter Valid USNs only, one in each line, no other text");
         return;
+      }
+      else{
+        teamMembers[i]=teamMembers[i].toUpperCase();
       }
     }
     // if(confirm("I confirm that I have verified my details and understand that my choice is finalized")===false)
