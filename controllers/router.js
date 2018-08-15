@@ -1,7 +1,6 @@
 const path = require("path");
-const os = require('os');
-const export_xlsx = require("./export.js");
-module.exports=function(app){
+const export_xlsx = require("./export_xlsx.js");
+module.exports=function(app,db){
   
   app.get("/", function (request, response) {
     response.sendFile(path.join(__dirname,'../views/index.html'));
@@ -11,9 +10,6 @@ module.exports=function(app){
     response.sendFile(path.join(__dirname,'../views/admin.html'));
   });
   
-  app.get("/export",function (request, response) {
-    export_xlsx();
-    response.sendFile(path.join(os.tmpdir(),'registrations.xlsx'));
-  });
+  app.get("/export",export_xlsx);
 
 }
