@@ -74,6 +74,11 @@
       "guide": "Hermione",
       "title": "It's Levi-oh-sah, not Levio-sah",
       "available": true
+    },
+    {
+      "guide": "Hermione",
+      "title": "How not to die, or worse, be expelled",
+      "available": true
     }
   ],
   "registrations": [
