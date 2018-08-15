@@ -5,16 +5,23 @@ const path = require("path");
 const export_xlsx = (response,db) => {
   
   let registrations=db.get("registrations").value();
+  
+  let file = new xlsx.File();
+  let sheet = file.addSheet('Sheet1');
+  
+  
   for(let registration in registrations){
-    
+    let row = sheet.addRow();
+    for (let item in registration){
+      let cell = row.addCell();
+      if(typeof item ===Array)
+        cell.value = registration.item.join("\n");
+      cell.value = registration.item;
+    }
   }
     
-  const file = new xlsx.File();
-  const sheet = file.addSheet('Sheet1');
-  const row = sheet.addRow();
-  const cell = row.addCell();
-
-  cell.value = 'I am a cell!';
+ 
+  
   // cell.hMerge = 2;
   // cell.vMerge = 1;
 
