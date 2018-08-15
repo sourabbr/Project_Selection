@@ -69,6 +69,11 @@
       "guide": "Flitwick",
       "title": "Swish and Flick",
       "available": true
+    },
+    {
+      "guide": "Hermione",
+      "title": "It's Levi-oh-sah, not Levio-sah",
+      "available": true
     }
   ],
   "registrations": [

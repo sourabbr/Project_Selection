@@ -52,6 +52,7 @@ $(function() {
   
   socket.on('loadState', function(state) {
     $('#projectSelectionForm').html('');
+    $('#takenProjectsList').html('');
     for(var guide of getUnique(state.projects,'guide')){
       $(`<hr><h6 style="display: none;">Guide: ${guide}</h6>
          <fieldset value="${guide}" class="${guide.split(' ').join('-')}"></fieldset>
