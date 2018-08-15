@@ -10,6 +10,8 @@ module.exports=function(app,db){
     response.sendFile(path.join(__dirname,'../views/admin.html'));
   });
   
-  app.get("/export",export_xlsx);
+  app.get("/export", function (request, response) {
+    export_xlsx(response);
+  });
 
 }
