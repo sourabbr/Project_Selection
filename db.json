@@ -38,7 +38,7 @@
     {
       "guide": "Minerva",
       "title": "Dark arts",
-      "available": true
+      "available": false
     },
     {
       "guide": "Minerva",
@@ -53,6 +53,21 @@
     {
       "guide": "Minerva",
       "title": "Astronomy",
+      "available": false
+    },
+    {
+      "guide": "Nandan",
+      "title": "How to be cool",
+      "available": true
+    },
+    {
+      "guide": "Nandan",
+      "title": "Micro biology\n",
+      "available": true
+    },
+    {
+      "guide": "Nandan",
+      "title": "Micro kewl",
       "available": true
     }
   ],
@@ -92,6 +107,22 @@
         "1DS15IS063",
         "1DS15IS064"
       ]
+    },
+    {
+      "title": "Dark arts",
+      "guide": "Minerva",
+      "teamMembers": [
+        "Usn1"
+      ]
+    },
+    {
+      "title": "Astronomy",
+      "guide": "Minerva",
+      "teamMembers": [
+        "ahdsfdhfj",
+        "klfgliukg",
+        "lkyfoiug"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -106,6 +137,10 @@
     "1DS15IS061",
     "1DS15IS062",
     "1DS15IS063",
-    "1DS15IS064"
+    "1DS15IS064",
+    "Usn1",
+    "ahdsfdhfj",
+    "klfgliukg",
+    "lkyfoiug"
   ]
 }
