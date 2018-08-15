@@ -9,7 +9,7 @@ const server = http.Server(app);
 const io = require('socket.io')(server);
 
 app.use(express.static('public'));
-app.use(express.static(os.tmpdir()+'/exports'));
+app.use('/exports',express.static('exports'));
 app.enable('trust proxy'); 
 app.use(express_enforces_ssl());
 
