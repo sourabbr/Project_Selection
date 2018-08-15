@@ -2,8 +2,13 @@ const fs = require('fs');
 const xlsx = require('better-xlsx');
 const path = require("path");
 
-module.exports = response => {
+const export_xlsx = (response,db) => {
   
+  let registrations=db.get("registrations").value();
+  for(let registration in registrations){
+    
+  }
+    
   const file = new xlsx.File();
   const sheet = file.addSheet('Sheet1');
   const row = sheet.addRow();
@@ -31,4 +36,10 @@ module.exports = response => {
       response.redirect('/exports/registrations.xlsx');  
     });
   
+}
+
+module.exports=(app,db)=>{
+  app.get("/export", function (request, response) {
+    export_xlsx(response,db);
+  });
 }
