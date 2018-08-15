@@ -8,6 +8,9 @@ function validateUSN(usn){
   var pattern=/\d\w\w\d\d\w\w\d\d\d/i;
   return pattern.test(usn);
 }
+function displayAlert(type,message){
+  $(`#display-alert-${type}`).text(message).show();
+}
 
 $(function() {
   
