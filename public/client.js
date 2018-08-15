@@ -5,7 +5,7 @@ function getUnique(array, key){
   }, []);
 }
 function validateUSN(usn){
-  let pattern=/\d\w\w\d\d\w\w\d\d\d/i;
+  var pattern=/\d\w\w\d\d\w\w\d\d\d/i;
   return pattern.test(usn);
 }
 
@@ -28,6 +28,13 @@ $(function() {
       return;
     }
     var teamMembers = $team.val().split('\n');
+    for(var i=0;i<teamMembers.length;i++){
+      
+      if(!validateUSN(teamMembers[i])){
+        alert("Please Enter Valid USNs only, one in each line, no other text");
+        return;
+      }
+    }
     // if(confirm("I confirm that I have verified my details and understand that my choice is finalized")===false)
     //   return;
     socket.emit('registerProject', {title,guide,teamMembers});
