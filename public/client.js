@@ -4,6 +4,10 @@ function getUnique(array, key){
     return carry;
   }, []);
 }
+function validateUSN(usn){
+  let pattern=/\d\w\w\d\d\w\w\d\d\d/i;
+  return pattern.test(usn);
+}
 
 $(function() {
   
