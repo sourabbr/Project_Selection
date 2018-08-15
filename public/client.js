@@ -1,21 +1,34 @@
+$.fn.scrollTo = function (speed) {
+    if (typeof(speed) === 'undefined')
+        speed = 1000;
+
+    $('html, body').animate({
+        scrollTop: parseInt($(this).offset().top)
+    }, speed);
+};
+
 function getUnique(array, key){
   return array.reduce(function(carry, item){
     if(item[key] && !~carry.indexOf(item[key])) carry.push(item[key]);
     return carry;
   }, []);
 }
+
 function validateUSN(usn){
   var pattern=/\d\w\w\d\d\w\w\d\d\d/i;
   return pattern.test(usn);
 }
-function displayAlert(type,message){
+
+function displayAlert(message,type='info'){
+  $('#alerts').html('');
   $(`<div class="alert alert-${type} alert-dismissible fade show" style="display:none">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
       ${message}
     </div>
   `)
   .appendTo("#alerts")
-  .slideDown();
+  .slideDown()
+  .scrollTo();
 }
 
 $(function() {
@@ -27,7 +40,7 @@ $(function() {
     var $selectedProject = $('form input[name=selectedProject]:checked');
     var title = $selectedProject.val();
     if(title===undefined){
-      alert("Please Select a Project");
+      displayAlert("Please Select a Project");
       return;
     }
     var guide = $selectedProject.parent().parent().parent().attr('value');
@@ -39,7 +52,7 @@ $(function() {
     var teamMembers = $team.val().trim().split('\n');
     for(var i=0;i<teamMembers.length;i++){
       if(!validateUSN(teamMembers[i])){
-        alert("Please Enter Valid USNs only, one in each line, no other text or commas");
+        displayAlert("Please Enter Valid USNs only, one in each line, no other text or commas",'warning');
         $team.focus();
         return;
       }
@@ -55,7 +68,7 @@ $(function() {
   socket.on('successfullyRegistered', function(){
     $('input').hide(500, function(){ $(this).remove(); $('textarea').attr('disabled','disabled');});
     setTimeout(function(){
-      alert("Successfully Registered Project");
+      displayAlert("Successfully Registered Project",'success');
     },1000);
   });
   
@@ -109,8 +122,8 @@ $(function() {
     `).appendTo('ul#takenProjectsList').show(500);
   });
   
-  socket.on('alert', function(message) {
-    alert(message);
+  socket.on('displayAlert', function(message,type) {
+    displayAlert(message,type);
   });
   
 });

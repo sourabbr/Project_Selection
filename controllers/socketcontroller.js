@@ -29,7 +29,7 @@ let socketcontroller = (io,db) => {
       let usnList=db.get("registeredUSNs").value();
       for(let usn of project.teamMembers){
         if(usnList.includes(usn)){
-          io.to(`${socket.id}`).emit('alert',`${usn} already registered`);
+          io.to(`${socket.id}`).emit('displayAlert',`${usn} already registered`,'warning');
           return;
         }
       } 
@@ -40,7 +40,7 @@ let socketcontroller = (io,db) => {
       .write()
       .then(err=>{
         if (err){
-          io.to(`${socket.id}`).emit('alert',"Project already taken");
+          io.to(`${socket.id}`).emit('displayAlert',"Project already taken",'warning');
           return;
         }
         db.get("projects")
