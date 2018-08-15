@@ -4,12 +4,12 @@ const path = require("path");
 
 const export_xlsx = (response,db) => {
   
-  let registrations=db.get('registrations');
+  let registrations=db.get('registrations').value();
   let file = new xlsx.File();
   let sheet = file.addSheet('Sheet1');
   
   let header=sheet.addRow();
-  for(let item of registrations[0]){
+  for(let item in registrations[0]){
     let heading=header.addCell();
     heading.value=item;
   }
