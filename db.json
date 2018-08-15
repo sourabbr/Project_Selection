@@ -68,7 +68,7 @@
     {
       "guide": "Flitwick",
       "title": "Swish and Flick",
-      "available": true
+      "available": false
     },
     {
       "guide": "Hermione",
@@ -89,10 +89,20 @@
         "1DS15IS061",
         "1DS15IS062"
       ]
+    },
+    {
+      "title": "Swish and Flick",
+      "guide": "Flitwick",
+      "teamMembers": [
+        "1DS15IS063",
+        "1DS15IS064"
+      ]
     }
   ],
   "registeredUSNs": [
     "1DS15IS061",
-    "1DS15IS062"
+    "1DS15IS062",
+    "1DS15IS063",
+    "1DS15IS064"
   ]
 }
