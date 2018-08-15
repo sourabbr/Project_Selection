@@ -27,10 +27,11 @@ $(function() {
       $team.focus();
       return;
     }
-    var teamMembers = $team.val().split('\n');
+    var teamMembers = $team.val().trim().split('\n');
     for(var i=0;i<teamMembers.length;i++){
       if(!validateUSN(teamMembers[i])){
-        alert("Please Enter Valid USNs only, one in each line, no other text");
+        alert("Please Enter Valid USNs only, one in each line, no other text or commas");
+        $team.focus();
         return;
       }
       else{

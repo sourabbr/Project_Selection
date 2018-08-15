@@ -28,7 +28,7 @@
     {
       "guide": "Snape",
       "title": "Killing Dumbledore 101",
-      "available": true
+      "available": false
     },
     {
       "guide": "Snape",
@@ -49,8 +49,40 @@
       "guide": "Hagrid",
       "title": "How to raise a dragon",
       "available": true
+    },
+    {
+      "guide": "Hagrid",
+      "title": "How to feed flobberworms",
+      "available": true
+    },
+    {
+      "guide": "Hagrid",
+      "title": "How to handle hippogryphs",
+      "available": true
+    },
+    {
+      "guide": "Flitwick",
+      "title": "How to deal with people making fun of your height",
+      "available": true
+    },
+    {
+      "guide": "Flitwick",
+      "title": "Swish and Flick",
+      "available": true
     }
   ],
-  "registrations": [],
-  "registeredUSNs": []
+  "registrations": [
+    {
+      "title": "Killing Dumbledore 101",
+      "guide": "Snape",
+      "teamMembers": [
+        "1DS15IS061",
+        "1DS15IS062"
+      ]
+    }
+  ],
+  "registeredUSNs": [
+    "1DS15IS061",
+    "1DS15IS062"
+  ]
 }
