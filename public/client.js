@@ -9,7 +9,13 @@ function validateUSN(usn){
   return pattern.test(usn);
 }
 function displayAlert(type,message){
-  $(`#display-alert-${type}`).text(message).show();
+  $(`<div class="alert alert-${type} alert-dismissible fade show" style="display:none">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      ${message}
+    </div>
+  `)
+  .appendTo("#alerts")
+  .slideDown();
 }
 
 $(function() {
