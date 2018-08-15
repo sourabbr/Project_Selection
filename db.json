@@ -7,7 +7,7 @@
     },
     {
       "guide": "Snape",
-      "title": "Potions\nDark Arts",
+      "title": "Potions",
       "available": false
     },
     {
@@ -23,7 +23,7 @@
   ],
   "registrations": [
     {
-      "title": "Potions\nDark Arts",
+      "title": "Potions",
       "guide": "Snape",
       "teamMembers": [
         "1DS15IS001",

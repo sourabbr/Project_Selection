@@ -4,27 +4,28 @@ const path = require("path");
 
 const export_xlsx = (response,db) => {
   
-  let registrations=db.getState().registrations;
+  let registrations=db.get('registrations');
   let file = new xlsx.File();
   let sheet = file.addSheet('Sheet1');
   
   
-  for(let registration in registrations){
-    console.log(
+  for(let registration of registrations){
+    // console.log(registration);
     let row = sheet.addRow();
-    let cell1 = row.addCell();
-    cell1.value=registration.title;
-    let cell2 = row.addCell();
-    cell2.value=registration.guide;
+    // let cell1 = row.addCell();
+    // cell1.value=registration.title;
+    // let cell2 = row.addCell();
+    // cell2.value=registration.guide;
     // let cell3 = row.addCell();
     // cell3.value=registration.teamMembers.join(',');
-    // for (let item in registration){
-    //   let cell = row.addCell();
-    //   if(typeof item ===Array)
-    //     cell.value = registration.item.join("\n");
-    //   else
-    //     cell.value = registration.item;
-    // }
+    for (let item in registration){
+      console.log(item);
+      let cell = row.addCell();
+      if(typeof registration.item === "object")
+        cell.value = registration.item.join("\n");
+      else
+        cell.value = registration.item;
+    }
   }
     
  
