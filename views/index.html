@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Project Selection</title>
     <meta name="description" content="Select your project">
-    <link id="favicon" rel="icon" href="https://cdn.glitch.com/c2f40f93-8c0e-4ea1-ab79-d03ffc9797cf%2Fsign-check-icon.png?1534096697428" type="image/x-icon">
+    <link id="favicon" rel="icon"
+          href="https://cdn.glitch.com/c2f40f93-8c0e-4ea1-ab79-d03ffc9797cf%2Fsign-check-icon.png?1534096697428"
+          type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  </head>
-  <body>
-    <br><br>
-    <div class="container">
-      <label>Select your project from the Available Projects list</label>
-      <form action="">
-          <div class="row">
+</head>
+<body>
+<br><br>
+<div class="container">
+    <label>Select your project from the Available Projects list</label>
+    <form action="">
+        <div class="row">
             <div class="col-md jumbotron m-4 pt-3 pb-3">
-              <b>Available Projects</b>
-              <div id="projectSelectionForm">
+                <b>Available Projects</b>
+                <div id="projectSelectionForm">
+                    <hr>
+                    <img style="display:block; margin-left:auto; margin-right:auto; height:15em"
+                         src="https://cdn.glitch.com/c2f40f93-8c0e-4ea1-ab79-d03ffc9797cf%2Findex.triple-gears-loading-icon.svg?1534345143690">
+                </div>
+            </div>
+            <div class="col-md jumbotron m-4 pt-3 pb-3">
+                <b>Taken Projects</b>
                 <hr>
-                <img style="display:block; margin-left:auto; margin-right:auto; height:15em" 
-                     src="https://cdn.glitch.com/c2f40f93-8c0e-4ea1-ab79-d03ffc9797cf%2Findex.triple-gears-loading-icon.svg?1534345143690">
-              </div>
+                <div>
+                    <ul id="takenProjectsList">
+                        <img style="display:block; margin-left:auto; margin-right:auto; height:15em"
+                             src="https://cdn.glitch.com/c2f40f93-8c0e-4ea1-ab79-d03ffc9797cf%2Findex.dual-gear-loading-icon.svg?1534345144958">
+                    </ul>
+                </div>
             </div>
-            <div class="col-md jumbotron m-4 pt-3 pb-3">
-              <b>Taken Projects</b>
-              <hr>
-              <div>
-                <ul id="takenProjectsList">
-                  <img style="display:block; margin-left:auto; margin-right:auto; height:15em" 
-                     src="https://cdn.glitch.com/c2f40f93-8c0e-4ea1-ab79-d03ffc9797cf%2Findex.dual-gear-loading-icon.svg?1534345144958">
-                </ul>
-              </div>
-            </div>
-          </div>
-        
-          <div id="alerts"></div>
-          
-          <div class="form-group">
+        </div>
+
+        <div id="alerts"></div>
+
+        <div class="form-group">
             <label for="team-members">Enter Team Members' USNs <b>(one in each line)</b></label>
             <textarea class="form-control" rows="4" id="team-members"></textarea>
-          </div>
-          <input type="submit" class="btn btn-success form-control">
-      </form>
-      <br>
-    </div>
-   
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/client.js"></script>
-  </body>
+        </div>
+        <input type="submit" class="btn btn-success form-control">
+    </form>
+    <br>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/client.js"></script>
+</body>
 </html>

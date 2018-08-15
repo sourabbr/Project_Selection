@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Project Submission</title>
     <meta name="description" content="Submit your projects">
-    <link id="favicon" rel="icon" href="https://cdn.glitch.com/c2f40f93-8c0e-4ea1-ab79-d03ffc9797cf%2Fsign-check-icon.png?1534096697428" type="image/x-icon">
+    <link id="favicon" rel="icon"
+          href="https://cdn.glitch.com/c2f40f93-8c0e-4ea1-ab79-d03ffc9797cf%2Fsign-check-icon.png?1534096697428"
+          type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  </head>
-  <body>
-    <br><br>
-    <div class="container">
-      
-      <label>Enter a new project</label>
-        <form role="form">
-          <div class="jumbotron p-3">
-            <div class="form-group">
-              <input type="text" class="form-control" name="Guide" autocomplete="off" id="Guide" placeholder="Guide Name">
-            </div>
-            <div class="form-group">
-              <textarea class="form-control textarea" rows="3" name="Title" id="Title" placeholder="Project Title"></textarea>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-success">Add Project</button>
-        </form>
+</head>
+<body>
+<br><br>
+<div class="container">
 
-      <ul id="list"></ul>
-      </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/client-admin.js"></script>
-  </body>
+    <label>Enter a new project</label>
+    <form role="form">
+        <div class="jumbotron p-3">
+            <div class="form-group">
+                <input type="text" class="form-control" name="Guide" autocomplete="off" id="Guide"
+                       placeholder="Guide Name">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control textarea" rows="3" name="Title" id="Title"
+                          placeholder="Project Title"></textarea>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Add Project</button>
+    </form>
+
+    <ul id="list"></ul>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/client-admin.js"></script>
+</body>
 </html>
