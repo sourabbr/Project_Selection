@@ -23,7 +23,7 @@
     {
       "guide": "Snape",
       "title": "Defence Against The Dark Arts",
-      "available": true
+      "available": false
     },
     {
       "guide": "Snape",
@@ -104,6 +104,14 @@
       "teamMembers": [
         "1DS15IS065"
       ]
+    },
+    {
+      "title": "Defence Against The Dark Arts",
+      "guide": "Snape",
+      "teamMembers": [
+        "1DS16IS003",
+        "1DS16IS004"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -111,6 +119,8 @@
     "1DS15IS062",
     "1DS15IS063",
     "1DS15IS064",
-    "1DS15IS065"
+    "1DS15IS065",
+    "1DS16IS003",
+    "1DS16IS004"
   ]
 }
