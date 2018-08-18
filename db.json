@@ -33,12 +33,12 @@
     {
       "guide": "Snape",
       "title": "How to betray the most evil Wizard of all time while keeping a straight face",
-      "available": true
+      "available": false
     },
     {
       "guide": "Minerva",
       "title": "How to bring statues to life",
-      "available": true
+      "available": false
     },
     {
       "guide": "Minerva",
@@ -73,7 +73,7 @@
     {
       "guide": "Hermione",
       "title": "It's Levi-oh-sah, not Levio-sah",
-      "available": true
+      "available": false
     },
     {
       "guide": "Hermione",
@@ -112,6 +112,28 @@
         "1DS16IS003",
         "1DS16IS004"
       ]
+    },
+    {
+      "title": "How to bring statues to life",
+      "guide": "Minerva",
+      "teamMembers": [
+        "1DS15IS033",
+        "1DS15IS044"
+      ]
+    },
+    {
+      "title": "It's Levi-oh-sah, not Levio-sah",
+      "guide": "Hermione",
+      "teamMembers": [
+        "1DS16IS444"
+      ]
+    },
+    {
+      "title": "How to betray the most evil Wizard of all time while keeping a straight face",
+      "guide": "Snape",
+      "teamMembers": [
+        "1DS16IS033"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -121,6 +143,10 @@
     "1DS15IS064",
     "1DS15IS065",
     "1DS16IS003",
-    "1DS16IS004"
+    "1DS16IS004",
+    "1DS15IS033",
+    "1DS15IS044",
+    "1DS16IS444",
+    "1DS16IS033"
   ]
 }
