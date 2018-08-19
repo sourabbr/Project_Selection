@@ -18,7 +18,7 @@ $(function () {
         const project = {
             guide: $guide.val().trim(),
             title: $title.val().trim(),
-            available: true
+            available: 1
         };
 
         console.log(project);

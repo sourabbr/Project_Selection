@@ -36,6 +36,7 @@ let socketcontroller = (io, db) => {
         });
 
         socket.on('registerProject', project => {
+          
             let usnList = db.get("registeredUSNs").value();
             for (let usn of project.teamMembers) {
                 if (usnList.includes(usn)) {
@@ -46,7 +47,7 @@ let socketcontroller = (io, db) => {
 
 
             db.get("registrations")
-                .insertIfNotExists(project)
+                .insertIfNotExists({...project,IP:headers['x-forwarded-for']})
                 .write()
                 .then(err => {
                     if (err) {
@@ -55,7 +56,7 @@ let socketcontroller = (io, db) => {
                     }
                     db.get("projects")
                         .find({title: project.title})
-                        .assign({available: false})
+                        .assign({available: 0})
                         .write()
                         .then(() => {
                             db.get("registeredUSNs")
