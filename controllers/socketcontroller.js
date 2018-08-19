@@ -70,7 +70,11 @@ let socketcontroller = (io, db) => {
                                   guide.registeredCount++;
                                   if (guide.registeredCount == MAX_REGISTRATION_COUNT){
                                     db.get("projects")
-                                      .each(proj=>proj.available=false)
+                                      .filter({guide:guide.name})
+                                      .each(proj=>{
+                                        proj.available=0;
+                                        io.emit('removeProject',proj);
+                                      })
                                       .write()                                  
                                       .then(()=>console.log(guide.name+" done"))
                                       .catch(err=>console.error(err));

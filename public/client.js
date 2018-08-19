@@ -141,6 +141,12 @@ $(function () {
             </li>
           `).appendTo('ul#takenProjectsList').show(500);
     });
+  
+    socket.on('removeProject', function (project) {
+        $(`#${project.title.split(' ').join('-')}`).hide(500, function () {
+            $(this).remove();
+        });
+    });
 
     socket.on('displayAlert', function (message, type) {
         displayAlert(message, type);
