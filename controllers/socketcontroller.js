@@ -1,3 +1,4 @@
+const MAX_REGISTRATION_COUNT = 2;
 let socketcontroller = (io, db) => {
 
     io.on('connection', socket => {
@@ -23,9 +24,15 @@ let socketcontroller = (io, db) => {
                 .then(() => {
                     io.emit('addProject', project);
                 });
-            let guide=db.get('guides')
+            let guide = db.get('guides')
               .find({name:project.guide})
-              .value()
+              .value();
+            if(guide===undefined){
+              db.get("guides")
+                .push({name:project.guide,registeredCount:0})
+                .write();
+            }
+            
         });
 
         socket.on('registerProject', project => {
@@ -57,6 +64,13 @@ let socketcontroller = (io, db) => {
                                 .then(() => {
                                     io.emit('takenProject', project);
                                     io.to(`${socket.id}`).emit('successfullyRegistered');
+                                    let guide = db.get('guides')
+                                      .find({name:project.guide})
+                                      .value();
+                                    guide.registeredCount++;
+                                    if (guide.registeredCount == MAX_REGISTRATION_COUNT){
+                                      
+                                    }
                                 })
                                 .catch(err => {
                                     console.error(err);
