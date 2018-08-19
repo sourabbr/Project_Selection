@@ -8,22 +8,22 @@ const export_xlsx = (response, db) => {
     let file = new xlsx.File();
     let sheet = file.addSheet('Sheet1');
 
-    let header = sheet.addRow();
-    for (let item in registrations[0]) {
+    let header = sheet.addRow(); //headers for the columns
+    for (let column of ['Project Title','Guide','USN1','USN2','USN3','USN4']) {
         let heading = header.addCell();
-        heading.value = item;
+        heading.value = column;
     }
 
     for (let registration of registrations) {
         let row = sheet.addRow();
         for (let item in registration) {
-            if (typeof registration[item] === "object"){
+            if (typeof registration[item] === "object"){ //if it is a list
               for (let USN of registration[item]){
                 let cell = row.addCell();
                 cell.value = USN;
               }
             }
-            else{
+            else{  //if it is a string
               let cell = row.addCell();
               cell.value = registration[item];
             }

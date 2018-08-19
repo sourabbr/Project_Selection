@@ -88,12 +88,12 @@ $(function () {
         $('#projectSelectionForm').html('');
         $('#takenProjectsList').html('');
         var project,guide;
-        for (guide of getUnique(state.projects, 'guide')) {
-            $(`<hr><h6 style="display: none;">Guide: ${guide}</h6>
-         <fieldset value="${guide}" class="${guide.split(' ').join('-')}"></fieldset>
-        `)
-                .appendTo('#projectSelectionForm').show(500);
-        }
+        // for (guide of getUnique(state.projects, 'guide')) {
+        //     $(`<hr><h6 style="display: none;">Guide: ${guide}</h6>
+        //  <fieldset value="${guide}" class="${guide.split(' ').join('-')}"></fieldset>
+        // `)
+        //         .appendTo('#projectSelectionForm').show(500);
+        // }
         for (project of state.projects) {
             if (project.available) {
                 $(`<div style="display: none;" class="radio" id="${project.title.split(' ').join('-')}">
@@ -104,13 +104,10 @@ $(function () {
             }
         }
         for (project of state.registrations) {
-            $(` <li style="display: none;">${project.title}
-          <ul>
-            <li>Guide: ${project.guide}</li>
-            <li>Team: ${project.teamMembers.join(', ')}</li>
-          </ul>
-        </li>
-    `).appendTo('ul#takenProjectsList').show(500);
+          $(` <li style="display: none;">${project.title}
+               Team: ${project.teamMembers.join(', ')}
+            </li>
+          `).appendTo('ul#takenProjectsList').show(500);
         }
 
 
