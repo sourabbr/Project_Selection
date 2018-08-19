@@ -70,9 +70,8 @@ let socketcontroller = (io, db) => {
                                   guide.registeredCount++;
                                   if (guide.registeredCount == MAX_REGISTRATION_COUNT){
                                     db.get("projects")
-                                      .find({guide:guide.name})
-                                      .assign({available:false})
-                                      .write()
+                                      .each(proj=>proj.available=false)
+                                      .write()                                  
                                       .then(()=>console.log(guide.name+" done"))
                                       .catch(err=>console.error(err));
                                   }

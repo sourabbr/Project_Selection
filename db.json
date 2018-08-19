@@ -3,37 +3,37 @@
     {
       "guide": "B",
       "title": "p1",
-      "available": false
+      "available": 0
     },
     {
       "guide": "B",
       "title": "p2",
-      "available": false
+      "available": 0
     },
     {
       "guide": "B",
       "title": "p3",
-      "available": true
+      "available": 0
     },
     {
       "guide": "B",
       "title": "p4",
-      "available": true
+      "available": 0
     },
     {
-      "guide": "A",
+      "guide": "B",
       "title": "p5",
-      "available": true
+      "available": 0
     },
     {
-      "guide": "A",
+      "guide": "B",
       "title": "p6",
-      "available": true
+      "available": 0
     },
     {
-      "guide": "A",
+      "guide": "B",
       "title": "p7",
-      "available": true
+      "available": 0
     }
   ],
   "registrations": [
