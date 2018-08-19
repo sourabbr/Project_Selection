@@ -1,167 +1,65 @@
 {
   "projects": [
     {
-      "guide": "Minerva",
-      "title": "Transfiguration",
+      "guide": "A",
+      "title": "p1",
       "available": false
     },
     {
-      "guide": "Snape",
-      "title": "Potions",
+      "guide": "A",
+      "title": "p2",
       "available": true
     },
     {
-      "guide": "Hagrid",
-      "title": "Care of Magical Creatures",
+      "guide": "A",
+      "title": "p3",
       "available": true
     },
     {
-      "guide": "Flitwick",
-      "title": "Charms",
-      "available": false
-    },
-    {
-      "guide": "Snape",
-      "title": "Defence Against The Dark Arts",
-      "available": false
-    },
-    {
-      "guide": "Snape",
-      "title": "Killing Dumbledore 101",
-      "available": false
-    },
-    {
-      "guide": "Snape",
-      "title": "How to betray the most evil Wizard of all time while keeping a straight face",
-      "available": false
-    },
-    {
-      "guide": "Minerva",
-      "title": "How to bring statues to life",
-      "available": false
-    },
-    {
-      "guide": "Minerva",
-      "title": "How to deal with Umbridge 101",
+      "guide": "A",
+      "title": "p4",
       "available": true
     },
     {
-      "guide": "Hagrid",
-      "title": "How to raise a dragon",
+      "guide": "B",
+      "title": "p5",
       "available": true
     },
     {
-      "guide": "Hagrid",
-      "title": "How to feed flobberworms",
+      "guide": "B",
+      "title": "p6",
       "available": true
     },
     {
-      "guide": "Hagrid",
-      "title": "How to handle hippogryphs",
-      "available": true
-    },
-    {
-      "guide": "Flitwick",
-      "title": "How to deal with people making fun of your height",
-      "available": true
-    },
-    {
-      "guide": "Flitwick",
-      "title": "Swish and Flick",
-      "available": false
-    },
-    {
-      "guide": "Hermione",
-      "title": "It's Levi-oh-sah, not Levio-sah",
-      "available": false
-    },
-    {
-      "guide": "Hermione",
-      "title": "How not to die (or worse, be expelled)",
+      "guide": "B",
+      "title": "p7",
       "available": true
     }
   ],
   "registrations": [
     {
-      "title": "Killing Dumbledore 101",
-      "guide": "Snape",
+      "title": "p1",
+      "guide": "A",
       "teamMembers": [
-        "1DS15IS061",
-        "1DS15IS062"
-      ]
-    },
-    {
-      "title": "Swish and Flick",
-      "guide": "Flitwick",
-      "teamMembers": [
-        "1DS15IS063",
-        "1DS15IS064"
-      ]
-    },
-    {
-      "title": "Transfiguration",
-      "guide": "Minerva",
-      "teamMembers": [
-        "1DS15IS065"
-      ]
-    },
-    {
-      "title": "Defence Against The Dark Arts",
-      "guide": "Snape",
-      "teamMembers": [
-        "1DS16IS003",
-        "1DS16IS004"
-      ]
-    },
-    {
-      "title": "How to bring statues to life",
-      "guide": "Minerva",
-      "teamMembers": [
-        "1DS15IS033",
-        "1DS15IS044"
-      ]
-    },
-    {
-      "title": "It's Levi-oh-sah, not Levio-sah",
-      "guide": "Hermione",
-      "teamMembers": [
-        "1DS16IS444"
-      ]
-    },
-    {
-      "title": "How to betray the most evil Wizard of all time while keeping a straight face",
-      "guide": "Snape",
-      "teamMembers": [
-        "1DS16IS033"
-      ]
-    },
-    {
-      "title": "Charms",
-      "guide": "Flitwick",
-      "teamMembers": [
-        "1DS15IS071",
-        "1DS15IS072",
-        "1DS15IS073",
-        "1DS15IS074"
+        "1DS15IS001",
+        "1DS15IS002",
+        "1DS15IS002"
       ]
     }
   ],
   "registeredUSNs": [
-    "1DS15IS061",
-    "1DS15IS062",
-    "1DS15IS063",
-    "1DS15IS064",
-    "1DS15IS065",
-    "1DS16IS003",
-    "1DS16IS004",
-    "1DS15IS033",
-    "1DS15IS044",
-    "1DS16IS444",
-    "1DS16IS033",
-    "1DS15IS071",
-    "1DS15IS072",
-    "1DS15IS073",
-    "1DS15IS074"
+    "1DS15IS001",
+    "1DS15IS002",
+    "1DS15IS002"
   ],
-  "guides": []
+  "guides": [
+    {
+      "name": "A",
+      "registeredCount": 0
+    },
+    {
+      "name": "B",
+      "registeredCount": 0
+    }
+  ]
 }

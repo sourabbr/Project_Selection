@@ -59,30 +59,28 @@ let socketcontroller = (io, db) => {
                         .write()
                         .then(() => {
                             db.get("registeredUSNs")
-                                .push(...project.teamMembers)
-                                .write()
-                                .then(() => {
-                                    io.emit('takenProject', project);
-                                    io.to(`${socket.id}`).emit('successfullyRegistered');
-                                    let guide = db.get('guides')
-                                      .find({name:project.guide})
-                                      .value();
-                                    guide.registeredCount++;
-                                    if (guide.registeredCount == MAX_REGISTRATION_COUNT){
-                                      
-                                    }
-                                })
-                                .catch(err => {
-                                    console.error(err);
-                                });
+                              .push(...project.teamMembers)
+                              .write()
+                              .then(() => {
+                                  io.emit('takenProject', project);
+                                  io.to(`${socket.id}`).emit('successfullyRegistered');
+                                  let guide = db.get('guides')
+                                    .find({name:project.guide})
+                                    .value();
+                                  guide.registeredCount++;
+                                  if (guide.registeredCount == MAX_REGISTRATION_COUNT){
+                                    db.get("projects")
+                                      .find({guide:guide.name})
+                                      .assign({available:false})
+                                      .write()
+                                      .catch(err=>console.error(err));
+                                  }
+                              })
+                              .catch(err=>console.error(err));
                         })
-                        .catch(err => {
-                            console.error(err);
-                        });
+                        .catch(err=>console.error(err));
                 })
-                .catch(err => {
-                    console.error(err);
-                });
+                .catch(err=>console.error(err));
         });
 
         socket.on('disconnect', () => {
