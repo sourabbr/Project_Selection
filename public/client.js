@@ -1,3 +1,6 @@
+const MIN_TEAM_MEMBERS = 3
+const MAX_TEAM_MEMBERS = 4
+
 $.fn.scrollTo = function (speed) {
     if (typeof(speed) === 'undefined')
         speed = 1000;
@@ -59,6 +62,12 @@ $(function () {
             else {
                 teamMembers[i] = teamMembers[i].toUpperCase();
             }
+        }
+        if (teamMembers.length < MIN_TEAM_MEMBERS || teamMembers.length > MAX_TEAM_MEMBERS)
+        {
+          displayAlert(`Your team must have minimum ${MIN_TEAM_MEMBERS} and maximum ${MAX_TEAM_MEMBERS} members`, 'warning');
+          $team.focus();
+          return;
         }
         // if(confirm("I confirm that I have verified my details and understand that my choice is finalized")===false)
         //   return;
