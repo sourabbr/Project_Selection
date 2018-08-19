@@ -1,5 +1,6 @@
-const MIN_TEAM_MEMBERS = 3
-const MAX_TEAM_MEMBERS = 4
+const MIN_TEAM_MEMBERS = 3;
+const MAX_TEAM_MEMBERS = 4;
+var REGISTRATION_COMPLETE = false;
 
 $.fn.scrollTo = function (speed) {
     if (typeof(speed) === 'undefined')
@@ -78,6 +79,7 @@ $(function () {
         $('input').hide(500, function () {
             $(this).remove();
             $('textarea').attr('disabled', 'disabled');
+            REGISTRATION_COMPLETE = true;
         });
         setTimeout(function () {
             displayAlert("Successfully Registered Project", 'success');
@@ -88,12 +90,14 @@ $(function () {
         $('#projectSelectionForm').html('');
         $('#takenProjectsList').html('');
         var project,guide;
+      
         for (guide of getUnique(state.projects, 'guide')) {
             // $(`<hr><h6 style="display: none;">Guide: ${guide}</h6>
          $(`<fieldset value="${guide}" class="${guide.split(' ').join('-')}"></fieldset>
           `)
                 .appendTo('#projectSelectionForm').show(500);
         }
+      
         for (project of state.projects) {
             if (project.available) {
                 $(`<div style="display: none;" class="radio" id="${project.title.split(' ').join('-')}">
@@ -103,13 +107,19 @@ $(function () {
                     .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
             }
         }
+      
+        if (REGISTRATION_COMPLETE){
+          $('input').remove();
+          $('textarea').attr('disabled', 'disabled');
+        }
+      
         for (project of state.registrations) {
           $(` <li style="display: none;">${project.title}
             <br>Team: ${project.teamMembers.join(', ')}
             </li>
           `).appendTo('ul#takenProjectsList').show(500);
         }
-
+        
 
     });
 
