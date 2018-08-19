@@ -3,22 +3,22 @@
     {
       "guide": "A",
       "title": "p1",
-      "available": false
+      "available": 0
     },
     {
       "guide": "A",
       "title": "p2",
-      "available": true
+      "available": 0
     },
     {
       "guide": "A",
       "title": "p3",
-      "available": true
+      "available": 0
     },
     {
       "guide": "A",
       "title": "p4",
-      "available": true
+      "available": 0
     },
     {
       "guide": "B",
@@ -65,17 +65,29 @@
         "1DS15IS001",
         "1DS15IS001"
       ]
+    },
+    {
+      "title": "p4",
+      "guide": "A",
+      "teamMembers": [
+        "1DS15IS002",
+        "1DS15IS002",
+        "1DS15IS002"
+      ]
     }
   ],
   "registeredUSNs": [
     "1DS15IS001",
     "1DS15IS001",
-    "1DS15IS001"
+    "1DS15IS001",
+    "1DS15IS002",
+    "1DS15IS002",
+    "1DS15IS002"
   ],
   "guides": [
     {
       "name": "A",
-      "registeredCount": 0
+      "registeredCount": 2
     },
     {
       "name": "B",

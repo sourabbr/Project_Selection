@@ -55,6 +55,8 @@ $(function () {
             return;
         }
         var teamMembers = $team.val().trim().split('\n');
+        var teamMemberSet=new Set(teamMembers);
+        teamMembers=[...teamMemberSet];
         for (var i = 0; i < teamMembers.length; i++) {
             if (!validateUSN(teamMembers[i])) {
                 displayAlert("Please Enter Valid USNs only, one in each line, no other text or commas", 'warning');
