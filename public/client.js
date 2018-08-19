@@ -19,7 +19,8 @@ function getUnique(array, key) {
 }
 
 function validateUSN(usn) {
-    var pattern = /\d\w\w\d\d\w\w\d\d\d/i;
+    // var pattern = /\d\w\w\d\d\w\w\d\d\d/i;
+    var pattern = /1DS(15|16)IS\d\d\d/i;          //for ISE final year students
     return pattern.test(usn);
 }
 
@@ -115,7 +116,7 @@ $(function () {
       
         for (project of state.registrations) {
           $(` <li style="display: none;">${project.title}
-            <br>Team: ${project.teamMembers.join(', ')}
+            <br><small>Team: ${project.teamMembers.join(', ')}</small>
             </li>
           `).appendTo('ul#takenProjectsList').show(500);
         }
@@ -136,7 +137,7 @@ $(function () {
             $(this).remove();
         });
         $(` <li style="display: none;">${project.title}
-            <br>Team: ${project.teamMembers.join(', ')}
+            <br><small>Team: ${project.teamMembers.join(', ')}</small>
             </li>
           `).appendTo('ul#takenProjectsList').show(500);
     });

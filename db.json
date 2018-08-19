@@ -18,7 +18,7 @@
     {
       "guide": "Flitwick",
       "title": "Charms",
-      "available": true
+      "available": false
     },
     {
       "guide": "Snape",
@@ -134,6 +134,16 @@
       "teamMembers": [
         "1DS16IS033"
       ]
+    },
+    {
+      "title": "Charms",
+      "guide": "Flitwick",
+      "teamMembers": [
+        "1DS15IS071",
+        "1DS15IS072",
+        "1DS15IS073",
+        "1DS15IS074"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -147,6 +157,10 @@
     "1DS15IS033",
     "1DS15IS044",
     "1DS16IS444",
-    "1DS16IS033"
+    "1DS16IS033",
+    "1DS15IS071",
+    "1DS15IS072",
+    "1DS15IS073",
+    "1DS15IS074"
   ]
 }
