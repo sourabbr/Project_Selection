@@ -46,7 +46,7 @@ $(function () {
             displayAlert("Please Select a Project");
             return;
         }
-        var guide = $selectedProject.parent().parent().parent().attr('value');
+        // var guide = $selectedProject.parent().parent().parent().attr('value');
         var $team = $('textarea#team-members');
         if ($team.val().trim().length === 0) {
             $team.focus();
@@ -71,7 +71,8 @@ $(function () {
         }
         // if(confirm("I confirm that I have verified my details and understand that my choice is finalized")===false)
         //   return;
-        socket.emit('registerProject', {title, guide, teamMembers});
+        // socket.emit('registerProject', {title, guide, teamMembers});
+        socket.emit('registerProject', {title, teamMembers});
     });
 
     socket.on('successfullyRegistered', function () {
@@ -94,19 +95,36 @@ $(function () {
         // `)
         //         .appendTo('#projectSelectionForm').show(500);
         // }
+        // for (project of state.projects) {
+        //     if (project.available) {
+        //         $(`<div style="display: none;" class="radio" id="${project.title.split(' ').join('-')}">
+        //      <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
+        //    </div>
+        //   `)
+        //             .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
+        //     }
+        // }
+    //     for (project of state.registrations) {
+    //         $(` <li style="display: none;">${project.title}
+    //       <ul>
+    //         <li>Guide: ${project.guide}</li>
+    //         <li>Team: ${project.teamMembers.join(', ')}</li>
+    //       </ul>
+    //     </li>
+    // `).appendTo('ul#takenProjectsList').show(500);
+    //     }
         for (project of state.projects) {
-            if (project.available) {
-                $(`<div style="display: none;" class="radio" id="${project.title.split(' ').join('-')}">
-             <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
-           </div>
-          `)
-                    .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
-            }
+          if (project.available) {
+              $(`<div style="display: none;" class="radio" id="${project.title.split(' ').join('-')}">
+                 <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
+               </div>
+              `).appendTo('#projectSelectionForm').show(500);
+          }
         }
-        for (project of state.registrations) {
-          $(` <li style="display: none;">${project.title}
-               Team: ${project.teamMembers.join(', ')}
-            </li>
+       for (project of state.registrations) {
+          $(` <li style="display: none;">${project.title}<br>
+                Team: ${project.teamMembers.join(', ')}
+              </li> 
           `).appendTo('ul#takenProjectsList').show(500);
         }
 
@@ -114,24 +132,32 @@ $(function () {
     });
 
     socket.on('addProject', function (project) {
-        $(`<div class="radio" id="${project.title.split(' ').join('-')}">
-         <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
-         </div>
-        `)
-            .appendTo(`fieldset.${project.guide.split(' ').join('-')}`);
+        // $(`<div class="radio" id="${project.title.split(' ').join('-')}">
+        //  <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
+        //  </div>
+        // `)
+        //     .appendTo(`fieldset.${project.guide.split(' ').join('-')}`);
+         $(`<div style="display: none;" class="radio" id="${project.title.split(' ').join('-')}">
+                 <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
+               </div>
+          `).appendTo('#projectSelectionForm').show(500);
     });
 
     socket.on('takenProject', function (project) {
         $(`#${project.title.split(' ').join('-')}`).hide(500, function () {
             $(this).remove();
         });
-        $(` <li style="display: none;">${project.title}
-          <ul>
-            <li>Guide: ${project.guide}</li>
-            <li>Team: ${project.teamMembers.join(', ')}</li>
-          </ul>
-        </li>
-    `).appendTo('ul#takenProjectsList').show(500);
+    //     $(` <li style="display: none;">${project.title}
+    //       <ul>
+    //         <li>Guide: ${project.guide}</li>
+    //         <li>Team: ${project.teamMembers.join(', ')}</li>
+    //       </ul>
+    //     </li>
+    // `).appendTo('ul#takenProjectsList').show(500);
+        $(` <li style="display: none;">${project.title}<br>
+                  Team: ${project.teamMembers.join(', ')}
+                </li> 
+            `).appendTo('ul#takenProjectsList').show(500);
     });
 
     socket.on('displayAlert', function (message, type) {
