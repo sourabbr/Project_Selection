@@ -1,137 +1,55 @@
 {
   "projects": [
     {
-      "guide": "A",
-      "title": "p1",
-      "available": 0
-    },
-    {
-      "guide": "A",
-      "title": "p2",
-      "available": 0
-    },
-    {
-      "guide": "A",
-      "title": "p3",
-      "available": 0
-    },
-    {
-      "guide": "A",
-      "title": "p4",
-      "available": 0
-    },
-    {
-      "guide": "B",
-      "title": "p5",
-      "available": 0
-    },
-    {
-      "guide": "B",
-      "title": "p6",
-      "available": 0
-    },
-    {
-      "guide": "B",
-      "title": "p7",
-      "available": 0
-    },
-    {
-      "guide": "B",
-      "title": "p8",
-      "available": 0
-    },
-    {
-      "guide": "C",
-      "title": "p9",
-      "available": 0
-    },
-    {
-      "guide": "C",
-      "title": "p10",
+      "guide": "Guide1",
+      "title": "Project1",
       "available": true
     },
     {
-      "guide": "C",
-      "title": "p11",
+      "guide": "Guide1",
+      "title": "Project2",
+      "available": true
+    },
+    {
+      "guide": "Guide1",
+      "title": "Project3",
+      "available": true
+    },
+    {
+      "guide": "Guide1",
+      "title": "Project4",
+      "available": true
+    },
+    {
+      "guide": "Guide1",
+      "title": "Project5",
+      "available": true
+    },
+    {
+      "guide": "Guide2",
+      "title": "Project6",
+      "available": true
+    },
+    {
+      "guide": "Guide2",
+      "title": "Project7",
+      "available": true
+    },
+    {
+      "guide": "Guide2",
+      "title": "Project8",
       "available": true
     }
   ],
-  "registrations": [
-    {
-      "title": "p1",
-      "guide": "A",
-      "teamMembers": [
-        "1DS15IS001",
-        "1DS15IS001",
-        "1DS15IS001"
-      ]
-    },
-    {
-      "title": "p4",
-      "guide": "A",
-      "teamMembers": [
-        "1DS15IS002",
-        "1DS15IS002",
-        "1DS15IS002"
-      ]
-    },
-    {
-      "title": "p6",
-      "guide": "B",
-      "teamMembers": [
-        "1DS15IS003",
-        "1DS15IS004",
-        "1DS15IS005"
-      ]
-    },
-    {
-      "title": "p7",
-      "guide": "B",
-      "teamMembers": [
-        "1DS15IS006",
-        "1DS15IS007",
-        "1DS15IS008"
-      ]
-    },
-    {
-      "title": "p9",
-      "guide": "C",
-      "teamMembers": [
-        "1DS15IS090",
-        "1DS15IS091",
-        "1DS15IS093"
-      ],
-      "IP": "49.206.11.139,::ffff:10.10.11.62,::ffff:10.10.10.105"
-    }
-  ],
-  "registeredUSNs": [
-    "1DS15IS001",
-    "1DS15IS001",
-    "1DS15IS001",
-    "1DS15IS002",
-    "1DS15IS002",
-    "1DS15IS002",
-    "1DS15IS003",
-    "1DS15IS004",
-    "1DS15IS005",
-    "1DS15IS006",
-    "1DS15IS007",
-    "1DS15IS008",
-    "1DS15IS090",
-    "1DS15IS091",
-    "1DS15IS093"
-  ],
+  "registrations": [],
+  "registeredUSNs": [],
   "guides": [
     {
-      "name": "A",
-      "registeredCount": 2
+      "name": "Guide1",
+      "registeredCount": 0
     },
     {
-      "name": "B",
-      "registeredCount": 2
-    },
-    {
-      "name": "C",
+      "name": "Guide2",
       "registeredCount": 0
     }
   ]
