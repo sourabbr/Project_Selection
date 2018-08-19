@@ -1,37 +1,37 @@
 {
   "projects": [
     {
-      "guide": "A",
+      "guide": "B",
       "title": "p1",
       "available": false
     },
     {
-      "guide": "A",
+      "guide": "B",
       "title": "p2",
-      "available": true
+      "available": false
     },
     {
-      "guide": "A",
+      "guide": "B",
       "title": "p3",
       "available": true
     },
     {
-      "guide": "A",
+      "guide": "B",
       "title": "p4",
       "available": true
     },
     {
-      "guide": "B",
+      "guide": "A",
       "title": "p5",
       "available": true
     },
     {
-      "guide": "B",
+      "guide": "A",
       "title": "p6",
       "available": true
     },
     {
-      "guide": "B",
+      "guide": "A",
       "title": "p7",
       "available": true
     }
@@ -39,9 +39,19 @@
   "registrations": [
     {
       "title": "p1",
-      "guide": "A",
+      "guide": "B",
       "teamMembers": [
         "1DS15IS001",
+        "1DS15IS001",
+        "1DS15IS001"
+      ]
+    },
+    {
+      "title": "p2",
+      "guide": "B",
+      "teamMembers": [
+        "1DS15IS002",
+        "1DS15IS002",
         "1DS15IS002",
         "1DS15IS002"
       ]
@@ -49,16 +59,20 @@
   ],
   "registeredUSNs": [
     "1DS15IS001",
+    "1DS15IS001",
+    "1DS15IS001",
+    "1DS15IS002",
+    "1DS15IS002",
     "1DS15IS002",
     "1DS15IS002"
   ],
   "guides": [
     {
-      "name": "A",
-      "registeredCount": 0
+      "name": "B",
+      "registeredCount": 2
     },
     {
-      "name": "B",
+      "name": "A",
       "registeredCount": 0
     }
   ]

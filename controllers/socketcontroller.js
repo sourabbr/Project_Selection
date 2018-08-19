@@ -73,6 +73,7 @@ let socketcontroller = (io, db) => {
                                       .find({guide:guide.name})
                                       .assign({available:false})
                                       .write()
+                                      .then(()=>console.log(guide.name+" done"))
                                       .catch(err=>console.error(err));
                                   }
                               })
