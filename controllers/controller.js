@@ -36,7 +36,7 @@ const controller = function (app, io) {
             router(app);
             exportcontroller(app, db);
             return db
-                .defaults({projects: [], registrations: [], registeredUSNs: []})
+                .defaults({projects: [], registrations: [], registeredUSNs: [], 'guides':[]})
                 .write();
         })
         .catch(err => {

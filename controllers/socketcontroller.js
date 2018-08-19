@@ -23,6 +23,9 @@ let socketcontroller = (io, db) => {
                 .then(() => {
                     io.emit('addProject', project);
                 });
+            let guide=db.get('guides')
+              .find({name:project.guide})
+              .value()
         });
 
         socket.on('registerProject', project => {
