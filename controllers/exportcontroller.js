@@ -17,15 +17,15 @@ const export_xlsx = (response, db) => {
     for (let registration of registrations) {
         let row = sheet.addRow();
         for (let item in registration) {
-            if (typeof registration[item] === "object"){ //if it is a list
+            if (typeof registration[item] === "string"){  //if it is a string
+              let cell = row.addCell();
+              cell.value = registration[item];
+            }
+            else if (typeof registration[item] === "object"){ //if it is a list
               for (let USN of registration[item]){
                 let cell = row.addCell();
                 cell.value = USN;
               }
-            }
-            else{  //if it is a string
-              let cell = row.addCell();
-              cell.value = registration[item];
             }
         }
     }
