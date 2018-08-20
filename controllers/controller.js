@@ -3,6 +3,7 @@ const FileAsync = require("lowdb/adapters/FileAsync");
 const adapter = new FileAsync('db.json');
 const socketcontroller = require("./socketcontroller.js");
 const exportcontroller = require("./exportcontroller.js");
+const importcontroller = require("./importcontroller.js");
 const router = require("./router.js");
 const controller = function (app, io) {
     low(adapter)
@@ -31,10 +32,12 @@ const controller = function (app, io) {
                     collection.push(obj);
                 }
             });
-
-            socketcontroller(io, db);
-            router(app);
+      
+            socketcontroller(io, db);      
             exportcontroller(app, db);
+            importcontroller(app, db);
+            router(app);
+      
             return db
                 .defaults({projects: [], registrations: [], registeredUSNs: [], 'guides':[]})
                 .write();
