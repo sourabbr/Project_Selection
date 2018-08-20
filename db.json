@@ -3,27 +3,27 @@
     {
       "guide": "Guide1",
       "title": "Project1",
-      "available": true
+      "available": 0
     },
     {
       "guide": "Guide1",
       "title": "Project2",
-      "available": true
+      "available": 0
     },
     {
       "guide": "Guide1",
       "title": "Project3",
-      "available": true
+      "available": 0
     },
     {
       "guide": "Guide1",
       "title": "Project4",
-      "available": true
+      "available": 0
     },
     {
       "guide": "Guide1",
       "title": "Project5",
-      "available": true
+      "available": 0
     },
     {
       "guide": "Guide2",
@@ -41,12 +41,40 @@
       "available": true
     }
   ],
-  "registrations": [],
-  "registeredUSNs": [],
+  "registrations": [
+    {
+      "title": "Project1",
+      "guide": "Guide1",
+      "teamMembers": [
+        "1DS15IS001",
+        "1DS15IS002",
+        "1DS15IS003"
+      ],
+      "IP": "182.72.191.26,::ffff:10.10.10.149,::ffff:10.10.10.170"
+    },
+    {
+      "title": "Project4",
+      "guide": "Guide1",
+      "teamMembers": [
+        "1DS15IS004",
+        "1DS15IS005",
+        "1DS15IS006"
+      ],
+      "IP": "182.72.191.26,::ffff:10.10.10.149,::ffff:10.10.10.170"
+    }
+  ],
+  "registeredUSNs": [
+    "1DS15IS001",
+    "1DS15IS002",
+    "1DS15IS003",
+    "1DS15IS004",
+    "1DS15IS005",
+    "1DS15IS006"
+  ],
   "guides": [
     {
       "name": "Guide1",
-      "registeredCount": 0
+      "registeredCount": 2
     },
     {
       "name": "Guide2",
