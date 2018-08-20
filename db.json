@@ -3,22 +3,22 @@
     {
       "guide": "A",
       "title": "p1",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "A",
       "title": "p2",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "A",
       "title": "p3",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "A",
       "title": "p4",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "B",
@@ -41,42 +41,12 @@
       "available": 1
     }
   ],
-  "registrations": [
-    {
-      "Timestamp": "2018-08-20T04:37:59.249Z",
-      "IP": "182.72.191.26,::ffff:10.10.11.120,::ffff:10.10.10.105",
-      "title": "p1",
-      "guide": "A",
-      "teamMembers": [
-        "1DS15IS001",
-        "1DS15IS002",
-        "1DS15IS003"
-      ]
-    },
-    {
-      "Timestamp": "2018-08-20T04:38:24.199Z",
-      "IP": "182.72.191.26,::ffff:10.10.11.120,::ffff:10.10.10.105",
-      "title": "p3",
-      "guide": "A",
-      "teamMembers": [
-        "1DS15IS004",
-        "1DS15IS005",
-        "1DS15IS006"
-      ]
-    }
-  ],
-  "registeredUSNs": [
-    "1DS15IS001",
-    "1DS15IS002",
-    "1DS15IS003",
-    "1DS15IS004",
-    "1DS15IS005",
-    "1DS15IS006"
-  ],
+  "registrations": [],
+  "registeredUSNs": [],
   "guides": [
     {
       "name": "A",
-      "registeredCount": 2
+      "registeredCount": 0
     },
     {
       "name": "B",
