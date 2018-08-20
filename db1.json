@@ -1,0 +1,56 @@
+{
+  "projects": [
+    {
+      "guide": "A",
+      "title": "p1",
+      "available": 1
+    },
+    {
+      "guide": "A",
+      "title": "p2",
+      "available": 1
+    },
+    {
+      "guide": "A",
+      "title": "p3",
+      "available": 1
+    },
+    {
+      "guide": "A",
+      "title": "p4",
+      "available": 1
+    },
+    {
+      "guide": "B",
+      "title": "p5",
+      "available": 1
+    },
+    {
+      "guide": "B",
+      "title": "p6",
+      "available": 1
+    },
+    {
+      "guide": "B",
+      "title": "p7",
+      "available": 1
+    },
+    {
+      "guide": "B",
+      "title": "p8",
+      "available": 1
+    }
+  ],
+  "registrations": [],
+  "registeredUSNs": [],
+  "guides": [
+    {
+      "name": "A",
+      "registeredCount": 0
+    },
+    {
+      "name": "B",
+      "registeredCount": 0
+    }
+  ]
+}

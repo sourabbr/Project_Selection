@@ -1,66 +1,68 @@
 {
   "projects": [
     {
-      "guide": "Guide1",
-      "title": "Project1",
+      "guide": "A",
+      "title": "p1",
       "available": 0
     },
     {
-      "guide": "Guide1",
-      "title": "Project2",
+      "guide": "A",
+      "title": "p2",
       "available": 0
     },
     {
-      "guide": "Guide1",
-      "title": "Project3",
+      "guide": "A",
+      "title": "p3",
       "available": 0
     },
     {
-      "guide": "Guide1",
-      "title": "Project4",
+      "guide": "A",
+      "title": "p4",
       "available": 0
     },
     {
-      "guide": "Guide1",
-      "title": "Project5",
-      "available": 0
+      "guide": "B",
+      "title": "p5",
+      "available": 1
     },
     {
-      "guide": "Guide2",
-      "title": "Project6",
-      "available": true
+      "guide": "B",
+      "title": "p6",
+      "available": 1
     },
     {
-      "guide": "Guide2",
-      "title": "Project7",
-      "available": true
+      "guide": "B",
+      "title": "p7",
+      "available": 1
     },
     {
-      "guide": "Guide2",
-      "title": "Project8",
-      "available": true
+      "guide": "B",
+      "title": "p8",
+      "available": 1
     }
   ],
   "registrations": [
     {
-      "title": "Project1",
-      "guide": "Guide1",
+      "Timestamp": "2018-08-20T04:37:59.249Z",
+      "IP": "182.72.191.26,::ffff:10.10.11.120,::ffff:10.10.10.105",
+      "title": "p1",
+      "guide": "A",
       "teamMembers": [
         "1DS15IS001",
         "1DS15IS002",
         "1DS15IS003"
-      ],
-      "IP": "182.72.191.26,::ffff:10.10.10.149,::ffff:10.10.10.170"
+      ]
     },
     {
-      "title": "Project4",
-      "guide": "Guide1",
+      "Timestamp": "2018-08-20T04:38:24.199Z",
+      "IP": "182.72.191.26,::ffff:10.10.11.120,::ffff:10.10.10.105",
+      "title": "p3",
+      "guide": "A",
       "teamMembers": [
         "1DS15IS004",
         "1DS15IS005",
         "1DS15IS006"
-      ],
-      "IP": "182.72.191.26,::ffff:10.10.10.149,::ffff:10.10.10.170"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -73,11 +75,11 @@
   ],
   "guides": [
     {
-      "name": "Guide1",
+      "name": "A",
       "registeredCount": 2
     },
     {
-      "name": "Guide2",
+      "name": "B",
       "registeredCount": 0
     }
   ]
