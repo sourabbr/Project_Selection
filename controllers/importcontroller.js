@@ -2,6 +2,7 @@ var xlsx2json = require('xlsx2json');
 const import_xlsx = (response, db) => {
   xlsx2json(
     'exports/registrations.xlsx',{
+        sheet:0,
         dataStartingRow: 2,
         mapping: {
             'title': 3,
@@ -11,13 +12,13 @@ const import_xlsx = (response, db) => {
     .then(jsonArray => {
       response.json(
         {
-          projects:jsonArray[0]
+          projects:jsonArray
         }
       );
   });
 }
 
-module.exports = (app, db) => {
+module.exports = (app,io, db) => {
     app.get("/import", function (request, response) {
         import_xlsx(response, db);
     });

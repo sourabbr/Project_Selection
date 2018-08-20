@@ -18,6 +18,7 @@ let socketcontroller = (io, db) => {
         });
 
         socket.on('newProject', project => {
+            project={...project,available: 1};
             db.get("projects")
                 .upsert(project)
                 .write()
