@@ -47,7 +47,7 @@ let socketcontroller = (io, db) => {
 
 
             db.get("registrations")
-                .insertIfNotExists({Timestamp:new Date(),IP:headers['x-forwarded-for'],...project})
+                .insertIfNotExists({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project})
                 .write()
                 .then(err => {
                     if (err) {
