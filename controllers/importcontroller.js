@@ -4,9 +4,8 @@ const import_xlsx = (response, db) => {
     'exports/registrations.xlsx',{
         dataStartingRow: 2,
         mapping: {
-            'title': 'C',
-            'guide': 'D',
-            'available':1
+            'title': 3,
+            'guide': 4
         }
     })
     .then(jsonArray => {
