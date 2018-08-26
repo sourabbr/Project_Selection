@@ -42,8 +42,13 @@ $(function () {
     window.addEventListener("focus", () => socket.connect());
     $('form').submit(function (event) {
         event.preventDefault();
-        console.log($(
         var $selectedProject = $('form input[name=selectedProject]:checked');
+      
+        //store project options 1 2 3 in variables from respective select menu
+        var $selectedProject1 = $("select#projectselectoption1 > option:selected").val();
+        var $selectedProject2 = $("select#projectselectoption2 > option:selected").val();
+        var $selectedProject3 = $("select#projectselectoption3 > option:selected").val();
+      
         var title = $selectedProject.val();
         if (title === undefined) {
             displayAlert("Please Select a Project");
@@ -120,19 +125,19 @@ $(function () {
       
         $(`<div style="display: none;" class="select">
              <label>Option 1:</label>
-             <select class="form-control selection" name="projectselectoption1">
+             <select class="form-control selection" id="projectselectoption1">
           `+projectoptionhtmlstring+`</select></div>`)
                     .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
       
         $(`<div style="display: none;" class="select">
              <label>Option 2:</label>
-             <select class="form-control selection" name="projectselectoption2">
+             <select class="form-control selection" id="projectselectoption2">
           `+projectoptionhtmlstring+`</select></div>`)
                     .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
       
         $(`<div style="display: none;" class="select">
              <label>Option 3:</label>
-             <select class="form-control selection" name="projectselectoption3">
+             <select class="form-control selection" id="projectselectoption3">
           `+projectoptionhtmlstring+`</select></div>`)
                     .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
       
