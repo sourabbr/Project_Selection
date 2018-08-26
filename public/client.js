@@ -113,14 +113,16 @@ $(function () {
       
         $(`<div style="display: none;" class="select" id="${project.title.split(' ').join('-')}">
              <select name="projectselectoption2" value="${project.title}"> ${project.title}
-           </div>
           `)
                     .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
-        for (project of state.projects) {
-            if (project.available) {
-                
-            }
-        }
+          for (project of state.projects) {
+              if (project.available) {
+                $(`<option value="${project.title}"Volvo</option>`)
+                      .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
+              }
+          }
+        $(`</select></div>`)
+                      .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
       
         if (REGISTRATION_COMPLETE){
           $('input').remove();
