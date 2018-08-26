@@ -93,6 +93,13 @@ $(function () {
         $('#projectSelectionForm').html('');
         $('#takenProjectsList').html('');
         var project,guide;
+        var projectoptionhtmlstring='';
+        for (project of state.projects) {
+            if (project.available) {
+              $(`<option value="${project.title}">${project.title}</option>`)
+                    .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
+            }
+        }
       
         for (guide of getUnique(state.projects, 'guide')) {
             // $(`<hr><h6 style="display: none;">Guide: ${guide}</h6>
@@ -112,12 +119,12 @@ $(function () {
         }
       
         $(`<div style="display: none;" class="select" id="${project.title.split(' ').join('-')}">
-             <select name="projectselectoption2" value="${project.title}"> ${project.title}
+             <select class="form-control selection" name="projectselectoption2">
           `)
                     .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
           for (project of state.projects) {
               if (project.available) {
-                $(`<option value="${project.title}"Volvo</option>`)
+                $(`<option value="${project.title}">${project.title}</option>`)
                       .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
               }
           }
