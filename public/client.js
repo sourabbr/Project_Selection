@@ -42,6 +42,7 @@ $(function () {
     window.addEventListener("focus", () => socket.connect());
     $('form').submit(function (event) {
         event.preventDefault();
+        console.log($(
         var $selectedProject = $('form input[name=selectedProject]:checked');
         var title = $selectedProject.val();
         if (title === undefined) {
@@ -96,8 +97,7 @@ $(function () {
         var projectoptionhtmlstring='';
         for (project of state.projects) {
             if (project.available) {
-              $(`<option value="${project.title}">${project.title}</option>`)
-                    .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
+              projectoptionhtmlstring += `<option value="${project.title}">${project.title}</option>`;
             }
         }
       
@@ -108,28 +108,33 @@ $(function () {
                 .appendTo('#projectSelectionForm').show(500);
         }
       
-        for (project of state.projects) {
-            if (project.available) {
-                $(`<div style="display: none;" class="radio" id="${project.title.split(' ').join('-')}">
-             <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
-           </div>
-          `)
-                    .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
-            }
-        }
+        // for (project of state.projects) {
+        //     if (project.available) {
+        //         $(`<div style="display: none;" class="radio" id="${project.title.split(' ').join('-')}">
+        //      <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
+        //    </div>
+        //   `)
+        //             .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
+        //     }
+        // }
       
-        $(`<div style="display: none;" class="select" id="${project.title.split(' ').join('-')}">
-             <select class="form-control selection" name="projectselectoption2">
-          `)
+        $(`<div style="display: none;" class="select">
+             <label>Option 1:</label>
+             <select class="form-control selection" name="projectselectoption1">
+          `+projectoptionhtmlstring+`</select></div>`)
                     .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
-          for (project of state.projects) {
-              if (project.available) {
-                $(`<option value="${project.title}">${project.title}</option>`)
-                      .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
-              }
-          }
-        $(`</select></div>`)
-                      .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
+      
+        $(`<div style="display: none;" class="select">
+             <label>Option 2:</label>
+             <select class="form-control selection" name="projectselectoption2">
+          `+projectoptionhtmlstring+`</select></div>`)
+                    .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
+      
+        $(`<div style="display: none;" class="select">
+             <label>Option 3:</label>
+             <select class="form-control selection" name="projectselectoption3">
+          `+projectoptionhtmlstring+`</select></div>`)
+                    .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
       
         if (REGISTRATION_COMPLETE){
           $('input').remove();
