@@ -42,19 +42,23 @@ $(function () {
     window.addEventListener("focus", () => socket.connect());
     $('form').submit(function (event) {
         event.preventDefault();
-        var $selectedProject = $('form input[name=selectedProject]:checked');
+        // var $selectedProject = $('form input[name=selectedProject]:checked');
       
         //store project options 1 2 3 in variables from respective select menu
-        var $selectedProject1 = $("select#projectselectoption1 > option:selected").val();
-        var $selectedProject2 = $("select#projectselectoption2 > option:selected").val();
-        var $selectedProject3 = $("select#projectselectoption3 > option:selected").val();
+        var $selectedProject1 = $("select#projectselectoption1 > option:selected");
+        var $selectedProject2 = $("select#projectselectoption2 > option:selected");
+        var $selectedProject3 = $("select#projectselectoption3 > option:selected");
       
-        var title = $selectedProject.val();
-        if (title === undefined) {
-            displayAlert("Please Select a Project");
+        var title1 = $selectedProject1.val();
+        var title2 = $selectedProject2.val();
+        var title3 = $selectedProject3.val();
+        if (title1 === undefined || title2 === undefined || title3 === undefined) {
+            displayAlert("Please Select Three Project Options");
             return;
         }
-        var guide = $selectedProject.parent().parent().parent().attr('value');
+        var guide1 = $selectedProject1.parent().parent().parent().attr('value');
+        var guide2 = $selectedProject2.parent().parent().parent().attr('value');
+        var guide3 = $selectedProject3.parent().parent().parent().attr('value');
         var $team = $('textarea#team-members');
         if ($team.val().trim().length === 0) {
             $team.focus();
@@ -78,10 +82,10 @@ $(function () {
           displayAlert(`Your team must have minimum ${MIN_TEAM_MEMBERS} and maximum ${MAX_TEAM_MEMBERS} unique members`, 'warning');
           $team.focus();
           return;
-        }
+        }s
         // if(confirm("I confirm that I have verified my details and understand that my choice is finalized")===false)
         //   return;
-        socket.emit('registerProject', {title, guide, teamMembers});
+        socket.emit('registerProject', {title1, title2, title3, guide1, guide2, guide3,teamMembers});
     });
 
     socket.on('successfullyRegistered', function () {
