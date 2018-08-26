@@ -111,13 +111,14 @@ $(function () {
             }
         }
       
-        for (project of state.projects) {
-            if (project.available) {
-                $(`<div style="display: none;" class="radio" id="${project.title.split(' ').join('-')}">
-             <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
+        $(`<div style="display: none;" class="select" id="${project.title.split(' ').join('-')}">
+             <select name="projectselectoption2" value="${project.title}"> ${project.title}
            </div>
           `)
                     .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
+        for (project of state.projects) {
+            if (project.available) {
+                
             }
         }
       
