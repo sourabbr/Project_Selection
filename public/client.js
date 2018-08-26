@@ -111,6 +111,16 @@ $(function () {
             }
         }
       
+        for (project of state.projects) {
+            if (project.available) {
+                $(`<div style="display: none;" class="radio" id="${project.title.split(' ').join('-')}">
+             <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
+           </div>
+          `)
+                    .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
+            }
+        }
+      
         if (REGISTRATION_COMPLETE){
           $('input').remove();
           $('textarea').attr('disabled', 'disabled');
