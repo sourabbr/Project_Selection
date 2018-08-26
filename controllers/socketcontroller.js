@@ -58,7 +58,7 @@ let socketcontroller = (io, db) => {
                     var i = 1;
                     for(i = 1; i<=3; i++){
                       db.get("projects")
-                          .find({title: project.title})
+                          .find({title: project["title"+i]})
                           .assign({available: 0})
                           .write()
                           .then(() => {
@@ -69,7 +69,7 @@ let socketcontroller = (io, db) => {
                                     io.emit('takenProject', project);
                                     io.to(`${socket.id}`).emit('successfullyRegistered');
                                     let guide = db.get('guides')
-                                      .find({name:project.guide})
+                                      .find({name:project["guide"+i]})
                                       .value();
                                     guide.registeredCount++;
                                     if (guide.registeredCount == MAX_REGISTRATION_COUNT){
@@ -83,10 +83,12 @@ let socketcontroller = (io, db) => {
                                         .then(()=>console.log(guide.name+" done"))
                                         .catch(err=>console.error(err));
                                     }
+                                    return;
                                 })
                                 .catch(err=>console.error(err));
                           })
                           .catch(err=>console.error(err));
+                    }
                 })
                 .catch(err=>console.error(err));
         });

@@ -82,7 +82,7 @@ $(function () {
           displayAlert(`Your team must have minimum ${MIN_TEAM_MEMBERS} and maximum ${MAX_TEAM_MEMBERS} unique members`, 'warning');
           $team.focus();
           return;
-        }s
+        }
         // if(confirm("I confirm that I have verified my details and understand that my choice is finalized")===false)
         //   return;
         socket.emit('registerProject', {title1, title2, title3, guide1, guide2, guide3,teamMembers});
