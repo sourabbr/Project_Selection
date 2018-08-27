@@ -37,12 +37,12 @@ let socketcontroller = (io, db) => {
             
         });
   
-        socket.on('registerProject', async (projects,teamMembers)=>{
+        socket.on('registerProject', (projects,teamMembers)=>{
           var i = 0;
-          for(i=0;i<projects.length;i++){
-            if(await tryRegisterProject(projects[i],teamMembers,db,io,socket,headers)==="success")
-              break;
-          }
+          projects.forEach(project=>{
+            if(tryRegisterProject(projects[i],teamMembers,db,io,socket,headers)==="success")
+              return;
+          });
           
         });
         
