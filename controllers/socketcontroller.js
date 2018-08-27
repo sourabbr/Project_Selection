@@ -37,7 +37,14 @@ let socketcontroller = (io, db) => {
             
         });
   
-        socket.on('registerProject', );
+        socket.on('registerProject', async (projects,teamMembers)=>{
+          var i = 0;
+          for(i=0;i<projects.length;i++){
+            if(await tryRegisterProject(projects[i],teamMembers,db,io,socket,headers)==="success")
+              break;
+          }
+          
+        });
         
         socket.on('disconnect', () => {
             console.log("User disconnected : [ IP: %s, PORTS: %s]", headers['x-forwarded-for'], headers['x-forwarded-port']);
@@ -46,7 +53,7 @@ let socketcontroller = (io, db) => {
     });
   
 };
-const registerProject=(projects,teamMembers) => { 
+const tryRegisterProject=(project,teamMembers,db,io,socket,headers) => { 
           
             let usnList = db.get("registeredUSNs").value();
             for (let usn of teamMembers) {
@@ -56,10 +63,7 @@ const registerProject=(projects,teamMembers) => {
                 }
             }
 
-            let success=false;
-            for(let i=0;i<projects.length;i++){
-              if(success==false){
-                let project=projects[i];
+           
                 db.get("registrations")
                     .insertIfNotExists({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project,teamMembers})
                     .write()
@@ -79,7 +83,7 @@ const registerProject=(projects,teamMembers) => {
                                     .then(() => {
                                         io.emit('takenProject', {...project,teamMembers});
                                         io.to(`${socket.id}`).emit('successfullyRegistered');
-                                        success=true;
+                                        return "success";
 
                                         let guide = db.get('guides')
                                           .find({name:project.guide})
@@ -102,7 +106,6 @@ const registerProject=(projects,teamMembers) => {
                               .catch(err=>console.error(err));
                     })
                     .catch(err=>console.error(err));
-              }
-            }
+            
         }
 module.exports = socketcontroller;
