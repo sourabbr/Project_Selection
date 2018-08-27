@@ -3,32 +3,32 @@
     {
       "guide": "A",
       "title": "p1",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "A",
       "title": "p2",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "A",
       "title": "p3",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "A",
       "title": "p4",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "B",
       "title": "p5",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "B",
       "title": "p6",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "B",
@@ -39,87 +39,14 @@
       "guide": "B",
       "title": "p8",
       "available": 1
-    },
-    {
-      "guide": "A",
-      "title": "Sinai begin laundry key Verizon Verizon fellow snow",
-      "available": 1
     }
   ],
-  "registrations": [
-    {
-      "Timestamp": "8/20/2018, 5:18:01 AM",
-      "IP": "182.71.135.170,::ffff:10.10.10.149,::ffff:10.10.10.24",
-      "title": "p1",
-      "guide": "A",
-      "teamMembers": [
-        "1DS15IS001",
-        "1DS15IS002",
-        "1DS15IS003"
-      ]
-    },
-    {
-      "Timestamp": "8/20/2018, 5:18:59 AM",
-      "IP": "182.71.135.170,::ffff:10.10.10.149,::ffff:10.10.10.177",
-      "title": "p3",
-      "guide": "A",
-      "teamMembers": [
-        "1DS15IS101",
-        "1DS15IS102",
-        "1DS15IS103"
-      ]
-    },
-    {
-      "Timestamp": "8/20/2018, 5:19:11 AM",
-      "IP": "182.72.191.26,::ffff:10.10.11.120,::ffff:10.10.10.105",
-      "title": "p6",
-      "guide": "B",
-      "teamMembers": [
-        "1DS15IS004",
-        "1DS15IS005",
-        "1DS15IS006"
-      ]
-    },
-    {
-      "Timestamp": "8/26/2018, 6:34:37 PM",
-      "IP": "119.161.97.122,::ffff:10.10.10.247,::ffff:10.10.10.24",
-      "title1": "p5",
-      "title2": "p5",
-      "title3": "p5",
-      "guide1": "B",
-      "guide2": "B",
-      "guide3": "B",
-      "teamMembers": [
-        "1DS15IS007",
-        "1DS15IS008",
-        "1DS15IS009"
-      ]
-    }
-  ],
-  "registeredUSNs": [
-    "1DS15IS001",
-    "1DS15IS002",
-    "1DS15IS003",
-    "1DS15IS101",
-    "1DS15IS102",
-    "1DS15IS103",
-    "1DS15IS004",
-    "1DS15IS005",
-    "1DS15IS006",
-    "1DS15IS007",
-    "1DS15IS008",
-    "1DS15IS009",
-    "1DS15IS007",
-    "1DS15IS008",
-    "1DS15IS009",
-    "1DS15IS007",
-    "1DS15IS008",
-    "1DS15IS009"
-  ],
+  "registrations": [],
+  "registeredUSNs": [],
   "guides": [
     {
       "name": "A",
-      "registeredCount": 2
+      "registeredCount": 0
     },
     {
       "name": "B",

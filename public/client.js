@@ -169,7 +169,7 @@ $(function () {
     });
 
     socket.on('takenProject', function (project) {
-        $(`#${project.title.split(' ').join('-')}`).hide(500, function () {
+        $(`.${project.title.split(' ').join('-')}`).hide(500, function () {
             $(this).remove();
         });
         $(` <li style="display: none;">${project.title}
@@ -179,7 +179,7 @@ $(function () {
     });
   
     socket.on('removeProject', function (project) {
-        $(`#${project.title.split(' ').join('-')}`).hide(500, function () {
+        $(`.${project.title.split(' ').join('-')}`).hide(500, function () {
             $(this).remove();
         });
     });

@@ -46,8 +46,10 @@ let socketcontroller = (io, db) => {
                 }
             }
 
-
+            let success=false;
             for(let project of projects){
+              if(success===true)
+                break;
               db.get("registrations")
                   .insertIfNotExists({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project})
                   .write()
@@ -65,8 +67,10 @@ let socketcontroller = (io, db) => {
                                   .push(...teamMembers) 
                                   .write()
                                   .then(() => {
-                                      io.emit('takenProject', project);
+                                      io.emit('takenProject', {...project,teamMembers});
                                       io.to(`${socket.id}`).emit('successfullyRegistered');
+                                      success=true;
+                                  
                                       let guide = db.get('guides')
                                         .find({name:project.guide})
                                         .value();
@@ -82,12 +86,10 @@ let socketcontroller = (io, db) => {
                                           .then(()=>console.log(guide.name+" done"))
                                           .catch(err=>console.error(err));
                                       }
-                                      return;
                                   })
                                   .catch(err=>console.error(err));
                             })
                             .catch(err=>console.error(err));
-                      
                   })
                   .catch(err=>console.error(err));
             }
