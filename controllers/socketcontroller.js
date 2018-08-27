@@ -47,9 +47,8 @@ let socketcontroller = (io, db) => {
             }
 
             let success=false;
-            for(let project of projects){
-              if(success===true)
-                break;
+            for(let i=0;i<projects.length&&!success;i++){
+              let project=projects[i];
               db.get("registrations")
                   .insertIfNotExists({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project})
                   .write()
