@@ -35,11 +35,11 @@ let socketcontroller = (io, db) => {
             }
             
         });
-
-        socket.on('registerProject', project => {
+  
+        socket.on('registerProject', (projects,teamMembers) => { 
           
             let usnList = db.get("registeredUSNs").value();
-            for (let usn of project.teamMembers) {
+            for (let usn of teamMembers) {
                 if (usnList.includes(usn)) {
                     io.to(`${socket.id}`).emit('displayAlert', `${usn} already registered`, 'warning');
                     return;
@@ -47,6 +47,7 @@ let socketcontroller = (io, db) => {
             }
 
 
+            for(let project of projects){
             db.get("registrations")
                 .insertIfNotExists({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project})
                 .write()
@@ -55,21 +56,19 @@ let socketcontroller = (io, db) => {
                         io.to(`${socket.id}`).emit('displayAlert', "Project already taken", 'warning');
                         return;
                     }
-                    var i = 1;
-                    for(i = 1; i<=3; i++){
                       db.get("projects")
-                          .find({title: project["title"+i]})
+                          .find({title: project.title})
                           .assign({available: 0})
                           .write()
                           .then(() => {
                               db.get("registeredUSNs")
-                                .push(...project.teamMembers)
+                                .push(...teamMembers) 
                                 .write()
                                 .then(() => {
                                     io.emit('takenProject', project);
                                     io.to(`${socket.id}`).emit('successfullyRegistered');
                                     let guide = db.get('guides')
-                                      .find({name:project["guide"+i]})
+                                      .find({name:project.guide})
                                       .value();
                                     guide.registeredCount++;
                                     if (guide.registeredCount == MAX_REGISTRATION_COUNT){

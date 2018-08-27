@@ -85,7 +85,7 @@ $(function () {
         }
         // if(confirm("I confirm that I have verified my details and understand that my choice is finalized")===false)
         //   return;
-        socket.emit('registerProject', {title1, title2, title3, guide1, guide2, guide3,teamMembers});
+        socket.emit('registerProject', [{title:title1, guide:guide1}, {title:title2, guide:guide2}, {title:title3, guide:guide3}], teamMembers);
     });
 
     socket.on('successfullyRegistered', function () {
