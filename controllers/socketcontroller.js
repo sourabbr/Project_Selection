@@ -48,55 +48,56 @@ let socketcontroller = (io, db) => {
 
 
             for(let project of projects){
-            db.get("registrations")
-                .insertIfNotExists({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project})
-                .write()
-                .then(err => {
-                    if (err) {
-                        io.to(`${socket.id}`).emit('displayAlert', "Project already taken", 'warning');
-                        return;
-                    }
-                      db.get("projects")
-                          .find({title: project.title})
-                          .assign({available: 0})
-                          .write()
-                          .then(() => {
-                              db.get("registeredUSNs")
-                                .push(...teamMembers) 
-                                .write()
-                                .then(() => {
-                                    io.emit('takenProject', project);
-                                    io.to(`${socket.id}`).emit('successfullyRegistered');
-                                    let guide = db.get('guides')
-                                      .find({name:project.guide})
-                                      .value();
-                                    guide.registeredCount++;
-                                    if (guide.registeredCount == MAX_REGISTRATION_COUNT){
-                                      db.get("projects")
-                                        .filter({guide:guide.name})
-                                        .each(proj=>{
-                                          proj.available=0;
-                                          io.emit('removeProject',proj);
-                                        })
-                                        .write()                                  
-                                        .then(()=>console.log(guide.name+" done"))
-                                        .catch(err=>console.error(err));
-                                    }
-                                    return;
-                                })
-                                .catch(err=>console.error(err));
-                          })
-                          .catch(err=>console.error(err));
-                    }
-                })
-                .catch(err=>console.error(err));
+              db.get("registrations")
+                  .insertIfNotExists({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project})
+                  .write()
+                  .then(err => {
+                      if (err) {
+                          io.to(`${socket.id}`).emit('displayAlert', "Project already taken", 'warning');
+                          return;
+                      }
+                        db.get("projects")
+                            .find({title: project.title})
+                            .assign({available: 0})
+                            .write()
+                            .then(() => {
+                                db.get("registeredUSNs")
+                                  .push(...teamMembers) 
+                                  .write()
+                                  .then(() => {
+                                      io.emit('takenProject', project);
+                                      io.to(`${socket.id}`).emit('successfullyRegistered');
+                                      let guide = db.get('guides')
+                                        .find({name:project.guide})
+                                        .value();
+                                      guide.registeredCount++;
+                                      if (guide.registeredCount == MAX_REGISTRATION_COUNT){
+                                        db.get("projects")
+                                          .filter({guide:guide.name})
+                                          .each(proj=>{
+                                            proj.available=0;
+                                            io.emit('removeProject',proj);
+                                          })
+                                          .write()                                  
+                                          .then(()=>console.log(guide.name+" done"))
+                                          .catch(err=>console.error(err));
+                                      }
+                                      return;
+                                  })
+                                  .catch(err=>console.error(err));
+                            })
+                            .catch(err=>console.error(err));
+                      
+                  })
+                  .catch(err=>console.error(err));
+            }
         });
-
+        
         socket.on('disconnect', () => {
             console.log("User disconnected : [ IP: %s, PORTS: %s]", headers['x-forwarded-for'], headers['x-forwarded-port']);
         });
 
     });
-
+  
 };
 module.exports = socketcontroller;

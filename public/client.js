@@ -106,7 +106,7 @@ $(function () {
         var projectoptionhtmlstring='';
         for (project of state.projects) {
             if (project.available) {
-              projectoptionhtmlstring += `<option value="${project.title}">${project.title}</option>`;
+              projectoptionhtmlstring += `<option class="${project.title.split(' ').join('-')}" value="${project.title}">${project.title}</option>`;
             }
         }
       
