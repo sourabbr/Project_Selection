@@ -1,4 +1,5 @@
 const MAX_REGISTRATION_COUNT = 2;
+
 let socketcontroller = (io, db) => {
 
     io.on('connection', socket => {
@@ -36,7 +37,16 @@ let socketcontroller = (io, db) => {
             
         });
   
-        socket.on('registerProject', (projects,teamMembers) => { 
+        socket.on('registerProject', );
+        
+        socket.on('disconnect', () => {
+            console.log("User disconnected : [ IP: %s, PORTS: %s]", headers['x-forwarded-for'], headers['x-forwarded-port']);
+        });
+
+    });
+  
+};
+const registerProject=(projects,teamMembers) => { 
           
             let usnList = db.get("registeredUSNs").value();
             for (let usn of teamMembers) {
@@ -47,58 +57,52 @@ let socketcontroller = (io, db) => {
             }
 
             let success=false;
-            for(let i=0;i<projects.length&&!success;i++){
-              let project=projects[i];
-              db.get("registrations")
-                  .insertIfNotExists({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project})
-                  .write()
-                  .then(err => {
-                      if (err) {
-                          io.to(`${socket.id}`).emit('displayAlert', "Project already taken", 'warning');
-                          return;
-                      }
-                        db.get("projects")
-                            .find({title: project.title})
-                            .assign({available: 0})
-                            .write()
-                            .then(() => {
-                                db.get("registeredUSNs")
-                                  .push(...teamMembers) 
-                                  .write()
-                                  .then(() => {
-                                      io.emit('takenProject', {...project,teamMembers});
-                                      io.to(`${socket.id}`).emit('successfullyRegistered');
-                                      success=true;
-                                  
-                                      let guide = db.get('guides')
-                                        .find({name:project.guide})
-                                        .value();
-                                      guide.registeredCount++;
-                                      if (guide.registeredCount == MAX_REGISTRATION_COUNT){
-                                        db.get("projects")
-                                          .filter({guide:guide.name})
-                                          .each(proj=>{
-                                            proj.available=0;
-                                            io.emit('removeProject',proj);
-                                          })
-                                          .write()                                  
-                                          .then(()=>console.log(guide.name+" done"))
-                                          .catch(err=>console.error(err));
-                                      }
-                                  })
-                                  .catch(err=>console.error(err));
-                            })
-                            .catch(err=>console.error(err));
-                  })
-                  .catch(err=>console.error(err));
-            }
-        });
-        
-        socket.on('disconnect', () => {
-            console.log("User disconnected : [ IP: %s, PORTS: %s]", headers['x-forwarded-for'], headers['x-forwarded-port']);
-        });
+            for(let i=0;i<projects.length;i++){
+              if(success==false){
+                let project=projects[i];
+                db.get("registrations")
+                    .insertIfNotExists({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project,teamMembers})
+                    .write()
+                    .then(err => {
+                        if (err) {
+                            io.to(`${socket.id}`).emit('displayAlert', "Project already taken", 'warning');
+                            return;
+                        }
+                          db.get("projects")
+                              .find({title: project.title})
+                              .assign({available: 0})
+                              .write()
+                              .then(() => {
+                                  db.get("registeredUSNs")
+                                    .push(...teamMembers) 
+                                    .write()
+                                    .then(() => {
+                                        io.emit('takenProject', {...project,teamMembers});
+                                        io.to(`${socket.id}`).emit('successfullyRegistered');
+                                        success=true;
 
-    });
-  
-};
+                                        let guide = db.get('guides')
+                                          .find({name:project.guide})
+                                          .value();
+                                        guide.registeredCount++;
+                                        if (guide.registeredCount == MAX_REGISTRATION_COUNT){
+                                          db.get("projects")
+                                            .filter({guide:guide.name})
+                                            .each(proj=>{
+                                              proj.available=0;
+                                              io.emit('removeProject',proj);
+                                            })
+                                            .write()                                  
+                                            .then(()=>console.log(guide.name+" done"))
+                                            .catch(err=>console.error(err));
+                                        }
+                                    })
+                                    .catch(err=>console.error(err));
+                              })
+                              .catch(err=>console.error(err));
+                    })
+                    .catch(err=>console.error(err));
+              }
+            }
+        }
 module.exports = socketcontroller;
