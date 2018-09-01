@@ -18,22 +18,22 @@
     {
       "guide": "A",
       "title": "p4",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "B",
       "title": "p5",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "B",
       "title": "p6",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "B",
       "title": "p7",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "B",
@@ -43,111 +43,49 @@
   ],
   "registrations": [
     {
-      "Timestamp": "8/27/2018, 4:09:49 PM",
-      "IP": "119.161.97.122,::ffff:10.10.11.196,::ffff:10.10.10.105",
+      "Timestamp": "9/1/2018, 6:26:08 AM",
+      "IP": "182.71.135.170,::ffff:10.10.10.247,::ffff:10.10.10.182",
       "title": "p1",
+      "guide": "B",
+      "teamMembers": [
+        "1DS15IS004",
+        "1DS15IS005",
+        "1DS15IS006"
+      ]
+    },
+    {
+      "Timestamp": "9/1/2018, 6:27:04 AM",
+      "IP": "182.71.135.170,::ffff:10.10.10.247,::ffff:10.10.10.231",
+      "title": "p2",
       "guide": "B",
       "teamMembers": [
         "1DS15IS001",
         "1DS15IS002",
-        "1DS15IS003",
-        "1DS15IS004"
+        "1DS15IS003"
       ]
     },
     {
-      "Timestamp": "8/27/2018, 4:10:39 PM",
-      "IP": "119.161.97.122,::ffff:10.10.11.196,::ffff:10.10.10.203",
-      "title": "p2",
-      "guide": "B",
-      "teamMembers": [
-        "1DS15IS005",
-        "1DS15IS006",
-        "1DS15IS007",
-        "1DS15IS008"
-      ]
-    },
-    {
-      "Timestamp": "8/27/2018, 4:10:56 PM",
-      "IP": "49.206.15.35,::ffff:10.10.10.247,::ffff:10.10.10.24",
+      "Timestamp": "9/1/2018, 6:27:47 AM",
+      "IP": "182.71.135.170,::ffff:10.10.10.247,::ffff:10.10.10.254",
       "title": "p3",
       "guide": "B",
       "teamMembers": [
-        "1DS15IS011",
-        "1DS15IS022",
-        "1DS15IS033"
-      ]
-    },
-    {
-      "Timestamp": "8/27/2018, 4:13:40 PM",
-      "IP": "49.206.15.35,::ffff:10.10.11.196,::ffff:10.10.10.177",
-      "title": "p4",
-      "guide": "B",
-      "teamMembers": [
-        "1DS15IS101",
-        "1DS15IS102",
-        "1DS15IS103"
-      ]
-    },
-    {
-      "Timestamp": "8/27/2018, 4:15:31 PM",
-      "IP": "49.206.15.35,::ffff:10.10.11.196,::ffff:10.10.10.177",
-      "title": "p5",
-      "guide": "B",
-      "teamMembers": [
-        "1DS15IS121",
-        "1DS15IS122",
-        "1DS15IS123"
-      ]
-    },
-    {
-      "Timestamp": "8/27/2018, 4:16:29 PM",
-      "IP": "49.206.15.35,::ffff:10.10.10.247,::ffff:10.10.10.105",
-      "title": "p6",
-      "guide": "B",
-      "teamMembers": [
-        "1DS15IS141",
-        "1DS15IS142",
-        "1DS15IS143"
-      ]
-    },
-    {
-      "Timestamp": "8/27/2018, 4:16:31 PM",
-      "IP": "119.161.97.122,::ffff:10.10.10.247,::ffff:10.10.10.24",
-      "title": "p7",
-      "guide": "B",
-      "teamMembers": [
-        "1DS15IS041",
-        "1DS15IS042",
-        "1DS15IS043",
-        "1DS15IS044"
+        "1DS15IS009",
+        "1DS15IS008",
+        "1DS15IS007"
       ]
     }
   ],
   "registeredUSNs": [
-    "1DS15IS001",
-    "1DS15IS002",
-    "1DS15IS003",
     "1DS15IS004",
     "1DS15IS005",
     "1DS15IS006",
-    "1DS15IS007",
+    "1DS15IS001",
+    "1DS15IS002",
+    "1DS15IS003",
+    "1DS15IS009",
     "1DS15IS008",
-    "1DS15IS011",
-    "1DS15IS022",
-    "1DS15IS033",
-    "1DS15IS101",
-    "1DS15IS102",
-    "1DS15IS103",
-    "1DS15IS121",
-    "1DS15IS122",
-    "1DS15IS123",
-    "1DS15IS141",
-    "1DS15IS142",
-    "1DS15IS143",
-    "1DS15IS041",
-    "1DS15IS042",
-    "1DS15IS043",
-    "1DS15IS044"
+    "1DS15IS007"
   ],
   "guides": [
     {
