@@ -112,7 +112,7 @@ function removeProject(project) {
     console.log(project);
     var doRemove=true;
     var $project=$(`.${hash(project.title)}`);
-    for(var i=0;i<3;i++){
+    for(var i=0;i<3;++i){
       if($project[i].selected){
         doRemove=false
         break;
@@ -122,7 +122,9 @@ function removeProject(project) {
       $project.hide(500, function () {
           $(this).remove();
       });
-      displayAlert(`Your Choice ${i+1} is now unavailable`,'danger');
+    }
+    else{
+      displayAlert(`Your Choice ${i} is now unavailable`,'danger');
     }
 }
 

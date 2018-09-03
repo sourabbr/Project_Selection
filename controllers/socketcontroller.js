@@ -67,30 +67,30 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
     await db.get("registrations")
       .insertIfNotExists({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project,teamMembers})
       .write()
-      .then(() => {
+      .then(async() => {
           // if (err==="alreadyExists") {
           //     console.log("Error");
           //     console.log(err);
           //     io.to(`${socket.id}`).emit('displayAlert', `Project ${project.title} already taken`, 'danger');
           //     return;
           // }
-            db.get("projects")
+          await  db.get("projects")
                 .find({title: project.title})
                 .assign({available: 0})
                 .write()
-                .then(() => {
-                    db.get("registeredUSNs")
+                .then(async() => {
+                    await db.get("registeredUSNs")
                       .push(...teamMembers) 
                       .write()
-                      .then(() => {
-                          db.get('guides')
+                      .then(async() => {
+                          await db.get('guides')
                             .find({name:project.guide})
                             .update('registeredCount', n => n + 1)
                             .write()
-                            .then(guide=>{
+                            .then(async(guide)=>{
                               console.log(guide);
                               if (guide.registeredCount >= MAX_REGISTRATION_COUNT){
-                                db.get("projects")
+                                await db.get("projects")
                                 .filter({guide:guide.name})
                                 .each(proj=>{
                                   proj.available=0;
