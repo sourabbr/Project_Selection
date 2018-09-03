@@ -70,15 +70,14 @@ function loadState(state) {
 
     for (guide of getUnique(state.projects, 'guide')) {
         // $(`<hr><h6 style="display: none;">Guide: ${guide}</h6>
-     $(`<optgroup value="${guide}" class="${guide.split(' ').join('-')}"></optgroup>
-      `)
+     $(`<optgroup value="${guide}" class="${guide.split(' ').join('-').replace(/\./g,'_')}"></optgroup>`)
             .appendTo('.projectSelectionOption');
     }
 
     for (project of state.projects) {
         if (project.available) {
             $(`<option class="${project.title.split(' ').join('-')}" value="${project.title}">${project.title}</option>`)
-                .appendTo(`optgroup.${project.guide.split(' ').join('-')}`);
+                .appendTo(`optgroup.${project.guide.split(' ').join('-').replace(/\./g,'_')}`);
         }
     }
 
