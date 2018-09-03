@@ -57,7 +57,7 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
           return;
       }
   }
-
+  var choices={choice1:projects[0].title,}
   var success=false;
   for(var i=0;i<projects.length;i++)
   {
@@ -65,7 +65,7 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
     if(success)
       return;
     await db.get("registrations")
-      .insertIfNotExists({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project,teamMembers})
+      .insertIfNotExists({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project,...choices,teamMembers})
       .write()
       .then(async() => {
           // if (err==="alreadyExists") {

@@ -3,7 +3,7 @@
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Sound Regeneration using GAN's",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
@@ -13,57 +13,57 @@
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Secured certificates and marksheets using blockchain",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Live object detection in videos using CNN",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "An efficient algorithm to recognize the License plate of the vehicle.",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "Text Detection in Images Using Python",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "Offline signature verification system",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "Image Compression Using Wavelet Approach",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Mr. DHEEMANTH URS",
       "title": "Intelligent theft managment system using image processing technique",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Mr. DHEEMANTH URS",
       "title": "Automatic patient enrolment software for hospitals",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Mr. DHEEMANTH URS",
       "title": "Make way for ambulance a moblie application",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Mr. DHEEMANTH URS",
       "title": "Paperless tickets for indian transportation system",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Mr. SURESHKUMAR M.",
       "title": "Detecting fraud apps using sentiment analysis",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Mr. SURESHKUMAR M.",
@@ -483,125 +483,52 @@
   ],
   "registrations": [
     {
-      "Timestamp": "9/3/2018, 5:00:57 PM",
-      "IP": "49.206.11.12,::ffff:10.10.11.196,::ffff:10.10.10.254",
-      "title": "Sound Regeneration using GAN's",
+      "Timestamp": "9/3/2018, 6:02:35 PM",
+      "IP": "49.206.11.12,::ffff:10.10.11.196,::ffff:10.10.10.31",
+      "title": "Blockchain in PDS and rural industries",
       "guide": "Ms. SHARON CHRISTA I.L",
+      "choices": [
+        {
+          "title": "Blockchain in PDS and rural industries",
+          "guide": "Ms. SHARON CHRISTA I.L"
+        },
+        {
+          "title": "Intelligent theft managment system using image processing technique",
+          "guide": "Mr. DHEEMANTH URS"
+        },
+        {
+          "title": "Segmentation and analysis of CT images for abnormality detection",
+          "guide": "Ms. BHAVANI K."
+        }
+      ],
       "teamMembers": [
         "1DS15IS001",
         "1DS15IS002",
         "1DS15IS003"
-      ]
-    },
-    {
-      "Timestamp": "9/3/2018, 5:01:37 PM",
-      "IP": "49.206.11.12,::ffff:10.10.11.196,::ffff:10.10.10.231",
-      "title": "Blockchain in PDS and rural industries",
-      "guide": "Ms. SHARON CHRISTA I.L",
-      "teamMembers": [
-        "1DS15IS004",
-        "1DS15IS005",
-        "1DS15IS006"
-      ]
-    },
-    {
-      "Timestamp": "9/3/2018, 5:02:28 PM",
-      "IP": "49.206.11.12,::ffff:10.10.11.196,::ffff:10.10.10.31",
-      "title": "Automatic patient enrolment software for hospitals",
-      "guide": "Mr. DHEEMANTH URS",
-      "teamMembers": [
-        "1DS15IS011",
-        "1DS15IS012",
-        "1DS15IS013"
-      ]
-    },
-    {
-      "Timestamp": "9/3/2018, 5:17:18 PM",
-      "IP": "49.206.11.12,::ffff:10.10.11.196,::ffff:10.10.10.254",
-      "title": "An efficient algorithm to recognize the License plate of the vehicle.",
-      "guide": "Ms. KRUPASHANKARI .S.S",
-      "teamMembers": [
-        "1DS16IS201",
-        "1DS16IS202",
-        "1DS16IS203"
-      ]
-    },
-    {
-      "Timestamp": "9/3/2018, 5:25:55 PM",
-      "IP": "49.206.11.12,::ffff:10.10.10.247,::ffff:10.10.10.31",
-      "title": "Text Detection in Images Using Python",
-      "guide": "Ms. KRUPASHANKARI .S.S",
-      "teamMembers": [
-        "1DS16IS301",
-        "1DS16IS302",
-        "1DS16IS303"
-      ]
-    },
-    {
-      "Timestamp": "9/3/2018, 5:28:10 PM",
-      "IP": "49.206.11.12,::ffff:10.10.11.196,::ffff:10.10.10.57",
-      "title": "Intelligent theft managment system using image processing technique",
-      "guide": "Mr. DHEEMANTH URS",
-      "teamMembers": [
-        "1DS16IS401",
-        "1DS16IS402",
-        "1DS16IS403"
-      ]
-    },
-    {
-      "Timestamp": "9/3/2018, 5:40:58 PM",
-      "IP": "49.206.11.12,::ffff:10.10.11.196,::ffff:10.10.10.57",
-      "title": "Detecting fraud apps using sentiment analysis",
-      "guide": "Mr. SURESHKUMAR M.",
-      "teamMembers": [
-        "1DS15IS601",
-        "1DS15IS602",
-        "1DS15IS603"
       ]
     }
   ],
   "registeredUSNs": [
     "1DS15IS001",
     "1DS15IS002",
-    "1DS15IS003",
-    "1DS15IS004",
-    "1DS15IS005",
-    "1DS15IS006",
-    "1DS15IS011",
-    "1DS15IS012",
-    "1DS15IS013",
-    "1DS15IS101",
-    "1DS15IS102",
-    "1DS15IS103",
-    "1DS16IS201",
-    "1DS16IS202",
-    "1DS16IS203",
-    "1DS16IS301",
-    "1DS16IS302",
-    "1DS16IS303",
-    "1DS16IS401",
-    "1DS16IS402",
-    "1DS16IS403",
-    "1DS15IS601",
-    "1DS15IS602",
-    "1DS15IS603"
+    "1DS15IS003"
   ],
   "guides": [
     {
       "name": "Ms. SHARON CHRISTA I.L",
-      "registeredCount": 3
+      "registeredCount": 1
     },
     {
       "name": "Ms. KRUPASHANKARI .S.S",
-      "registeredCount": 2
+      "registeredCount": 0
     },
     {
       "name": "Mr. DHEEMANTH URS",
-      "registeredCount": 2
+      "registeredCount": 0
     },
     {
       "name": "Mr. SURESHKUMAR M.",
-      "registeredCount": 1
+      "registeredCount": 0
     },
     {
       "name": "Ms. RADHIKA T. V.",
