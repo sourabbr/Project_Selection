@@ -103,47 +103,50 @@ $(function () {
         $('#projectSelectionForm').html('');
         $('#takenProjectsList').html('');
         var project,guide;
-        var projectoptionhtmlstring='';
-        for (project of state.projects) {
-            if (project.available) {
-              projectoptionhtmlstring += `<option class="${project.title.split(' ').join('-')}" value="${project.title}">${project.title}</option>`;
-            }
-        }
+        // var projectoptionhtmlstring='';
+        // for (project of state.projects) {
+        //     if (project.available) {
+        //       projectoptionhtmlstring += `<option class="${project.title.split(' ').join('-')}" value="${project.title}">${project.title}</option>`;
+        //     }
+        // }
+        for(var i=1;i<=3;i++)
+        $(`<div style="display: none;" class="select">
+             <label>Choice ${i}:</label>
+             <select class="form-control selection projectSelectionOption" id="projectselectoption${i}">
+              </select></div>`)
+                    .appendTo(`#projectSelectionForm`).show(500);
       
         for (guide of getUnique(state.projects, 'guide')) {
             // $(`<hr><h6 style="display: none;">Guide: ${guide}</h6>
          $(`<fieldset value="${guide}" class="${guide.split(' ').join('-')}"></fieldset>
           `)
-                .appendTo('#projectSelectionForm').show(500);
+                .appendTo('.projectSelectionOption');
         }
       
-        // for (project of state.projects) {
-        //     if (project.available) {
-        //         $(`<div style="display: none;" class="radio" id="${project.title.split(' ').join('-')}">
-        //      <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
-        //    </div>
-        //   `)
-        //             .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
-        //     }
-        // }
+        for (project of state.projects) {
+            if (project.available) {
+                $(`<option class="${project.title.split(' ').join('-')}" value="${project.title}">${project.title}</option>`)
+                    .appendTo(`fieldset.${project.guide.split(' ').join('-')}`);
+            }
+        }
       
-        $(`<div style="display: none;" class="select">
-             <label>Option 1:</label>
-             <select class="form-control selection" id="projectselectoption1">
-          `+projectoptionhtmlstring+`</select></div>`)
-                    .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
+//         $(`<div style="display: none;" class="select">
+//              <label>Option 1:</label>
+//              <select class="form-control selection" id="projectselectoption1" class="projectSelectionOption">
+//           `+projectoptionhtmlstring+`</select></div>`)
+//                     .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
       
-        $(`<div style="display: none;" class="select">
-             <label>Option 2:</label>
-             <select class="form-control selection" id="projectselectoption2">
-          `+projectoptionhtmlstring+`</select></div>`)
-                    .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
+//         $(`<div style="display: none;" class="select">
+//              <label>Option 2:</label>
+//              <select class="form-control selection" id="projectselectoption2" class="projectSelectionOption">
+//           `+projectoptionhtmlstring+`</select></div>`)
+//                     .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
       
-        $(`<div style="display: none;" class="select">
-             <label>Option 3:</label>
-             <select class="form-control selection" id="projectselectoption3">
-          `+projectoptionhtmlstring+`</select></div>`)
-                    .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
+//         $(`<div style="display: none;" class="select">
+//              <label>Option 3:</label>
+//              <select class="form-control selection" id="projectselectoption3" class="projectSelectionOption">
+//           `+projectoptionhtmlstring+`</select></div>`)
+//                     .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
       
         if (REGISTRATION_COMPLETE){
           $('input').remove();
