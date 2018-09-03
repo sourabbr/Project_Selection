@@ -3,7 +3,7 @@
     {
       "guide": "A",
       "title": "p1",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "A",
@@ -41,12 +41,28 @@
       "available": 1
     }
   ],
-  "registrations": [],
-  "registeredUSNs": [],
+  "registrations": [
+    {
+      "Timestamp": "9/3/2018, 6:06:01 AM",
+      "IP": "182.72.191.26,::ffff:10.10.10.247,::ffff:10.10.10.182",
+      "title": "p1",
+      "guide": "A",
+      "teamMembers": [
+        "1DS15IS001",
+        "1DS15IS002",
+        "1DS15IS003"
+      ]
+    }
+  ],
+  "registeredUSNs": [
+    "1DS15IS001",
+    "1DS15IS002",
+    "1DS15IS003"
+  ],
   "guides": [
     {
       "name": "A",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "B",

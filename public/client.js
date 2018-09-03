@@ -102,6 +102,8 @@ function addProject(project) {
 }
 
 function removeProject(project) {
+    console.log("Removing project");
+    console.log(project);
     var doRemove=true;
     var $project=$(`.${project.title.split(' ').join('-')}`);
     for(var i=0;i<3;i++){
@@ -114,8 +116,6 @@ function removeProject(project) {
       $project.hide(500, function () {
           $(this).remove();
       });
-    }
-    else{
       displayAlert(`Your Choice ${i+1} is now unavailable`,'danger');
     }
 }
