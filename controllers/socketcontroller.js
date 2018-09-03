@@ -48,7 +48,7 @@ let socketcontroller = (io, db) => {
     });
   
 };
-const tryRegisterProject=(projects,teamMembers,db,io,socket,headers) => { 
+const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => { 
           
   let usnList = db.get("registeredUSNs").value();
   for (let usn of teamMembers) {
@@ -59,8 +59,12 @@ const tryRegisterProject=(projects,teamMembers,db,io,socket,headers) => {
   }
 
   var success=false;
-  for(var
-  db.get("registrations")
+  for(var i=0;i<projects.length;i++)
+  {
+    var project=projects[i];
+    if(success)
+      return;
+    await db.get("registrations")
       .insertIfNotExists({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project,teamMembers})
       .write()
       .then(() => {
@@ -98,7 +102,8 @@ const tryRegisterProject=(projects,teamMembers,db,io,socket,headers) => {
                               }
                               io.emit('takenProject', {...project,teamMembers});
                               io.to(`${socket.id}`).emit('successfullyRegistered',project.title);
-                              return "success";
+                              success=true
+                              return;
                             })
                          
                       })
@@ -107,6 +112,8 @@ const tryRegisterProject=(projects,teamMembers,db,io,socket,headers) => {
                 .catch(err=>console.error(err));
       })
       .catch(err=>console.error(err));
+  }
+  
             
 }
 module.exports = socketcontroller;

@@ -3,22 +3,22 @@
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Sound Regeneration using GAN's",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Blockchain in PDS and rural industries",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Secured certificates and marksheets using blockchain",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Live object detection in videos using CNN",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
@@ -481,34 +481,12 @@
       "available": 1
     }
   ],
-  "registrations": [
-    {
-      "Timestamp": "9/3/2018, 4:35:39 PM",
-      "IP": "49.206.11.12,::ffff:10.10.10.247,::ffff:10.10.10.31",
-      "title": "Blockchain in PDS and rural industries",
-      "guide": "Ms. SHARON CHRISTA I.L",
-      "teamMembers": [
-        "1DS15IS001",
-        "1DS15IS002",
-        "1DS15IS003"
-      ]
-    }
-  ],
-  "registeredUSNs": [
-    "1DS15IS001",
-    "1DS15IS002",
-    "1DS15IS003",
-    "1DS15IS001",
-    "1DS15IS002",
-    "1DS15IS003",
-    "1DS15IS001",
-    "1DS15IS002",
-    "1DS15IS003"
-  ],
+  "registrations": [],
+  "registeredUSNs": [],
   "guides": [
     {
       "name": "Ms. SHARON CHRISTA I.L",
-      "registeredCount": 3
+      "registeredCount": 0
     },
     {
       "name": "Ms. KRUPASHANKARI .S.S",
