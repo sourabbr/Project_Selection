@@ -57,7 +57,11 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
           return;
       }
   }
-  var choices={choice1:projects[0].title,}
+  var choices={
+    choice1:projects[0].title,guide1:projects[0].guide,
+    choice2:projects[1].title,guide2:projects[1].guide,
+    choice3:projects[2].title,guide3:projects[2].guide
+  }
   var success=false;
   for(var i=0;i<projects.length;i++)
   {

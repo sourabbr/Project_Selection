@@ -483,24 +483,16 @@
   ],
   "registrations": [
     {
-      "Timestamp": "9/3/2018, 6:02:35 PM",
-      "IP": "49.206.11.12,::ffff:10.10.11.196,::ffff:10.10.10.31",
+      "Timestamp": "9/3/2018, 6:12:45 PM",
+      "IP": "49.206.11.12,::ffff:10.10.10.247,::ffff:10.10.10.182",
       "title": "Blockchain in PDS and rural industries",
       "guide": "Ms. SHARON CHRISTA I.L",
-      "choices": [
-        {
-          "title": "Blockchain in PDS and rural industries",
-          "guide": "Ms. SHARON CHRISTA I.L"
-        },
-        {
-          "title": "Intelligent theft managment system using image processing technique",
-          "guide": "Mr. DHEEMANTH URS"
-        },
-        {
-          "title": "Segmentation and analysis of CT images for abnormality detection",
-          "guide": "Ms. BHAVANI K."
-        }
-      ],
+      "choice1": "Blockchain in PDS and rural industries",
+      "guide1": "Ms. SHARON CHRISTA I.L",
+      "choice2": "Intelligent theft managment system using image processing technique",
+      "guide2": "Mr. DHEEMANTH URS",
+      "choice3": "Paperless tickets for indian transportation system",
+      "guide3": "Mr. DHEEMANTH URS",
       "teamMembers": [
         "1DS15IS001",
         "1DS15IS002",
