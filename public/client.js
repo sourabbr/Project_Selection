@@ -1,6 +1,29 @@
 const MIN_TEAM_MEMBERS = 3;
 const MAX_TEAM_MEMBERS = 4;
 var REGISTRATION_COMPLETE = false;
+$(function () {
+
+    var socket = io();
+  
+    window.addEventListener("focus", function(){socket.connect()});
+
+    $('form').submit(tryRegistration);
+
+    socket.on('successfullyRegistered', successfullyRegistered);
+
+    socket.on('loadState', loadState);
+
+    socket.on('addProject', addProject);
+
+    socket.on('takenProject', takenProject);
+  
+    socket.on('removeProject', removeProject);
+
+    socket.on('displayAlert', function (message, type) {
+        displayAlert(message, type);
+    });
+
+});
 
 $.fn.scrollTo = function (speed) {
     if (typeof(speed) === 'undefined')
@@ -35,11 +58,50 @@ function displayAlert(message, type = 'info') {
         .slideDown()
         .scrollTo();
 }
+function loadState(state) {
+    $('#projectSelectionForm').html('');
+    $('#takenProjectsList').html('');
+    var project,guide;
+    for(var i=1;i<=3;i++)
+    $(`<div style="display: none;" class="select">
+         <label>Choice ${i}:</label>
+         <select class="form-control selection projectSelectionOption" id="projectselectoption${i}">
+          </select></div>`)
+                .appendTo(`#projectSelectionForm`).show(500);
+
+    for (guide of getUnique(state.projects, 'guide')) {
+        // $(`<hr><h6 style="display: none;">Guide: ${guide}</h6>
+     $(`<optgroup value="${guide}" class="${guide.split(' ').join('-')}"></optgroup>
+      `)
+            .appendTo('.projectSelectionOption');
+    }
+
+    for (project of state.projects) {
+        if (project.available) {
+            $(`<option class="${project.title.split(' ').join('-')}" value="${project.title}">${project.title}</option>`)
+                .appendTo(`optgroup.${project.guide.split(' ').join('-')}`);
+        }
+    }
+
+
+    if (REGISTRATION_COMPLETE){
+      $('input').remove();
+      $('textarea').attr('disabled', 'disabled');
+    }
+
+    for (project of state.registrations) {
+      $(` <li style="display: none;">${project.title}
+        <br><small>Team: ${project.teamMembers.join(', ')}</small>
+        </li>
+      `).appendTo('ul#takenProjectsList').show(500);
+    }
+}
 
 function addProject(project) {
   $(`<option class="${project.title.split(' ').join('-')}" value="${project.title}">${project.title}</option>`)
       .appendTo(`optgroup.${project.guide.split(' ').join('-')}`);
 }
+
 function removeProject(project) {
     var doRemove=true;
     var $project=$(`.${project.title.split(' ').join('-')}`);
@@ -59,128 +121,68 @@ function removeProject(project) {
     }
 }
 
-$(function () {
 
-    var socket = io();
-    window.addEventListener("focus", function(){socket.connect()});
-    $('form').submit(function (event) {
-        event.preventDefault();
-        // var $selectedProject = $('form input[name=selectedProject]:checked');
-      
-        //store project options 1 2 3 in variables from respective select menu
-        var $selectedProject1 = $("select#projectselectoption1 > option:selected");
-        var $selectedProject2 = $("select#projectselectoption2 > option:selected");
-        var $selectedProject3 = $("select#projectselectoption3 > option:selected");
-      
-        var title1 = $selectedProject1.val();
-        var title2 = $selectedProject2.val();
-        var title3 = $selectedProject3.val();
-        if (title1 === undefined || title2 === undefined || title3 === undefined) {
-            displayAlert("Please Select Three Project Options");
-            return;
-        }
-        var guide1 = $selectedProject1.parent().parent().parent().attr('value');
-        var guide2 = $selectedProject2.parent().parent().parent().attr('value');
-        var guide3 = $selectedProject3.parent().parent().parent().attr('value');
-        var $team = $('textarea#team-members');
-        if ($team.val().trim().length === 0) {
+function takenProject(project) {
+    removeProject(project);
+    $(`<li style="display: none;">${project.title}</li>`)
+      .appendTo('ul#takenProjectsList').show(500);
+}
+
+
+function successfullyRegistered() {
+    $('input').hide(500, function () {
+        $(this).remove();
+        $('textarea').attr('disabled', 'disabled');
+        REGISTRATION_COMPLETE = true;
+    });
+    setTimeout(function () {
+        displayAlert("Successfully Registered Project", 'success');
+    }, 1000);
+}
+
+
+function tryRegistration(event) {
+    event.preventDefault();
+  
+    var $selectedProject1 = $("select#projectselectoption1 > optgroup > option:selected");
+    var $selectedProject2 = $("select#projectselectoption2 > optgroup > option:selected");
+    var $selectedProject3 = $("select#projectselectoption3 > optgroup > option:selected");
+
+    var title1 = $selectedProject1.val();
+    var title2 = $selectedProject2.val();
+    var title3 = $selectedProject3.val();
+  
+    if (title1 === undefined || title2 === undefined || title3 === undefined) {
+        displayAlert("Please Select Three Project Options");
+        return;
+    }
+  
+    var guide1 = $selectedProject1.parent().parent().parent().attr('value');
+    var guide2 = $selectedProject2.parent().parent().parent().attr('value');
+    var guide3 = $selectedProject3.parent().parent().parent().attr('value');
+    var $team = $('textarea#team-members');
+    if ($team.val().trim().length === 0) {
+        $team.focus();
+        return;
+    }
+    var teamMembers = $team.val().trim().split('\n');
+    var teamMemberSet=new Set(teamMembers);
+    teamMembers=[...teamMemberSet];
+    for (var i = 0; i < teamMembers.length; i++) {
+        if (!validateUSN(teamMembers[i])) {
+            displayAlert("Please Enter Valid USNs only, one in each line, no other text or commas", 'warning');
             $team.focus();
             return;
         }
-        var teamMembers = $team.val().trim().split('\n');
-        var teamMemberSet=new Set(teamMembers);
-        teamMembers=[...teamMemberSet];
-        for (var i = 0; i < teamMembers.length; i++) {
-            if (!validateUSN(teamMembers[i])) {
-                displayAlert("Please Enter Valid USNs only, one in each line, no other text or commas", 'warning');
-                $team.focus();
-                return;
-            }
-            else {
-                teamMembers[i] = teamMembers[i].toUpperCase();
-            }
+        else {
+            teamMembers[i] = teamMembers[i].toUpperCase();
         }
-        if (teamMembers.length < MIN_TEAM_MEMBERS || teamMembers.length > MAX_TEAM_MEMBERS)
-        {
-          displayAlert(`Your team must have minimum ${MIN_TEAM_MEMBERS} and maximum ${MAX_TEAM_MEMBERS} unique members`, 'warning');
-          $team.focus();
-          return;
-        }
-        // if(confirm("I confirm that I have verified my details and understand that my choice is finalized")===false)
-        //   return;
-        socket.emit('registerProject', [{title:title1, guide:guide1}, {title:title2, guide:guide2}, {title:title3, guide:guide3}], teamMembers);
-    });
-
-    socket.on('successfullyRegistered', function () {
-        $('input').hide(500, function () {
-            $(this).remove();
-            $('textarea').attr('disabled', 'disabled');
-            REGISTRATION_COMPLETE = true;
-        });
-        setTimeout(function () {
-            displayAlert("Successfully Registered Project", 'success');
-        }, 1000);
-    });
-
-    socket.on('loadState', function (state) {
-        $('#projectSelectionForm').html('');
-        $('#takenProjectsList').html('');
-        var project,guide;
-        // var projectoptionhtmlstring='';
-        // for (project of state.projects) {
-        //     if (project.available) {
-        //       projectoptionhtmlstring += `<option class="${project.title.split(' ').join('-')}" value="${project.title}">${project.title}</option>`;
-        //     }
-        // }
-        for(var i=1;i<=3;i++)
-        $(`<div style="display: none;" class="select">
-             <label>Choice ${i}:</label>
-             <select class="form-control selection projectSelectionOption" id="projectselectoption${i}">
-              </select></div>`)
-                    .appendTo(`#projectSelectionForm`).show(500);
-      
-        for (guide of getUnique(state.projects, 'guide')) {
-            // $(`<hr><h6 style="display: none;">Guide: ${guide}</h6>
-         $(`<optgroup value="${guide}" class="${guide.split(' ').join('-')}"></optgroup>
-          `)
-                .appendTo('.projectSelectionOption');
-        }
-      
-        for (project of state.projects) {
-            if (project.available) {
-                $(`<option class="${project.title.split(' ').join('-')}" value="${project.title}">${project.title}</option>`)
-                    .appendTo(`optgroup.${project.guide.split(' ').join('-')}`);
-            }
-        }
-      
-      
-        if (REGISTRATION_COMPLETE){
-          $('input').remove();
-          $('textarea').attr('disabled', 'disabled');
-        }
-      
-        for (project of state.registrations) {
-          $(` <li style="display: none;">${project.title}
-            <br><small>Team: ${project.teamMembers.join(', ')}</small>
-            </li>
-          `).appendTo('ul#takenProjectsList').show(500);
-        }
-        
-
-    });
-
-    socket.on('addProject', addProject);
-
-    socket.on('takenProject', function (project) {
-        removeProject(project);
-        $(`<li style="display: none;">${project.title}</li>`)
-          .appendTo('ul#takenProjectsList').show(500);
-    });
-  
-    socket.on('removeProject', removeProject);
-
-    socket.on('displayAlert', function (message, type) {
-        displayAlert(message, type);
-    });
-
-});
+    }
+    if (teamMembers.length < MIN_TEAM_MEMBERS || teamMembers.length > MAX_TEAM_MEMBERS)
+    {
+      displayAlert(`Your team must have minimum ${MIN_TEAM_MEMBERS} and maximum ${MAX_TEAM_MEMBERS} unique members`, 'warning');
+      $team.focus();
+      return;
+    }
+    socket.emit('registerProject', [{title:title1, guide:guide1}, {title:title2, guide:guide2}, {title:title3, guide:guide3}], teamMembers);
+}
