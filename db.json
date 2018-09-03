@@ -8,7 +8,7 @@
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Blockchain in PDS and rural industries",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
@@ -481,34 +481,12 @@
       "available": 1
     }
   ],
-  "registrations": [
-    {
-      "Timestamp": "9/3/2018, 6:12:45 PM",
-      "IP": "49.206.11.12,::ffff:10.10.10.247,::ffff:10.10.10.182",
-      "title": "Blockchain in PDS and rural industries",
-      "guide": "Ms. SHARON CHRISTA I.L",
-      "choice1": "Blockchain in PDS and rural industries",
-      "guide1": "Ms. SHARON CHRISTA I.L",
-      "choice2": "Intelligent theft managment system using image processing technique",
-      "guide2": "Mr. DHEEMANTH URS",
-      "choice3": "Paperless tickets for indian transportation system",
-      "guide3": "Mr. DHEEMANTH URS",
-      "teamMembers": [
-        "1DS15IS001",
-        "1DS15IS002",
-        "1DS15IS003"
-      ]
-    }
-  ],
-  "registeredUSNs": [
-    "1DS15IS001",
-    "1DS15IS002",
-    "1DS15IS003"
-  ],
+  "registrations": [],
+  "registeredUSNs": [],
   "guides": [
     {
       "name": "Ms. SHARON CHRISTA I.L",
-      "registeredCount": 1
+      "registeredCount": 0
     },
     {
       "name": "Ms. KRUPASHANKARI .S.S",
