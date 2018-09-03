@@ -13,12 +13,12 @@
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Secured certificates and marksheets using blockchain",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Live object detection in videos using CNN",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
@@ -483,25 +483,14 @@
   ],
   "registrations": [
     {
-      "Timestamp": "9/3/2018, 3:34:34 PM",
-      "IP": "49.206.11.12,::ffff:10.10.10.247,::ffff:10.10.10.31",
-      "title": "Blockchain in PDS and rural industries",
+      "Timestamp": "9/3/2018, 3:40:36 PM",
+      "IP": "49.206.11.12,::ffff:10.10.10.247,::ffff:10.10.10.231",
+      "title": "Sound Regeneration using GAN's",
       "guide": "Ms. SHARON CHRISTA I.L",
       "teamMembers": [
         "1DS15IS001",
         "1DS15IS002",
         "1DS15IS003"
-      ]
-    },
-    {
-      "Timestamp": "9/3/2018, 3:36:34 PM",
-      "IP": "49.206.11.12,::ffff:10.10.10.247,::ffff:10.10.10.231",
-      "title": "Sound Regeneration using GAN's",
-      "guide": "Ms. SHARON CHRISTA I.L",
-      "teamMembers": [
-        "1DS15IS004",
-        "1DS15IS005",
-        "1DS15IS006"
       ]
     }
   ],
@@ -509,20 +498,17 @@
     "1DS15IS001",
     "1DS15IS002",
     "1DS15IS003",
-    "1DS15IS004",
-    "1DS15IS005",
-    "1DS15IS006",
-    "1DS15IS004",
-    "1DS15IS005",
-    "1DS15IS006",
-    "1DS15IS004",
-    "1DS15IS005",
-    "1DS15IS006"
+    "1DS15IS001",
+    "1DS15IS002",
+    "1DS15IS003",
+    "1DS15IS001",
+    "1DS15IS002",
+    "1DS15IS003"
   ],
   "guides": [
     {
       "name": "Ms. SHARON CHRISTA I.L",
-      "registeredCount": 4
+      "registeredCount": 3
     },
     {
       "name": "Ms. KRUPASHANKARI .S.S",

@@ -89,7 +89,7 @@ const tryRegisterProject=(project,teamMembers,db,io,socket,headers) => {
                             .write()
                             .then(guide=>{
                               console.log(guide);
-                              if (guide.registeredCount == MAX_REGISTRATION_COUNT){
+                              if (guide.registeredCount >= MAX_REGISTRATION_COUNT){
                                 db.get("projects")
                                 .filter({guide:guide.name})
                                 .each(proj=>{
