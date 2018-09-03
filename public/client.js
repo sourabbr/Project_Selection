@@ -1,7 +1,28 @@
 const MIN_TEAM_MEMBERS = 3;
 const MAX_TEAM_MEMBERS = 4;
 var REGISTRATION_COMPLETE = false;
+$(document).ready(function () {
 
+    window.socket = io();
+    window.addEventListener("focus", function(){socket.connect()});
+
+    $('form').submit(tryRegistration);
+
+    socket.on('successfullyRegistered', successfullyRegistered);
+
+    socket.on('loadState', loadState);
+
+    socket.on('addProject', addProject);
+
+    socket.on('takenProject', takenProject);
+  
+    socket.on('removeProject', removeProject);
+
+    socket.on('displayAlert', function (message, type) {
+        displayAlert(message, type);
+    });
+
+});
 $.fn.scrollTo = function (speed) {
     if (typeof(speed) === 'undefined')
         speed = 1000;
@@ -164,26 +185,3 @@ function tryRegistration(event) {
     socket.emit('registerProject', [{title:title1, guide:guide1}, {title:title2, guide:guide2}, {title:title3, guide:guide3}], teamMembers);
 }
 
-$(function () {
-
-    var socket = io();
-  
-    window.addEventListener("focus", function(){socket.connect()});
-
-    $('form').submit(tryRegistration);
-
-    socket.on('successfullyRegistered', successfullyRegistered);
-
-    socket.on('loadState', loadState);
-
-    socket.on('addProject', addProject);
-
-    socket.on('takenProject', takenProject);
-  
-    socket.on('removeProject', removeProject);
-
-    socket.on('displayAlert', function (message, type) {
-        displayAlert(message, type);
-    });
-
-});
