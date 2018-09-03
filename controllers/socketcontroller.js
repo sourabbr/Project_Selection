@@ -39,10 +39,10 @@ let socketcontroller = (io, db) => {
   
         socket.on('registerProject', (projects,teamMembers)=>{
           var i = 0;
-          projects.forEach(project=>{
+          for(var project of projects){
             if(tryRegisterProject(projects[i],teamMembers,db,io,socket,headers)==="success")
               return;
-          });
+          }
           
         });
         
