@@ -98,7 +98,7 @@ function loadState(state) {
       $(` <li style="display: none;">${project.title}
         <br><small>Team: ${project.teamMembers.join(', ')}</small>
         </li>
-      `).appendTo('ul#takenProjectsList').show(500);
+      `).prependTo('ul#takenProjectsList').show(500);
     }
 }
 
@@ -129,7 +129,7 @@ function takenProject(project) {
     $(`<li style="display: none;">${project.title}
         <br><small>Team: ${project.teamMembers.join(', ')}
         </li></small>`)
-      .appendTo('ul#takenProjectsList').show(500);
+      .prependTo('ul#takenProjectsList').show(500);
 }
 
 
