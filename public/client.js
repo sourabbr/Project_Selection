@@ -65,6 +65,7 @@ function loadState(state) {
     $(`<div style="display: none;" class="select">
          <label>Choice ${i}:</label>
          <select class="form-control selection projectSelectionOption" id="projectselectoption${i}">
+          <option disabled selected value> -- select an option -- </option>
           </select></div>`)
                 .appendTo(`#projectSelectionForm`).show(500);
 
@@ -76,11 +77,10 @@ function loadState(state) {
 
     for (project of state.projects) {
         if (project.available) {
-            $(`<option class="${project.title.split(' ').join('-')}" value="${project.title}">${project.title}</option>`)
+            $(`<option class="${project.title.split(' ').join('-').replace(/\./g,'_')}" value="${project.title}">${project.title}</option>`)
                 .appendTo(`optgroup.${project.guide.split(' ').join('-').replace(/\./g,'_')}`);
         }
     }
-
 
     if (REGISTRATION_COMPLETE){
       $('input').remove();
@@ -96,8 +96,8 @@ function loadState(state) {
 }
 
 function addProject(project) {
-  $(`<option class="${project.title.split(' ').join('-')}" value="${project.title}">${project.title}</option>`)
-      .appendTo(`optgroup.${project.guide.split(' ').join('-')}`);
+  $(`<option class="${project.title.split(' ').join('-').replace(/\./g,'_')}" value="${project.title}">${project.title}</option>`)
+      .appendTo(`optgroup.${project.guide.split(' ').join('-').replace(/\./g,'_')}`);
 }
 
 function removeProject(project) {
