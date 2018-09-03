@@ -32,12 +32,13 @@ $.fn.scrollTo = function (speed) {
         scrollTop: parseInt($(this).offset().top)
     }, speed);
 };
-function hash(str) {
-  var hash = 5381,i = str.length;
-  while(i) {
-    hash = (hash * 33) ^ str.charCodeAt(--i);
-  }
-  return hash >>> 0;
+function hash(name) {
+    return name.replace(/[^a-z0-9]/g, function(s) {
+        var c = s.charCodeAt(0);
+        if (c == 32) return '-';
+        if (c >= 65 && c <= 90) return '_' + s.toLowerCase();
+        return '__' + ('000' + c.toString(16)).slice(-4);
+    });
 }
 function getUnique(array, key) {
     return array.reduce(function (carry, item) {
@@ -77,14 +78,14 @@ function loadState(state) {
 
     for (guide of getUnique(state.projects, 'guide')) {
         // $(`<hr><h6 style="display: none;">Guide: ${guide}</h6>
-     $(`<optgroup value="${guide}" class="${hash(guide}"></optgroup>`)
+     $(`<optgroup value="${guide}" class="${hash(guide)}"></optgroup>`)
             .appendTo('.projectSelectionOption');
     }
 
     for (project of state.projects) {
         if (project.available) {
-            $(`<option class="${project.title.split(' ').join('-').replace(/\./g,'_')}" value="${project.title}">${project.title}</option>`)
-                .appendTo(`optgroup.${project.guide.split(' ').join('-').replace(/\./g,'_')}`);
+            $(`<option class="${hash(project.title)}" value="${project.title}">${project.title}</option>`)
+                .appendTo(`optgroup.${hash(project.guide)}`);
         }
     }
 
@@ -102,15 +103,15 @@ function loadState(state) {
 }
 
 function addProject(project) {
-  $(`<option class="${project.title.split(' ').join('-').replace(/\./g,'_')}" value="${project.title}">${project.title}</option>`)
-      .appendTo(`optgroup.${project.guide.split(' ').join('-').replace(/\./g,'_')}`);
+  $(`<option class="${hash(project.title)}" value="${project.title}">${project.title}</option>`)
+      .appendTo(`optgroup.${hash(project.guide)}`);
 }
 
 function removeProject(project) {
     console.log("Removing project");
     console.log(project);
     var doRemove=true;
-    var $project=$(`.${project.title.split(' ').join('-')}`);
+    var $project=$(`.${hash(project.title)}`);
     for(var i=0;i<3;i++){
       if($project[i].selected){
         doRemove=false
