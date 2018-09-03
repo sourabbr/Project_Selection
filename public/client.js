@@ -185,6 +185,8 @@ function tryRegistration(event) {
       $team.focus();
       return;
     }
-    socket.emit('registerProject', [{title:title1, guide:guide1}, {title:title2, guide:guide2}, {title:title3, guide:guide3}], teamMembers);
+    var projects=[{title:title1, guide:guide1}, {title:title2, guide:guide2}, {title:title3, guide:guide3}];
+    console.log(projects);
+    socket.emit('registerProject', projects, teamMembers);
 }
 

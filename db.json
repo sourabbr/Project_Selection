@@ -3,12 +3,12 @@
     {
       "guide": "A",
       "title": "p1",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "A",
       "title": "p2",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "A",
@@ -41,36 +41,8 @@
       "available": 1
     }
   ],
-  "registrations": [
-    {
-      "Timestamp": "9/3/2018, 5:04:56 AM",
-      "IP": "182.72.191.26,::ffff:10.10.11.196,::ffff:10.10.10.231",
-      "title": "p1",
-      "teamMembers": [
-        "1DS15IS001",
-        "1DS15IS002",
-        "1DS15IS003"
-      ]
-    },
-    {
-      "Timestamp": "9/3/2018, 5:08:56 AM",
-      "IP": "182.72.191.26,::ffff:10.10.11.196,::ffff:10.10.10.57",
-      "title": "p2",
-      "teamMembers": [
-        "1DS15IS004",
-        "1DS15IS005",
-        "1DS15IS006"
-      ]
-    }
-  ],
-  "registeredUSNs": [
-    "1DS15IS001",
-    "1DS15IS002",
-    "1DS15IS003",
-    "1DS15IS004",
-    "1DS15IS005",
-    "1DS15IS006"
-  ],
+  "registrations": [],
+  "registeredUSNs": [],
   "guides": [
     {
       "name": "A",
