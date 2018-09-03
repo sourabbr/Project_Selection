@@ -53,7 +53,7 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
   let usnList = db.get("registeredUSNs").value();
   for (let usn of teamMembers) {
       if (usnList.includes(usn)) {
-          io.to(`${socket.id}`).emit('displayAlert', `${usn} already registered`, 'warning');
+          io.to(`${socket.id}`).emit('displayAlert', `${usn} already registered`, 'danger');
           return;
       }
   }

@@ -63,7 +63,7 @@
     {
       "guide": "Mr. SURESHKUMAR M.",
       "title": "Detecting fraud apps using sentiment analysis",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. SURESHKUMAR M.",
@@ -547,6 +547,17 @@
         "1DS16IS402",
         "1DS16IS403"
       ]
+    },
+    {
+      "Timestamp": "9/3/2018, 5:40:58 PM",
+      "IP": "49.206.11.12,::ffff:10.10.11.196,::ffff:10.10.10.57",
+      "title": "Detecting fraud apps using sentiment analysis",
+      "guide": "Mr. SURESHKUMAR M.",
+      "teamMembers": [
+        "1DS15IS601",
+        "1DS15IS602",
+        "1DS15IS603"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -570,7 +581,10 @@
     "1DS16IS303",
     "1DS16IS401",
     "1DS16IS402",
-    "1DS16IS403"
+    "1DS16IS403",
+    "1DS15IS601",
+    "1DS15IS602",
+    "1DS15IS603"
   ],
   "guides": [
     {
@@ -587,7 +601,7 @@
     },
     {
       "name": "Mr. SURESHKUMAR M.",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Ms. RADHIKA T. V.",

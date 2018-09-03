@@ -140,7 +140,7 @@ function successfullyRegistered(project) {
         REGISTRATION_COMPLETE = true;
     });
     setTimeout(function () {
-        displayAlert(`Successfully Registered Project ${project}`, 'success');
+        displayAlert(`Successfully Registered Project: ${project}`, 'success');
     }, 1000);
 }
 
