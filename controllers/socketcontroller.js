@@ -69,7 +69,7 @@ const tryRegisterProject=(project,teamMembers,db,io,socket,headers) => {
       .write()
       .then(err => {
           if (err) {
-              io.to(`${socket.id}`).emit('displayAlert', "Project already taken", 'warning');
+              io.to(`${socket.id}`).emit('displayAlert', `Project ${project.title} already taken`, 'danger');
               return;
           }
             db.get("projects")
@@ -81,24 +81,28 @@ const tryRegisterProject=(project,teamMembers,db,io,socket,headers) => {
                       .push(...teamMembers) 
                       .write()
                       .then(() => {
-                          let guide = db.get('guides')
+                          db.get('guides')
                             .find({name:project.guide})
-                            .value();
-                          guide.registeredCount++;
-                          if (guide.registeredCount == MAX_REGISTRATION_COUNT){
-                            db.get("projects")
-                              .filter({guide:guide.name})
-                              .each(proj=>{
-                                proj.available=0;
-                                io.emit('removeProject',proj);
-                              })
-                              .write()                                  
-                              .then(()=>console.log(guide.name+" done"))
-                              .catch(err=>console.error(err));
-                          }
-                          io.emit('takenProject', {...project,teamMembers});
-                          io.to(`${socket.id}`).emit('successfullyRegistered',project.title);
-                          return "success";
+                            .update('registeredCount', n => n + 1)
+                            .write()
+                            .then(guide=>{
+                              console.log(guide);
+                              if (guide.registeredCount == MAX_REGISTRATION_COUNT){
+                                db.get("projects")
+                                .filter({guide:guide.name})
+                                .each(proj=>{
+                                  proj.available=0;
+                                  io.emit('removeProject',proj);
+                                })
+                                .write()                                  
+                                .then(()=>console.log(guide.name+" done"))
+                                .catch(err=>console.error(err));
+                              }
+                              io.emit('takenProject', {...project,teamMembers});
+                              io.to(`${socket.id}`).emit('successfullyRegistered',project.title);
+                              return "success";
+                            })
+                         
                       })
                       .catch(err=>console.error(err));
                 })
