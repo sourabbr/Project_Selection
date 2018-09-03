@@ -67,13 +67,13 @@ const tryRegisterProject=(project,teamMembers,db,io,socket,headers) => {
   db.get("registrations")
       .insertIfNotExists({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project,teamMembers})
       .write()
-      .then(err => {
-          if (err) {
-              console.log("Error");
-              console.log(err);
-              io.to(`${socket.id}`).emit('displayAlert', `Project ${project.title} already taken`, 'danger');
-              return;
-          }
+      .then(() => {
+          // if (err==="alreadyExists") {
+          //     console.log("Error");
+          //     console.log(err);
+          //     io.to(`${socket.id}`).emit('displayAlert', `Project ${project.title} already taken`, 'danger');
+          //     return;
+          // }
             db.get("projects")
                 .find({title: project.title})
                 .assign({available: 0})

@@ -26,7 +26,7 @@ const controller = function (app, io) {
                         key = key || 'title';
                         let el = collection[i];
                         if (el[key] === obj[key]) {
-                            return obj; // err: Already exists
+                            return "alreadyExists"; // err: Already exists
                         }
                     }
                     collection.push(obj);
