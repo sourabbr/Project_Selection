@@ -114,6 +114,7 @@ function removeProject(project) {
     var $project=$(`.${hash(project.title)}`);
     for(var i=0;i<3;++i){
       if($project[i].selected){
+        displayAlert(`Your Choice ${i+1} is now unavailable`,'danger');
         doRemove=false
         break;
       }
@@ -124,7 +125,7 @@ function removeProject(project) {
       });
     }
     else{
-      displayAlert(`Your Choice ${i} is now unavailable`,'danger');
+      displayAlert(`Your Choice ${i+1} is now unavailable`,'danger');
     }
 }
 
