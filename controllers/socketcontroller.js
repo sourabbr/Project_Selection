@@ -38,12 +38,7 @@ let socketcontroller = (io, db) => {
         });
   
         socket.on('registerProject', (projects,teamMembers)=>{
-          var i = 0;
-          for(var project of projects){
-            if(tryRegisterProject(projects[i],teamMembers,db,io,socket,headers)==="success")
-              return;
-          }
-          
+            tryRegisterProject(projects,teamMembers,db,io,socket,headers);
         });
         
         socket.on('disconnect', () => {
@@ -53,7 +48,7 @@ let socketcontroller = (io, db) => {
     });
   
 };
-const tryRegisterProject=(project,teamMembers,db,io,socket,headers) => { 
+const tryRegisterProject=(projects,teamMembers,db,io,socket,headers) => { 
           
   let usnList = db.get("registeredUSNs").value();
   for (let usn of teamMembers) {
@@ -63,7 +58,8 @@ const tryRegisterProject=(project,teamMembers,db,io,socket,headers) => {
       }
   }
 
-
+  var success=false;
+  for(var
   db.get("registrations")
       .insertIfNotExists({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project,teamMembers})
       .write()
