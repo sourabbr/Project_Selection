@@ -115,17 +115,12 @@ function removeProject(project) {
     for(var i=0;i<3;++i){
       if($project[i].selected){
         displayAlert(`Your Choice ${i+1} is now unavailable`,'danger');
-        doRemove=false
-        break;
-      }
-    }
-    if(doRemove){
-      $project.hide(500, function () {
+        :selected').parent().parent().val('')
+        $project.hide(500, function () {
           $(this).remove();
-      });
-    }
-    else{
-      displayAlert(`Your Choice ${i+1} is now unavailable`,'danger');
+        });
+        return;
+      }
     }
 }
 

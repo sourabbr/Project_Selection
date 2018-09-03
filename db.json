@@ -23,7 +23,7 @@
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "An efficient algorithm to recognize the License plate of the vehicle.",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
@@ -514,6 +514,17 @@
         "1DS15IS012",
         "1DS15IS013"
       ]
+    },
+    {
+      "Timestamp": "9/3/2018, 5:17:18 PM",
+      "IP": "49.206.11.12,::ffff:10.10.11.196,::ffff:10.10.10.254",
+      "title": "An efficient algorithm to recognize the License plate of the vehicle.",
+      "guide": "Ms. KRUPASHANKARI .S.S",
+      "teamMembers": [
+        "1DS16IS201",
+        "1DS16IS202",
+        "1DS16IS203"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -528,7 +539,10 @@
     "1DS15IS013",
     "1DS15IS101",
     "1DS15IS102",
-    "1DS15IS103"
+    "1DS15IS103",
+    "1DS16IS201",
+    "1DS16IS202",
+    "1DS16IS203"
   ],
   "guides": [
     {
@@ -537,7 +551,7 @@
     },
     {
       "name": "Ms. KRUPASHANKARI .S.S",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Mr. DHEEMANTH URS",
