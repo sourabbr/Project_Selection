@@ -69,6 +69,8 @@ const tryRegisterProject=(project,teamMembers,db,io,socket,headers) => {
       .write()
       .then(err => {
           if (err) {
+              console.log("Error");
+              console.log(err);
               io.to(`${socket.id}`).emit('displayAlert', `Project ${project.title} already taken`, 'danger');
               return;
           }
