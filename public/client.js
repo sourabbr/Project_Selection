@@ -39,7 +39,7 @@ function displayAlert(message, type = 'info') {
 $(function () {
 
     var socket = io();
-    window.addEventListener("focus", () => socket.connect());
+    window.addEventListener("focus", function(){socket.connect()});
     $('form').submit(function (event) {
         event.preventDefault();
         // var $selectedProject = $('form input[name=selectedProject]:checked');
