@@ -32,7 +32,13 @@ $.fn.scrollTo = function (speed) {
         scrollTop: parseInt($(this).offset().top)
     }, speed);
 };
-
+function hash(str) {
+  var hash = 5381,i = str.length;
+  while(i) {
+    hash = (hash * 33) ^ str.charCodeAt(--i);
+  }
+  return hash >>> 0;
+}
 function getUnique(array, key) {
     return array.reduce(function (carry, item) {
         if (item[key] && !~carry.indexOf(item[key])) carry.push(item[key]);
@@ -71,7 +77,7 @@ function loadState(state) {
 
     for (guide of getUnique(state.projects, 'guide')) {
         // $(`<hr><h6 style="display: none;">Guide: ${guide}</h6>
-     $(`<optgroup value="${guide}" class="${guide.split(' ').join('-').replace(/\./g,'_')}"></optgroup>`)
+     $(`<optgroup value="${guide}" class="${hash(guide}"></optgroup>`)
             .appendTo('.projectSelectionOption');
     }
 
