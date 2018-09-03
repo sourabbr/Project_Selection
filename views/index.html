@@ -18,8 +18,15 @@
 <body>
 <br><br>
 <div class="container">
-    <label>Select your project from the Available Projects list</label>
     <form action="">
+        <div class="form-group">
+            <label for="team-members">Enter Team Members' USNs <b>(one in each line)</b></label>
+            <textarea class="form-control" rows="4" id="team-members"></textarea>
+        </div>
+        
+        <div id="alerts"></div>
+        
+        <label>Select your project from the Available Projects list</label>
         <div class="row">
             <div class="col-md jumbotron m-4 pt-3 pb-3">
                 <b>Available Projects</b>
@@ -41,12 +48,7 @@
             </div>
         </div>
 
-        <div id="alerts"></div>
-
-        <div class="form-group">
-            <label for="team-members">Enter Team Members' USNs <b>(one in each line)</b></label>
-            <textarea class="form-control" rows="4" id="team-members"></textarea>
-        </div>
+        
         <input type="submit" class="btn btn-success form-control">
     </form>
     <br>

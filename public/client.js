@@ -115,13 +115,12 @@ function removeProject(project) {
     for(var i=0;i<3;++i){
       if($project[i].selected){
         displayAlert(`Your Choice ${i+1} is now unavailable`,'danger');
-        :selected').parent().parent().val('')
-        $project.hide(500, function () {
-          $(this).remove();
-        });
-        return;
+        $(`.${hash(project.title)}:selected`).parent().parent().val('')
       }
     }
+    $project.hide(500, function () {
+      $(this).remove();
+    });
 }
 
 
