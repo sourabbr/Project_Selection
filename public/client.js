@@ -158,9 +158,10 @@ function tryRegistration(event) {
         return;
     }
   
-    var guide1 = $selectedProject1.parent().parent().parent().attr('value');
-    var guide2 = $selectedProject2.parent().parent().parent().attr('value');
-    var guide3 = $selectedProject3.parent().parent().parent().attr('value');
+    var guide1 = $selectedProject1.parent().attr('value');
+    var guide2 = $selectedProject2.parent().attr('value');
+    var guide3 = $selectedProject3.parent().attr('value');
+  
     var $team = $('textarea#team-members');
     if ($team.val().trim().length === 0) {
         $team.focus();

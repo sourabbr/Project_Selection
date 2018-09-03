@@ -81,10 +81,6 @@ const tryRegisterProject=(project,teamMembers,db,io,socket,headers) => {
                       .push(...teamMembers) 
                       .write()
                       .then(() => {
-                          io.emit('takenProject', {...project,teamMembers});
-                          io.to(`${socket.id}`).emit('successfullyRegistered',project.title);
-                          return "success";
-
                           let guide = db.get('guides')
                             .find({name:project.guide})
                             .value();
@@ -100,6 +96,9 @@ const tryRegisterProject=(project,teamMembers,db,io,socket,headers) => {
                               .then(()=>console.log(guide.name+" done"))
                               .catch(err=>console.error(err));
                           }
+                          io.emit('takenProject', {...project,teamMembers});
+                          io.to(`${socket.id}`).emit('successfullyRegistered',project.title);
+                          return "success";
                       })
                       .catch(err=>console.error(err));
                 })
