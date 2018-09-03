@@ -36,6 +36,29 @@ function displayAlert(message, type = 'info') {
         .scrollTo();
 }
 
+function addProject(project) {
+  $(`<option class="${project.title.split(' ').join('-')}" value="${project.title}">${project.title}</option>`)
+      .appendTo(`optgroup.${project.guide.split(' ').join('-')}`);
+}
+function removeProject(project) {
+    var doRemove=true;
+    var $project=$(`.${project.title.split(' ').join('-')}`);
+    for(var i=0;i<3;i++){
+      if($project[i].selected){
+        doRemove=false
+        break;
+      }
+    }
+    if(doRemove){
+      $project.hide(500, function () {
+          $(this).remove();
+      });
+    }
+    else{
+      displayAlert(`Your Choice ${i} is now unavailable`,'danger');
+    }
+}
+
 $(function () {
 
     var socket = io();
@@ -146,26 +169,15 @@ $(function () {
 
     });
 
-    socket.on('addProject', function (project) {
-        $(`<option class="${project.title.split(' ').join('-')}" value="${project.title}">${project.title}</option>`)
-            .appendTo(`optgroup.${project.guide.split(' ').join('-')}`);
-    });
+    socket.on('addProject', addProject);
 
     socket.on('takenProject', function (project) {
-        $(`.${project.title.split(' ').join('-')}`).hide(500, function () {
-            $(this).remove();
-        });
+        removeProject(project);
         $(`<li style="display: none;">${project.title}</li>`)
           .appendTo('ul#takenProjectsList').show(500);
     });
   
-    socket.on('removeProject', function (project) {
-        var $project=$(`.${project.title.split(' ').join('-')}`);
-        
-        $project.hide(500, function () {
-            $(this).remove();
-        });
-    });
+    socket.on('removeProject', removeProject);
 
     socket.on('displayAlert', function (message, type) {
         displayAlert(message, type);
