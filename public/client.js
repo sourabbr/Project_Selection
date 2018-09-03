@@ -1,6 +1,7 @@
 const MIN_TEAM_MEMBERS = 3;
 const MAX_TEAM_MEMBERS = 4;
 var REGISTRATION_COMPLETE = false;
+var socket;
 $(document).ready(function () {
 
     window.socket = io();
@@ -115,26 +116,28 @@ function removeProject(project) {
       });
     }
     else{
-      displayAlert(`Your Choice ${i} is now unavailable`,'danger');
+      displayAlert(`Your Choice ${i+1} is now unavailable`,'danger');
     }
 }
 
 
 function takenProject(project) {
     removeProject(project);
-    $(`<li style="display: none;">${project.title}</li>`)
+    $(`<li style="display: none;">${project.title}
+        <br><small>Team: ${project.teamMembers.join(', ')}
+        </li></small>`)
       .appendTo('ul#takenProjectsList').show(500);
 }
 
 
-function successfullyRegistered() {
+function successfullyRegistered(project) {
     $('input').hide(500, function () {
         $(this).remove();
         $('textarea').attr('disabled', 'disabled');
         REGISTRATION_COMPLETE = true;
     });
     setTimeout(function () {
-        displayAlert("Successfully Registered Project", 'success');
+        displayAlert(`Successfully Registered Project ${project}`, 'success');
     }, 1000);
 }
 

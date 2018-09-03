@@ -82,7 +82,7 @@ const tryRegisterProject=(project,teamMembers,db,io,socket,headers) => {
                                     .write()
                                     .then(() => {
                                         io.emit('takenProject', {...project,teamMembers});
-                                        io.to(`${socket.id}`).emit('successfullyRegistered');
+                                        io.to(`${socket.id}`).emit('successfullyRegistered',project.title);
                                         return "success";
 
                                         let guide = db.get('guides')
