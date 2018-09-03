@@ -118,7 +118,7 @@ $(function () {
       
         for (guide of getUnique(state.projects, 'guide')) {
             // $(`<hr><h6 style="display: none;">Guide: ${guide}</h6>
-         $(`<fieldset value="${guide}" class="${guide.split(' ').join('-')}"></fieldset>
+         $(`<optgroup value="${guide}" class="${guide.split(' ').join('-')}"></optgroup>
           `)
                 .appendTo('.projectSelectionOption');
         }
@@ -126,27 +126,10 @@ $(function () {
         for (project of state.projects) {
             if (project.available) {
                 $(`<option class="${project.title.split(' ').join('-')}" value="${project.title}">${project.title}</option>`)
-                    .appendTo(`fieldset.${project.guide.split(' ').join('-')}`);
+                    .appendTo(`optgroup.${project.guide.split(' ').join('-')}`);
             }
         }
       
-//         $(`<div style="display: none;" class="select">
-//              <label>Option 1:</label>
-//              <select class="form-control selection" id="projectselectoption1" class="projectSelectionOption">
-//           `+projectoptionhtmlstring+`</select></div>`)
-//                     .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
-      
-//         $(`<div style="display: none;" class="select">
-//              <label>Option 2:</label>
-//              <select class="form-control selection" id="projectselectoption2" class="projectSelectionOption">
-//           `+projectoptionhtmlstring+`</select></div>`)
-//                     .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
-      
-//         $(`<div style="display: none;" class="select">
-//              <label>Option 3:</label>
-//              <select class="form-control selection" id="projectselectoption3" class="projectSelectionOption">
-//           `+projectoptionhtmlstring+`</select></div>`)
-//                     .appendTo(`fieldset.${project.guide.split(' ').join('-')}`).show(500);
       
         if (REGISTRATION_COMPLETE){
           $('input').remove();
@@ -164,25 +147,22 @@ $(function () {
     });
 
     socket.on('addProject', function (project) {
-        $(`<div class="radio" id="${project.title.split(' ').join('-')}">
-         <label><input type="radio" name="selectedProject" value="${project.title}"> ${project.title}</label>
-         </div>
-        `)
-            .appendTo(`fieldset.${project.guide.split(' ').join('-')}`);
+        $(`<option class="${project.title.split(' ').join('-')}" value="${project.title}">${project.title}</option>`)
+            .appendTo(`optgroup.${project.guide.split(' ').join('-')}`);
     });
 
     socket.on('takenProject', function (project) {
         $(`.${project.title.split(' ').join('-')}`).hide(500, function () {
             $(this).remove();
         });
-        $(` <li style="display: none;">${project.title}
-            <br><small>Team: ${project.teamMembers.join(', ')}</small>
-            </li>
-          `).appendTo('ul#takenProjectsList').show(500);
+        $(`<li style="display: none;">${project.title}</li>`)
+          .appendTo('ul#takenProjectsList').show(500);
     });
   
     socket.on('removeProject', function (project) {
-        $(`.${project.title.split(' ').join('-')}`).hide(500, function () {
+        var $project=$(`.${project.title.split(' ').join('-')}`);
+        
+        $project.hide(500, function () {
             $(this).remove();
         });
     });
