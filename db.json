@@ -203,22 +203,22 @@
     {
       "guide": "Ms. MADHURA J.",
       "title": "Novel apprach for denoising images using hybrid filters",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. MADHURA J.",
       "title": "Detection and Characterization of Subsolid Juxta-pleural Lung Nodule from CT Images",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. MADHURA J.",
       "title": "Chatbots in educational system",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. MADHURA J.",
       "title": "Design of Biometric Recognition Software Based on Image Processing",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SHILPA .D",
@@ -889,6 +889,40 @@
         "1DS15IS002",
         "1DS15IS003"
       ]
+    },
+    {
+      "Timestamp": "9/4/2018, 1:14:56 PM",
+      "IP": "49.206.11.12,::ffff:10.10.10.247,::ffff:10.10.10.31",
+      "title": "Chatbots in educational system",
+      "guide": "Ms. MADHURA J.",
+      "choice1": "Chatbots in educational system",
+      "guide1": "Ms. MADHURA J.",
+      "choice2": "Design of Biometric Recognition Software Based on Image Processing",
+      "guide2": "Ms. MADHURA J.",
+      "choice3": "An Efficient and Secured Data Storage technique  in  cloud",
+      "guide3": "Ms. VAIDEHI M",
+      "teamMembers": [
+        "1DS15IS101",
+        "1DS15IS102",
+        "1DS15IS103"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 1:16:37 PM",
+      "IP": "49.206.11.12,::ffff:10.10.10.247,::ffff:10.10.10.254",
+      "title": "Design of Biometric Recognition Software Based on Image Processing",
+      "guide": "Ms. MADHURA J.",
+      "choice1": "Design of Biometric Recognition Software Based on Image Processing",
+      "guide1": "Ms. MADHURA J.",
+      "choice2": "Division and Replication of Data in Cloud for Optimal Performance and Security",
+      "guide2": "Mr. MUZAMEEL AHMED",
+      "choice3": "An implementation of reliable routing protocol in Wirless sensor/adhoc networks",
+      "guide3": "Ms. SONALI JOYCE LOBO",
+      "teamMembers": [
+        "1DS15IS201",
+        "1DS15IS202",
+        "1DS15IS203"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -963,7 +997,13 @@
     "1DS15IS420",
     "1DS15IS001",
     "1DS15IS002",
-    "1DS15IS003"
+    "1DS15IS003",
+    "1DS15IS101",
+    "1DS15IS102",
+    "1DS15IS103",
+    "1DS15IS201",
+    "1DS15IS202",
+    "1DS15IS203"
   ],
   "guides": [
     {
@@ -1008,7 +1048,7 @@
     },
     {
       "name": "Ms. MADHURA J.",
-      "registeredCount": 0
+      "registeredCount": 2
     },
     {
       "name": "Ms. SHILPA .D",
