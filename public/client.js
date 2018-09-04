@@ -114,7 +114,7 @@ function removeProject(project) {
     var $project=$(`.${hash(project.title)}`);
     for(var i=0;i<3;++i){
       if($project[i].selected){
-        displayAlert(`Choice ${i+1} has been taken`,'info');
+        displayAlert(`Choice ${i+1} has now been taken. If you have not yet submitted please pick a new choice`,'info');
         $(`.${hash(project.title)}:selected`).parent().parent().val('')
       }
     }
@@ -140,7 +140,7 @@ function successfullyRegistered(project) {
         REGISTRATION_COMPLETE = true;
     });
     setTimeout(function () {
-        displayAlert(`Successfully Registered Project: ${project}`, 'success');
+        displayAlert(`Successfully Registered Project: <strong>${project}</strong>`, 'success');
     }, 1000);
 }
 
