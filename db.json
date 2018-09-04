@@ -223,7 +223,7 @@
     {
       "guide": "Ms. SHILPA .D",
       "title": "Low-Dose CT Image Denoising using novelfilter",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SHILPA .D",
@@ -838,6 +838,23 @@
         "1DS15IS115",
         "1DS15IS124"
       ]
+    },
+    {
+      "Timestamp": "9/4/2018, 6:08:17 AM",
+      "IP": "182.71.135.170,::ffff:10.10.10.247,::ffff:10.10.10.31",
+      "title": "Low-Dose CT Image Denoising using novelfilter",
+      "guide": "Ms. SHILPA .D",
+      "choice1": "Low-Dose CT Image Denoising using novelfilter",
+      "guide1": "Ms. SHILPA .D",
+      "choice2": "Test automation in agricultural applications",
+      "guide2": "Ms. BINDU BHARGAVI S.M",
+      "choice3": "An implementation of energy aware and secure routing protocol in Wirless sensor/adhoc networks",
+      "guide3": "Ms. SONALI JOYCE LOBO",
+      "teamMembers": [
+        "1DS16IS401",
+        "1DS16IS402",
+        "1DS16IS403"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -903,7 +920,10 @@
     "1DS15IS014",
     "1DS16IS111",
     "1DS15IS115",
-    "1DS15IS124"
+    "1DS15IS124",
+    "1DS16IS401",
+    "1DS16IS402",
+    "1DS16IS403"
   ],
   "guides": [
     {
@@ -952,7 +972,7 @@
     },
     {
       "name": "Ms. SHILPA .D",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Ms. SONALI JOYCE LOBO",
