@@ -228,17 +228,17 @@
     {
       "guide": "Ms. SHILPA .D",
       "title": "Human Identification from Freestyle Walks using Posture-Based Gait Feature",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SHILPA .D",
       "title": "Harnessing Multi-source Data about Public Sentiments and Activities for Informed Design",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SHILPA .D",
       "title": "Top-down parsing for Neural Network Exchange Format (NNEF) in TensorFlow-based deep learning computation",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SONALI JOYCE LOBO",
@@ -855,6 +855,23 @@
         "1DS16IS402",
         "1DS16IS403"
       ]
+    },
+    {
+      "Timestamp": "9/4/2018, 6:20:56 AM",
+      "IP": "182.72.191.26,::ffff:10.10.10.247,::ffff:10.10.10.31",
+      "title": "Top-down parsing for Neural Network Exchange Format (NNEF) in TensorFlow-based deep learning computation",
+      "guide": "Ms. SHILPA .D",
+      "choice1": "Top-down parsing for Neural Network Exchange Format (NNEF) in TensorFlow-based deep learning computation",
+      "guide1": "Ms. SHILPA .D",
+      "choice2": "Novel apprach for denoising images using hybrid filters",
+      "guide2": "Ms. MADHURA J.",
+      "choice3": "Avoiding Excessive Power Consumption by avoiding security Attacks in Networks ",
+      "guide3": "Ms. SONALI JOYCE LOBO",
+      "teamMembers": [
+        "1DS15IS422",
+        "1DS15IS421",
+        "1DS15IS420"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -923,7 +940,10 @@
     "1DS15IS124",
     "1DS16IS401",
     "1DS16IS402",
-    "1DS16IS403"
+    "1DS16IS403",
+    "1DS15IS422",
+    "1DS15IS421",
+    "1DS15IS420"
   ],
   "guides": [
     {
@@ -972,7 +992,7 @@
     },
     {
       "name": "Ms. SHILPA .D",
-      "registeredCount": 1
+      "registeredCount": 2
     },
     {
       "name": "Ms. SONALI JOYCE LOBO",
