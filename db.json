@@ -3,122 +3,122 @@
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Sound Regeneration using GAN's",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Blockchain in PDS and rural industries",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Secured certificates and marksheets using blockchain",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Live object detection in videos using CNN",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "An efficient algorithm to recognize the License plate of the vehicle.",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "Text Detection in Images Using Python",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "Offline signature verification system",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "Image Compression Using Wavelet Approach",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. DHEEMANTH URS",
       "title": "Intelligent theft managment system using image processing technique",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. DHEEMANTH URS",
       "title": "Automatic patient enrolment software for hospitals",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. DHEEMANTH URS",
       "title": "Make way for ambulance a moblie application",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. DHEEMANTH URS",
       "title": "Paperless tickets for indian transportation system",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. SURESHKUMAR M.",
       "title": "Detecting fraud apps using sentiment analysis",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. SURESHKUMAR M.",
       "title": "Customer behavior prediction using web usage mining",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. SURESHKUMAR M.",
       "title": "Diabetes prediction using data mining",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. SURESHKUMAR M.",
       "title": "Matrix based shoulder surfing security system",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. RADHIKA T. V.",
       "title": "Dynamic resource allocation and scheduling techniques/algorithms in cloud computing environment",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. RADHIKA T. V.",
       "title": "Resource migration and server consolidation approaches in cloud computing environment.",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. RADHIKA T. V.",
       "title": "Distributed computing technologies and security issues in Big Data analytics",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. RADHIKA T. V.",
       "title": "Big Data analytics for scientific computing",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. BHAVANI K.",
       "title": "Segmentation and analysis of CT images for abnormality detection",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. BHAVANI K.",
       "title": "Detection and Classification of CT images for abnormalities using machine learning techniques",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. BHAVANI K.",
       "title": "IOT based real time ambulance tracking ",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. BHAVANI K.",
       "title": "Chatbot for career guidance using AI",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. SUMA V.",
@@ -128,7 +128,7 @@
     {
       "guide": "Dr. SUMA V.",
       "title": "IOT for women safety",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. SUMA V.",
@@ -143,47 +143,47 @@
     {
       "guide": "Ms. CHANDRAKALA B.M.",
       "title": "cloud integrated smart attendance system",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. CHANDRAKALA B.M.",
       "title": "Web based library management system using angular and springboot",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. CHANDRAKALA B.M.",
       "title": "automatic street lighting using IOT",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. CHANDRAKALA B.M.",
       "title": "automatic control of geyser using audunio and rasbery pi",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. LATHA A.P.",
       "title": "smartphone app develops an instant translation of a Indian street sign",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. LATHA A.P.",
       "title": "Tracking multiple objects using deep learning techniques",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. LATHA A.P.",
       "title": "classification genre of songs",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. LATHA A.P.",
       "title": "Anomaly detection in ATM ",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. SUNANDA DIXIT",
       "title": "Advance Predictive Machine learning model using deep learning",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. SUNANDA DIXIT",
@@ -463,7 +463,7 @@
     {
       "guide": "Mr. MUZAMEEL AHMED",
       "title": "Contour Based Shape Retrieval and Recognition",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. MUZAMEEL AHMED",
@@ -481,48 +481,430 @@
       "available": 1
     }
   ],
-  "registrations": [],
-  "registeredUSNs": [],
+  "registrations": [
+    {
+      "Timestamp": "9/4/2018, 5:38:26 AM",
+      "IP": "182.72.191.26,::ffff:10.10.10.247,::ffff:10.10.10.182",
+      "title": "Sound Regeneration using GAN's",
+      "guide": "Ms. SHARON CHRISTA I.L",
+      "choice1": "Sound Regeneration using GAN's",
+      "guide1": "Ms. SHARON CHRISTA I.L",
+      "choice2": "Blockchain in PDS and rural industries",
+      "guide2": "Ms. SHARON CHRISTA I.L",
+      "choice3": "Secured certificates and marksheets using blockchain",
+      "guide3": "Ms. SHARON CHRISTA I.L",
+      "teamMembers": [
+        "1DS16IS041",
+        "1DS16IS040",
+        "1DS16IS031"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:38:46 AM",
+      "IP": "182.71.135.170,::ffff:10.10.11.196,::ffff:10.10.10.57",
+      "title": "Paperless tickets for indian transportation system",
+      "guide": "Mr. DHEEMANTH URS",
+      "choice1": "Paperless tickets for indian transportation system",
+      "guide1": "Mr. DHEEMANTH URS",
+      "choice2": "Automatic patient enrolment software for hospitals",
+      "guide2": "Mr. DHEEMANTH URS",
+      "choice3": "Offline signature verification system",
+      "guide3": "Ms. KRUPASHANKARI .S.S",
+      "teamMembers": [
+        "1DS16IS001",
+        "1DS16IS002",
+        "1DS16IS003"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:39:11 AM",
+      "IP": "182.72.191.26,::ffff:10.10.11.196,::ffff:10.10.10.31",
+      "title": "Blockchain in PDS and rural industries",
+      "guide": "Ms. SHARON CHRISTA I.L",
+      "choice1": "Blockchain in PDS and rural industries",
+      "guide1": "Ms. SHARON CHRISTA I.L",
+      "choice2": "Natural Language Processing using Tensor Flow",
+      "guide2": "Dr. SUNANDA DIXIT",
+      "choice3": "Big Data analytics for scientific computing",
+      "guide3": "Ms. RADHIKA T. V.",
+      "teamMembers": [
+        "1DS16IS037",
+        "1DS16IS026",
+        "1DS16IS027"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:39:46 AM",
+      "IP": "182.72.191.26,::ffff:10.10.11.196,::ffff:10.10.10.254",
+      "title": "Image Compression Using Wavelet Approach",
+      "guide": "Ms. KRUPASHANKARI .S.S",
+      "choice1": "Image Compression Using Wavelet Approach",
+      "guide1": "Ms. KRUPASHANKARI .S.S",
+      "choice2": "Intelligent theft managment system using image processing technique",
+      "guide2": "Mr. DHEEMANTH URS",
+      "choice3": "Detecting fraud apps using sentiment analysis",
+      "guide3": "Mr. SURESHKUMAR M.",
+      "teamMembers": [
+        "1DS16IS024",
+        "1DS16IS063",
+        "1DS16IS036"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:40:01 AM",
+      "IP": "182.72.191.26,::ffff:10.10.11.196,::ffff:10.10.10.182",
+      "title": "Big Data analytics for scientific computing",
+      "guide": "Ms. RADHIKA T. V.",
+      "choice1": "Big Data analytics for scientific computing",
+      "guide1": "Ms. RADHIKA T. V.",
+      "choice2": "Text Detection in Images Using Python",
+      "guide2": "Ms. KRUPASHANKARI .S.S",
+      "choice3": "Text Detection in Images Using Python",
+      "guide3": "Ms. KRUPASHANKARI .S.S",
+      "teamMembers": [
+        "1DS16IS059",
+        "1DS16IS060",
+        "1DS16IS061"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:40:05 AM",
+      "IP": "182.71.135.170,::ffff:10.10.10.247,::ffff:10.10.10.31",
+      "title": "Matrix based shoulder surfing security system",
+      "guide": "Mr. SURESHKUMAR M.",
+      "choice1": "Matrix based shoulder surfing security system",
+      "guide1": "Mr. SURESHKUMAR M.",
+      "choice2": "Priority based optimal resource reservation mechanism in constrained Networks for IOT applications",
+      "guide2": "Ms. SHALINI K.B",
+      "choice3": "Distributed computing technologies and security issues in Big Data analytics",
+      "guide3": "Ms. RADHIKA T. V.",
+      "teamMembers": [
+        "1DS16IS030",
+        "1DS16IS101",
+        "1DS16IS100"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:40:36 AM",
+      "IP": "182.72.191.26,::ffff:10.10.10.247,::ffff:10.10.10.182",
+      "title": "An efficient algorithm to recognize the License plate of the vehicle.",
+      "guide": "Ms. KRUPASHANKARI .S.S",
+      "choice1": "An efficient algorithm to recognize the License plate of the vehicle.",
+      "guide1": "Ms. KRUPASHANKARI .S.S",
+      "choice2": "Chatbots in educational system",
+      "guide2": "Ms. MADHURA J.",
+      "choice3": "Distributed computing technologies and security issues in Big Data analytics",
+      "guide3": "Ms. RADHIKA T. V.",
+      "teamMembers": [
+        "1DS16IS033",
+        "1DS16IS034",
+        "1DS16IS044"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:44:47 AM",
+      "IP": "182.71.135.170,::ffff:10.10.11.196,::ffff:10.10.10.57",
+      "title": "Dynamic resource allocation and scheduling techniques/algorithms in cloud computing environment",
+      "guide": "Ms. RADHIKA T. V.",
+      "choice1": "Dynamic resource allocation and scheduling techniques/algorithms in cloud computing environment",
+      "guide1": "Ms. RADHIKA T. V.",
+      "choice2": "Segmentation and analysis of CT images for abnormality detection",
+      "guide2": "Ms. BHAVANI K.",
+      "choice3": "Chatbot for career guidance using AI",
+      "guide3": "Ms. BHAVANI K.",
+      "teamMembers": [
+        "1DS16IS016",
+        "1DS16IS017",
+        "1DS16IS018"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:44:56 AM",
+      "IP": "182.71.135.170,::ffff:10.10.11.196,::ffff:10.10.10.231",
+      "title": "Segmentation and analysis of CT images for abnormality detection",
+      "guide": "Ms. BHAVANI K.",
+      "choice1": "Segmentation and analysis of CT images for abnormality detection",
+      "guide1": "Ms. BHAVANI K.",
+      "choice2": "Chatbot for career guidance using AI",
+      "guide2": "Ms. BHAVANI K.",
+      "choice3": "Make way for ambulance a moblie application",
+      "guide3": "Mr. DHEEMANTH URS",
+      "teamMembers": [
+        "1DS16IS015",
+        "1DS16IS019",
+        "1DS16IS043"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:45:04 AM",
+      "IP": "182.71.135.170,::ffff:10.10.10.247,::ffff:10.10.10.254",
+      "title": "Intelligent theft managment system using image processing technique",
+      "guide": "Mr. DHEEMANTH URS",
+      "choice1": "Intelligent theft managment system using image processing technique",
+      "guide1": "Mr. DHEEMANTH URS",
+      "choice2": "Detecting fraud apps using sentiment analysis",
+      "guide2": "Mr. SURESHKUMAR M.",
+      "choice3": "IOT for women safety",
+      "guide3": "Dr. SUMA V.",
+      "teamMembers": [
+        "1DS16IS023",
+        "1DS16IS020",
+        "1DS16IS011"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:45:11 AM",
+      "IP": "182.72.191.26,::ffff:10.10.10.247,::ffff:10.10.10.182",
+      "title": "Advance Predictive Machine learning model using deep learning",
+      "guide": "Dr. SUNANDA DIXIT",
+      "choice1": "Advance Predictive Machine learning model using deep learning",
+      "guide1": "Dr. SUNANDA DIXIT",
+      "choice2": "Anomaly detection in ATM ",
+      "guide2": "Ms. LATHA A.P.",
+      "choice3": "IOT based real time ambulance tracking ",
+      "guide3": "Ms. BHAVANI K.",
+      "teamMembers": [
+        "1DS16IS021",
+        "1DS16IS048",
+        "1DS16IS045"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:45:38 AM",
+      "IP": "182.72.191.26,::ffff:10.10.10.247,::ffff:10.10.10.182",
+      "title": "IOT based real time ambulance tracking ",
+      "guide": "Ms. BHAVANI K.",
+      "choice1": "IOT based real time ambulance tracking ",
+      "guide1": "Ms. BHAVANI K.",
+      "choice2": "Chatbot for career guidance using AI",
+      "guide2": "Ms. BHAVANI K.",
+      "choice3": "Customer behavior prediction using web usage mining",
+      "guide3": "Mr. SURESHKUMAR M.",
+      "teamMembers": [
+        "1DS16IS008",
+        "1DS16IS009",
+        "1DS16IS008"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:45:44 AM",
+      "IP": "182.71.135.170,::ffff:10.10.11.196,::ffff:10.10.10.182",
+      "title": "Detecting fraud apps using sentiment analysis",
+      "guide": "Mr. SURESHKUMAR M.",
+      "choice1": "Detecting fraud apps using sentiment analysis",
+      "guide1": "Mr. SURESHKUMAR M.",
+      "choice2": "Design of Biometric Recognition Software Based on Image Processing",
+      "guide2": "Ms. MADHURA J.",
+      "choice3": "cloud integrated smart attendance system",
+      "guide3": "Ms. CHANDRAKALA B.M.",
+      "teamMembers": [
+        "1DS15IS016",
+        "1DS15IS017",
+        "1DS15IS018"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:45:52 AM",
+      "IP": "182.71.135.170,::ffff:10.10.10.247,::ffff:10.10.10.231",
+      "title": "Web based library management system using angular and springboot",
+      "guide": "Ms. CHANDRAKALA B.M.",
+      "choice1": "Web based library management system using angular and springboot",
+      "guide1": "Ms. CHANDRAKALA B.M.",
+      "choice2": "automatic control of geyser using audunio and rasbery pi",
+      "guide2": "Ms. CHANDRAKALA B.M.",
+      "choice3": "Tracking multiple objects using deep learning techniques",
+      "guide3": "Ms. LATHA A.P.",
+      "teamMembers": [
+        "1DS15IS010",
+        "1DS15IS029",
+        "1DS15IS020"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:46:53 AM",
+      "IP": "182.72.191.26,::ffff:10.10.11.196,::ffff:10.10.10.254",
+      "title": "Contour Based Shape Retrieval and Recognition",
+      "guide": "Mr. MUZAMEEL AHMED",
+      "choice1": "Contour Based Shape Retrieval and Recognition",
+      "guide1": "Mr. MUZAMEEL AHMED",
+      "choice2": "IOT for women safety",
+      "guide2": "Dr. SUMA V.",
+      "choice3": "Enhancement of Software Quality through Predictive model ",
+      "guide3": "Dr. SUMA V.",
+      "teamMembers": [
+        "1DS16IS0022",
+        "1DS16IS0305",
+        "1DS16IS0001"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:47:18 AM",
+      "IP": "182.72.191.26,::ffff:10.10.11.196,::ffff:10.10.10.31",
+      "title": "IOT for women safety",
+      "guide": "Dr. SUMA V.",
+      "choice1": "IOT for women safety",
+      "guide1": "Dr. SUMA V.",
+      "choice2": "IOT for women safety",
+      "guide2": "Dr. SUMA V.",
+      "choice3": "IOT for women safety",
+      "guide3": "Dr. SUMA V.",
+      "teamMembers": [
+        "1DS16IS331",
+        "1DS16IS332",
+        "1DS16IS310"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:47:19 AM",
+      "IP": "182.71.135.170,::ffff:10.10.11.196,::ffff:10.10.10.182",
+      "title": "smartphone app develops an instant translation of a Indian street sign",
+      "guide": "Ms. LATHA A.P.",
+      "choice1": "smartphone app develops an instant translation of a Indian street sign",
+      "guide1": "Ms. LATHA A.P.",
+      "choice2": "smartphone app develops an instant translation of a Indian street sign",
+      "guide2": "Ms. LATHA A.P.",
+      "choice3": "smartphone app develops an instant translation of a Indian street sign",
+      "guide3": "Ms. LATHA A.P.",
+      "teamMembers": [
+        "1DS16IS012",
+        "1DS15IS110",
+        "1DS15IS120"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:47:34 AM",
+      "IP": "182.71.135.170,::ffff:10.10.11.196,::ffff:10.10.10.182",
+      "title": "automatic street lighting using IOT",
+      "guide": "Ms. CHANDRAKALA B.M.",
+      "choice1": "automatic street lighting using IOT",
+      "guide1": "Ms. CHANDRAKALA B.M.",
+      "choice2": "classification genre of songs",
+      "guide2": "Ms. LATHA A.P.",
+      "choice3": "Top-down parsing for Neural Network Exchange Format (NNEF) in TensorFlow-based deep learning computation",
+      "guide3": "Ms. SHILPA .D",
+      "teamMembers": [
+        "1DS16IS055",
+        "1DS16IS010",
+        "1DS16IS099"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:47:50 AM",
+      "IP": "182.72.191.26,::ffff:10.10.11.196,::ffff:10.10.10.57",
+      "title": "Tracking multiple objects using deep learning techniques",
+      "guide": "Ms. LATHA A.P.",
+      "choice1": "Tracking multiple objects using deep learning techniques",
+      "guide1": "Ms. LATHA A.P.",
+      "choice2": "Anomaly detection in ATM ",
+      "guide2": "Ms. LATHA A.P.",
+      "choice3": "Computer network security issues and measures to avoid it",
+      "guide3": "Ms. SONALI JOYCE LOBO",
+      "teamMembers": [
+        "1DS15IS019",
+        "1DS15IS043",
+        "1DS15IS015"
+      ]
+    }
+  ],
+  "registeredUSNs": [
+    "1DS16IS041",
+    "1DS16IS040",
+    "1DS16IS031",
+    "1DS16IS001",
+    "1DS16IS002",
+    "1DS16IS003",
+    "1DS16IS037",
+    "1DS16IS026",
+    "1DS16IS027",
+    "1DS16IS024",
+    "1DS16IS063",
+    "1DS16IS036",
+    "1DS16IS059",
+    "1DS16IS060",
+    "1DS16IS061",
+    "1DS16IS030",
+    "1DS16IS101",
+    "1DS16IS100",
+    "1DS16IS033",
+    "1DS16IS034",
+    "1DS16IS044",
+    "1DS16IS016",
+    "1DS16IS017",
+    "1DS16IS018",
+    "1DS16IS015",
+    "1DS16IS019",
+    "1DS16IS043",
+    "1DS16IS023",
+    "1DS16IS020",
+    "1DS16IS011",
+    "1DS16IS021",
+    "1DS16IS048",
+    "1DS16IS045",
+    "1DS16IS008",
+    "1DS16IS009",
+    "1DS16IS008",
+    "1DS15IS016",
+    "1DS15IS017",
+    "1DS15IS018",
+    "1DS15IS010",
+    "1DS15IS029",
+    "1DS15IS020",
+    "1DS16IS0022",
+    "1DS16IS0305",
+    "1DS16IS0001",
+    "1DS16IS331",
+    "1DS16IS332",
+    "1DS16IS310",
+    "1DS16IS012",
+    "1DS15IS110",
+    "1DS15IS120",
+    "1DS16IS055",
+    "1DS16IS010",
+    "1DS16IS099",
+    "1DS15IS019",
+    "1DS15IS043",
+    "1DS15IS015"
+  ],
   "guides": [
     {
       "name": "Ms. SHARON CHRISTA I.L",
-      "registeredCount": 0
+      "registeredCount": 2
     },
     {
       "name": "Ms. KRUPASHANKARI .S.S",
-      "registeredCount": 0
+      "registeredCount": 2
     },
     {
       "name": "Mr. DHEEMANTH URS",
-      "registeredCount": 0
+      "registeredCount": 2
     },
     {
       "name": "Mr. SURESHKUMAR M.",
-      "registeredCount": 0
+      "registeredCount": 2
     },
     {
       "name": "Ms. RADHIKA T. V.",
-      "registeredCount": 0
+      "registeredCount": 2
     },
     {
       "name": "Ms. BHAVANI K.",
-      "registeredCount": 0
+      "registeredCount": 2
     },
     {
       "name": "Dr. SUMA V.",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Ms. CHANDRAKALA B.M.",
-      "registeredCount": 0
+      "registeredCount": 2
     },
     {
       "name": "Ms. LATHA A.P.",
-      "registeredCount": 0
+      "registeredCount": 2
     },
     {
       "name": "Dr. SUNANDA DIXIT",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Ms. MADHURA J.",
@@ -578,7 +960,7 @@
     },
     {
       "name": "Mr. MUZAMEEL AHMED",
-      "registeredCount": 0
+      "registeredCount": 1
     }
   ]
 }
