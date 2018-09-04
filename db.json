@@ -403,7 +403,7 @@
     {
       "guide": "Ms. REKHA JAYARAM",
       "title": "Combinatorial Testing of ACTS: A Case Study",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. REKHA JAYARAM",
@@ -872,6 +872,23 @@
         "1DS15IS421",
         "1DS15IS420"
       ]
+    },
+    {
+      "Timestamp": "9/4/2018, 6:54:41 AM",
+      "IP": "182.71.135.170,::ffff:10.10.10.247,::ffff:10.10.10.254",
+      "title": "Combinatorial Testing of ACTS: A Case Study",
+      "guide": "Ms. REKHA JAYARAM",
+      "choice1": "Combinatorial Testing of ACTS: A Case Study",
+      "guide1": "Ms. REKHA JAYARAM",
+      "choice2": "An implementation of reliable routing protocol in Wirless sensor/adhoc networks",
+      "guide2": "Ms. SONALI JOYCE LOBO",
+      "choice3": "An implementation of energy aware and secure routing protocol in Wirless sensor/adhoc networks",
+      "guide3": "Ms. SONALI JOYCE LOBO",
+      "teamMembers": [
+        "1DS15IS001",
+        "1DS15IS002",
+        "1DS15IS003"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -943,7 +960,10 @@
     "1DS16IS403",
     "1DS15IS422",
     "1DS15IS421",
-    "1DS15IS420"
+    "1DS15IS420",
+    "1DS15IS001",
+    "1DS15IS002",
+    "1DS15IS003"
   ],
   "guides": [
     {
@@ -1028,7 +1048,7 @@
     },
     {
       "name": "Ms. REKHA JAYARAM",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Ms. DIVYA M.D",
