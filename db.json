@@ -243,7 +243,7 @@
     {
       "guide": "Ms. SONALI JOYCE LOBO",
       "title": "Avoiding Excessive Power Consumption by avoiding security Attacks in Networks ",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SONALI JOYCE LOBO",
@@ -263,7 +263,7 @@
     {
       "guide": "Ms. POOJA K SWAMY",
       "title": "Computer Simulation of Discrete Human-Machine Interaction for Providing Reliability and Cybersecurity of Critical Systems",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. POOJA K SWAMY",
@@ -923,6 +923,40 @@
         "1DS15IS202",
         "1DS15IS203"
       ]
+    },
+    {
+      "Timestamp": "9/4/2018, 2:10:18 PM",
+      "IP": "49.206.11.12,::ffff:10.10.10.247,::ffff:10.10.10.57",
+      "title": "Avoiding Excessive Power Consumption by avoiding security Attacks in Networks ",
+      "guide": "Ms. SONALI JOYCE LOBO",
+      "choice1": "Avoiding Excessive Power Consumption by avoiding security Attacks in Networks ",
+      "guide1": "Ms. SONALI JOYCE LOBO",
+      "choice2": "Avoiding Excessive Power Consumption by avoiding security Attacks in Networks ",
+      "guide2": "Ms. SONALI JOYCE LOBO",
+      "choice3": "Avoiding Excessive Power Consumption by avoiding security Attacks in Networks ",
+      "guide3": "Ms. SONALI JOYCE LOBO",
+      "teamMembers": [
+        "1DS15IS301",
+        "1DS15IS302",
+        "1DS15IS303"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 2:11:58 PM",
+      "IP": "49.206.11.12,::ffff:10.10.10.247,::ffff:10.10.10.31",
+      "title": "Computer Simulation of Discrete Human-Machine Interaction for Providing Reliability and Cybersecurity of Critical Systems",
+      "guide": "Ms. POOJA K SWAMY",
+      "choice1": "Computer Simulation of Discrete Human-Machine Interaction for Providing Reliability and Cybersecurity of Critical Systems",
+      "guide1": "Ms. POOJA K SWAMY",
+      "choice2": "An implementation of reliable routing protocol in Wirless sensor/adhoc networks",
+      "guide2": "Ms. SONALI JOYCE LOBO",
+      "choice3": "Computer network security issues and measures to avoid it",
+      "guide3": "Ms. SONALI JOYCE LOBO",
+      "teamMembers": [
+        "1DS15IS021",
+        "1DS15IS022",
+        "1DS15IS023"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -1003,7 +1037,13 @@
     "1DS15IS103",
     "1DS15IS201",
     "1DS15IS202",
-    "1DS15IS203"
+    "1DS15IS203",
+    "1DS15IS301",
+    "1DS15IS302",
+    "1DS15IS303",
+    "1DS15IS021",
+    "1DS15IS022",
+    "1DS15IS023"
   ],
   "guides": [
     {
@@ -1056,11 +1096,11 @@
     },
     {
       "name": "Ms. SONALI JOYCE LOBO",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Ms. POOJA K SWAMY",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Ms. BINDU BHARGAVI S.M",

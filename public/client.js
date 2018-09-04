@@ -72,7 +72,7 @@ function loadState(state) {
     $(`<div style="display: none;" class="select">
          <label>Choice ${i}:</label>
          <select class="form-control selection projectSelectionOption" id="projectselectoption${i}">
-          <option disabled selected value> -- select an option -- </option>
+          <option disabled selected value> -- select a project -- </option>
           </select></div>`)
                 .appendTo(`#projectSelectionForm`).show(500);
 
@@ -114,7 +114,7 @@ function removeProject(project) {
     var $project=$(`.${hash(project.title)}`);
     for(var i=0;i<3;++i){
       if($project[i].selected){
-        displayAlert(`Choice ${i+1} is now taken`,'info');
+        displayAlert(`Choice ${i+1} has been taken`,'info');
         $(`.${hash(project.title)}:selected`).parent().parent().val('')
       }
     }
@@ -157,7 +157,11 @@ function tryRegistration(event) {
     var title3 = $selectedProject3.val();
   
     if (title1 === undefined || title2 === undefined || title3 === undefined) {
-        displayAlert("Please Select Three Project Options");
+        displayAlert("Please select all 3 Project choices by priority");
+        return;
+    }
+    if (title1 === title2 || title1 === title3 || title2 === title3){
+        displayAlert("Please select 3 different choices");
         return;
     }
   
