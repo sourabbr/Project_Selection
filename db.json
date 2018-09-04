@@ -123,7 +123,7 @@
     {
       "guide": "Dr. SUMA V.",
       "title": "Automation of Agricultural Process",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. SUMA V.",
@@ -133,12 +133,12 @@
     {
       "guide": "Dr. SUMA V.",
       "title": "Enhancement of Software Quality through Predictive model ",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. SUMA V.",
       "title": "IOT for better living style ",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. CHANDRAKALA B.M.",
@@ -188,17 +188,17 @@
     {
       "guide": "Dr. SUNANDA DIXIT",
       "title": "3D model construction using multiple 2 D images",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. SUNANDA DIXIT",
       "title": "Natural Language Processing using Tensor Flow",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. SUNANDA DIXIT",
       "title": "Reinforcement Learning Methods for Sample based decision theoretic planning",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. MADHURA J.",
@@ -804,6 +804,40 @@
         "1DS15IS043",
         "1DS15IS015"
       ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:49:00 AM",
+      "IP": "182.71.135.170,::ffff:10.10.10.247,::ffff:10.10.10.31",
+      "title": "IOT for better living style ",
+      "guide": "Dr. SUMA V.",
+      "choice1": "IOT for better living style ",
+      "guide1": "Dr. SUMA V.",
+      "choice2": "3D model construction using multiple 2 D images",
+      "guide2": "Dr. SUNANDA DIXIT",
+      "choice3": "Detection and Characterization of Subsolid Juxta-pleural Lung Nodule from CT Images",
+      "guide3": "Ms. MADHURA J.",
+      "teamMembers": [
+        "1DS15IS009",
+        "1DS15IS012",
+        "1DS15IS014"
+      ]
+    },
+    {
+      "Timestamp": "9/4/2018, 5:50:36 AM",
+      "IP": "182.71.135.170,::ffff:10.10.11.196,::ffff:10.10.10.254",
+      "title": "Reinforcement Learning Methods for Sample based decision theoretic planning",
+      "guide": "Dr. SUNANDA DIXIT",
+      "choice1": "Reinforcement Learning Methods for Sample based decision theoretic planning",
+      "guide1": "Dr. SUNANDA DIXIT",
+      "choice2": "Reinforcement Learning Methods for Sample based decision theoretic planning",
+      "guide2": "Dr. SUNANDA DIXIT",
+      "choice3": "Reinforcement Learning Methods for Sample based decision theoretic planning",
+      "guide3": "Dr. SUNANDA DIXIT",
+      "teamMembers": [
+        "1DS16IS111",
+        "1DS15IS115",
+        "1DS15IS124"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -863,7 +897,13 @@
     "1DS16IS099",
     "1DS15IS019",
     "1DS15IS043",
-    "1DS15IS015"
+    "1DS15IS015",
+    "1DS15IS009",
+    "1DS15IS012",
+    "1DS15IS014",
+    "1DS16IS111",
+    "1DS15IS115",
+    "1DS15IS124"
   ],
   "guides": [
     {
@@ -892,7 +932,7 @@
     },
     {
       "name": "Dr. SUMA V.",
-      "registeredCount": 1
+      "registeredCount": 2
     },
     {
       "name": "Ms. CHANDRAKALA B.M.",
@@ -904,7 +944,7 @@
     },
     {
       "name": "Dr. SUNANDA DIXIT",
-      "registeredCount": 1
+      "registeredCount": 2
     },
     {
       "name": "Ms. MADHURA J.",
