@@ -114,7 +114,7 @@ function removeProject(project) {
     var $project=$(`.${hash(project.title)}`);
     for(var i=0;i<3;++i){
       if($project[i].selected){
-        displayAlert(`Your Choice ${i+1} is now unavailable`,'danger');
+        displayAlert(`Choice ${i+1} is now taken`,'info');
         $(`.${hash(project.title)}:selected`).parent().parent().val('')
       }
     }
