@@ -53,7 +53,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 <script src="/socket.io/socket.io.js"></script>
-<script src="/client.js"></script>
+<script src="/client.js" async defer></script>
 <script src="/jdetects.min.js"></script>
 <script>
 jdetects.create({
@@ -61,13 +61,7 @@ jdetects.create({
 	label: "You are not allowed to view the source",
 	onchange: function(status) {
     if(status==='on'){
-		  document.head.innerHTML = '';
-      document.body.innerHTML = '';
-      Object.keys(window).map(prop => delete window[prop]);
-      Object.keys(window).map(prop => {
-        if(prop!='location')
-          window[prop]=null;
-      });
+      window.location='/forbidden';
     }
 	}
 });  

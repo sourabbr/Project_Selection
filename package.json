@@ -1,6 +1,6 @@
 {
   "name": "Live-selection-form",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A live FCFS option selection form using sockets.io",
   "main": "server.js",
   "scripts": {

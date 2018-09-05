@@ -9,7 +9,11 @@ module.exports = function (app) {
     app.get("/admin", function (request, response) {
         response.sendFile(path.join(__dirname, '../views/admin.html'));
     });
-
+    
+    app.get("/forbidden", function (request, response) {
+        response.send("You are not allowed to view the source");
+    }); 
+  
     app.get("/resetRegistrations", function (request,response) {
         exec("cp db1.json db.json", function(error, stdout, stderr) {
           response.send("Reset Registrations Successfully");
