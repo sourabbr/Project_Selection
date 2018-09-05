@@ -98,7 +98,7 @@
       </div>
       <div class="col-md-3">
         <img style="height:3em" src="https://cdn.glitch.com/914cc278-c3a0-4b60-8a95-d762ade5c801%2Fdsce-ise.png?1536142461367">
-        <p>Dept. of ISE, DSCE,<br>Shavige Malleshwara Hills, Kumaraswamy Layout,<br>Bengaluru - 560078</p>
+        <p>Dept. of ISE, DSCE,<br>Shavige Malleshwara Hills,<br>Kumaraswamy Layout,<br>Bengaluru - 560078</p>
       </div>
     </div>
     <br><br>
@@ -110,16 +110,16 @@
 <script src="/client.js" async defer></script>
 <script src="/jdetects.min.js"></script>
 <script>
-// jdetects.create({
-// 	once: true,
-// 	label: "You are not allowed to view the source",
-// 	onchange: function(status) {
-//     if(status==='on'){
-//       document.body.innerHTML='';
-//       window.location='/forbidden';
-//     }
-// 	}
-// });  
+jdetects.create({
+	once: true,
+	label: "You are not allowed to view the source",
+	onchange: function(status) {
+    if(status==='on'){
+      document.body.innerHTML='';
+      window.location='/forbidden';
+    }
+	}
+});  
 </script>
 </body>
 </html>
