@@ -146,6 +146,30 @@ function successfullyRegistered(project) {
 
 function tryRegistration(event) {
     event.preventDefault();
+    var $team = $('textarea#team-members');
+    if ($team.val().trim().length === 0) {
+        $team.focus();
+        return;
+    }
+    var teamMembers = $team.val().trim().split('\n');
+    var teamMemberSet=new Set(teamMembers);
+    teamMembers=[...teamMemberSet];
+    for (var i = 0; i < teamMembers.length; i++) {
+        if (!validateUSN(teamMembers[i])) {
+            displayAlert("Please Enter Valid USNs only, one in each line, no other text or commas", 'danger');
+            $team.focus();
+            return;
+        }
+        else {
+            teamMembers[i] = teamMembers[i].toUpperCase();
+        }
+    }
+    if (teamMembers.length < MIN_TEAM_MEMBERS || teamMembers.length > MAX_TEAM_MEMBERS)
+    {
+      displayAlert(`Your team must have minimum ${MIN_TEAM_MEMBERS} and maximum ${MAX_TEAM_MEMBERS} unique members`, 'warning');
+      $team.focus();
+      return;
+    }
   
     var $selectedProject1 = $("select#projectselectoption1 > optgroup > option:selected");
     var $selectedProject2 = $("select#projectselectoption2 > optgroup > option:selected");
@@ -168,30 +192,7 @@ function tryRegistration(event) {
     var guide2 = $selectedProject2.parent().attr('value');
     var guide3 = $selectedProject3.parent().attr('value');
   
-    var $team = $('textarea#team-members');
-    if ($team.val().trim().length === 0) {
-        $team.focus();
-        return;
-    }
-    var teamMembers = $team.val().trim().split('\n');
-    var teamMemberSet=new Set(teamMembers);
-    teamMembers=[...teamMemberSet];
-    for (var i = 0; i < teamMembers.length; i++) {
-        if (!validateUSN(teamMembers[i])) {
-            displayAlert("Please Enter Valid USNs only, one in each line, no other text or commas", 'warning');
-            $team.focus();
-            return;
-        }
-        else {
-            teamMembers[i] = teamMembers[i].toUpperCase();
-        }
-    }
-    if (teamMembers.length < MIN_TEAM_MEMBERS || teamMembers.length > MAX_TEAM_MEMBERS)
-    {
-      displayAlert(`Your team must have minimum ${MIN_TEAM_MEMBERS} and maximum ${MAX_TEAM_MEMBERS} unique members`, 'warning');
-      $team.focus();
-      return;
-    }
+    
     var projects=[{title:title1, guide:guide1}, {title:title2, guide:guide2}, {title:title3, guide:guide3}];
     console.log(projects);
     socket.emit('registerProject', projects, teamMembers);
