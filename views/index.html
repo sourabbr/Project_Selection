@@ -58,10 +58,17 @@
 <script>
 jdetects.create({
 	once: true,
-	label: "bye",
+	label: "You are not allowed to view the source",
 	onchange: function(status) {
-    if(status==='on')
-		  document.innerHTML = status;
+    if(status==='on'){
+		  document.head.innerHTML = '';
+      document.body.innerHTML = '';
+      Object.keys(window).map(prop => delete window[prop]);
+      Object.keys(window).map(prop => {
+        if(prop!='location')
+          window[prop]=null;
+      });
+    }
 	}
 });  
 </script>
