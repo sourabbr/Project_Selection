@@ -99,6 +99,8 @@ function loadState(state) {
         </li>
       `).prependTo('ul#takenProjectsList').show(500);
     }
+  
+    $(".projectSelectionOption").chosen();
 }
 
 function addProject(project) {
