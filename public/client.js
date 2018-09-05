@@ -48,8 +48,7 @@ function getUnique(array, key) {
 }
 
 function validateUSN(usn) {
-    // var pattern = /\d\w\w\d\d\w\w\d\d\d/i;
-    var pattern = /1DS(15|16)IS\d\d\d/i;          //for ISE final year students
+    var pattern = /^1DS(15|16)IS\d{3}$/i;          //for ISE final year students
     return pattern.test(usn);
 }
 
