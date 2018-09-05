@@ -13,7 +13,7 @@
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Secured certificates and marksheets using blockchain",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
@@ -481,36 +481,12 @@
       "available": 1
     }
   ],
-  "registrations": [
-    {
-      "Timestamp": "9/5/2018, 1:35:30 PM",
-      "IP": "119.161.97.122,::ffff:10.10.11.196,::ffff:10.10.10.254",
-      "title": "Secured certificates and marksheets using blockchain",
-      "guide": "Ms. SHARON CHRISTA I.L",
-      "choice1": "Secured certificates and marksheets using blockchain",
-      "guide1": "Ms. SHARON CHRISTA I.L",
-      "choice2": "Intelligent theft managment system using image processing technique",
-      "guide2": "Mr. DHEEMANTH URS",
-      "choice3": "Chatbot for career guidance using AI",
-      "guide3": "Ms. BHAVANI K.",
-      "teamMembers": [
-        "1DS15IS106",
-        "1DS15IS080",
-        "1DS15IS096",
-        "1DS15IS007"
-      ]
-    }
-  ],
-  "registeredUSNs": [
-    "1DS15IS106",
-    "1DS15IS080",
-    "1DS15IS096",
-    "1DS15IS007"
-  ],
+  "registrations": [],
+  "registeredUSNs": [],
   "guides": [
     {
       "name": "Ms. SHARON CHRISTA I.L",
-      "registeredCount": 1
+      "registeredCount": 0
     },
     {
       "name": "Ms. KRUPASHANKARI .S.S",
