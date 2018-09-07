@@ -1,19 +1,20 @@
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
+var user_email='';
 
 // the process.env values are set in .env
 passport.use(new GoogleStrategy({
   clientID: '968726232427-h0ebj90sa7vngdigprl1e9r4lsjftrhd.apps.googleusercontent.com',
   clientSecret: 'inApVun16x24KVuLxrdv0MQP',
   callbackURL: '/auth/google/redirect',
-  scope: 'https://www.googleapis.com/auth/plus.login'
+  scope: ['profile','email']
 },
-function(token, tokenSecret, profile, cb) {
-  return cb(null, profile);
+function(token, tokenSecret, email, cb) {
+  return cb(null, email);
 }));
 passport.serializeUser(function(user, done) {
   done(null, user);
-  console.log(user);
+  user_email = user.emails[0].value;
 });
 passport.deserializeUser(function(obj, done) {
   done(null, obj);
@@ -91,6 +92,7 @@ function requireLogin (req, res, next) {
   if (!req.cookies['accessed-email']) {
     res.redirect('/');
   } else {
+    console.log(req.cookies['accessed-email']);
     next();
   }
 };
@@ -99,6 +101,7 @@ function requireUser (req, res, next) {
   if (!req.user) {
     res.redirect('/');
   } else {
+    console.log(req.user);
     next();
   }
 };
