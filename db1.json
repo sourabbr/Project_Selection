@@ -479,10 +479,31 @@
       "guide": "Mr. MUZAMEEL AHMED",
       "title": "Resource Allocation in Mobile Cloud Computing using Optimizations Technique ",
       "available": 1
+    },
+    {
+      "guide": "Dr. RAMAMOHAN BABU K. N",
+      "title": "Virtual Lab",
+      "available": 1
+    },
+    {
+      "guide": "Dr. RAMAMOHAN BABU K. N",
+      "title": "Cloud Set up for Department",
+      "available": 1
+    },
+    {
+      "guide": "Dr. RAMAMOHAN BABU K. N",
+      "title": "Network Security in Mobile Networks",
+      "available": 1
+    },
+    {
+      "guide": "Dr. RAMAMOHAN BABU K. N",
+      "title": "Pothole detection using IoT",
+      "available": 1
     }
   ],
   "registrations": [],
   "registeredUSNs": [],
+  "registeredTeams": [],
   "guides": [
     {
       "name": "Ms. SHARON CHRISTA I.L",
@@ -579,6 +600,10 @@
     {
       "name": "Mr. MUZAMEEL AHMED",
       "registeredCount": 0
+    },
+    {
+      "name": "Dr. RAMAMOHAN BABU K. N",
+      "registeredCount": 1
     }
   ]
 }
