@@ -86,7 +86,7 @@ function loadState(state) {
     }
     console.log(state.registeredTeams);
     for(var i=0; i<state.registeredTeams.length; i++){
-      if(state.registeredTeams[i].email==window.email){
+      if(state.registeredTeams[i].email==email){
         console.log(state.registeredTeams[i].team);
       }
       else{
@@ -94,6 +94,8 @@ function loadState(state) {
         return;
       }
     }
+    var $team = $('textarea#team-members');
+    $team.val()=
     $('#projectSelectionForm').html('');
     $('#takenProjectsList').html('');
     var project,guide;
