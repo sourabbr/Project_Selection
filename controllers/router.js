@@ -19,7 +19,7 @@ module.exports = function (app, db) {
     // if cookie exists, success. otherwise, user is redirected to index
     app.get('/success', requireLogin,
       function(req, res) {
-        res.sendFile(__dirname + '/views/index.html');
+        res.sendFile(path.join(__dirname, '../views/index.html'));
       }
     );
     app.get("/admin", function (request, response) {
@@ -42,9 +42,7 @@ module.exports = function (app, db) {
         response.end();
     });
   
-};
-
-function requireLogin (req, res, next) {
+    function requireLogin (req, res, next) {
   if (!req.cookies['accessed-email']) {
     res.redirect('/');
   } else {
@@ -61,12 +59,16 @@ function requireUser (req, res, next) {
 };
 
 function checkUserInDb (req, res, next) {
-  let teamemail = db.get('registeredTeams')
+  let team = db.get('registeredTeams')
               .find({email:req.user.emails[0].value})
               .value();
-  if(teamemail===undefined){
+  console.log(team);
+  if(team===undefined){
     res.redirect('/');
   }else {
     next();
   }
 };
+  
+};
+

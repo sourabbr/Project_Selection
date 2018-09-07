@@ -45,6 +45,8 @@ app.use('/exports', express.static('exports'));
 app.enable('trust proxy');
 app.use(express_enforces_ssl());
 
+controller(app, io);
+
 // index route
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/views/login.html');
@@ -65,8 +67,6 @@ app.get('/auth/google/redirect',
     { successRedirect: '/setcookie', failureRedirect: '/' }
   )
 );
-
-controller(app, io);
 const listener = server.listen(process.env.PORT, function () {
     console.log('Listening on port ' + listener.address().port);
 });

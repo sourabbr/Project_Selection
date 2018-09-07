@@ -503,7 +503,17 @@
   ],
   "registrations": [],
   "registeredUSNs": [],
-  "registeredTeams": [],
+  "registeredTeams": [
+    {
+      "email": "sourabbr2@gmail.com",
+      "team": [
+        "1DS15IS061",
+        "1DS15IS089",
+        "1DS15IS101",
+        "1DS15IS104"
+      ]
+    }
+  ],
   "guides": [
     {
       "name": "Ms. SHARON CHRISTA I.L",
