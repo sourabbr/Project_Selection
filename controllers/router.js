@@ -6,24 +6,21 @@ module.exports = function (app, db) {
     // to the success view
     app.get('/setcookie', requireUser, checkUserInDb,
       function(req, res) {
-        
-        console.log(req.get('Referrer'),req.get('Referrer').indexOf("google.com"));
-      
-        if(req.get('Referrer') && req.get('Referrer').indexOf("google.com")!=-1){
-          res.cookie('accessed-email', req.user.emails[0].value);
-          console.log(req.user.emails[0].value);
-          console.log("check");
-          res.redirect('/success');
-        } else {
-           res.redirect('/');
-        }
+        res.cookie('accessed-email', req.user.emails[0].value);
+        console.log(req.user.emails[0].value);
+        console.log("check");
+        res.redirect('/success');
       }
     );
 
     // if cookie exists, success. otherwise, user is redirected to index
     app.get('/success', requireLogin,
       function(req, res) {
-        res.sendFile(path.join(__dirname, '../views/index.html'));
+        if (!req.cookies['accessed-email']) {
+          res.redirect('/');
+        } else {
+          res.sendFile(path.join(__dirname, '../views/index.html'));
+        }        
       }
     );
     app.get("/admin", function (request, response) {
