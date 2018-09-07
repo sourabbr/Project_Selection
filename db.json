@@ -52,7 +52,7 @@
     },
     {
       "guide": "Mr. DHEEMANTH URS",
-      "title": "Make way for ambulance a moblie application",
+      "title": "Make way for ambulance a mobile application",
       "available": 1
     },
     {
@@ -503,26 +503,7 @@
   ],
   "registrations": [],
   "registeredUSNs": [],
-  "registeredTeams": [
-    {
-      "email": "sourabbr@gmail.com",
-      "team": [
-        "1DS15IS061",
-        "1DS15IS089",
-        "1DS15IS101",
-        "1DS15IS104"
-      ]
-    },
-    {
-      "email": "nischal@nthacks.com",
-      "team": [
-        "1DS15IS061",
-        "1DS15IS089",
-        "1DS15IS101",
-        "1DS15IS104"
-      ]
-    }
-  ],
+  "registeredTeams": [],
   "guides": [
     {
       "name": "Ms. SHARON CHRISTA I.L",
