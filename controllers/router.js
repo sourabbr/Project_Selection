@@ -7,8 +7,7 @@ module.exports = function (app, db) {
     app.get('/setcookie', requireUser, checkUserInDb,
       function(req, res) {
         if(req.get('Referrer') && req.get('Referrer').indexOf("google.com")!=-1){
-          res.cookie('accessed-email', new Date());
-          console.log(req.user.emails[0].value);
+          res.cookie('accessed-email', req.user.emails[0].value);
           res.redirect('/success');
         } else {
            res.redirect('/');
@@ -43,32 +42,34 @@ module.exports = function (app, db) {
     });
   
     function requireLogin (req, res, next) {
-  if (!req.cookies['accessed-email']) {
-    res.redirect('/');
-  } else {
-    next();
-  }
-};
+      console.log(1);
+      console.log(req.cookies['accessed-email']);
+      if (!req.cookies['accessed-email']) {
+        res.redirect('/');
+      } else {
+        next();
+      }
+    };
 
-function requireUser (req, res, next) {
-  if (!req.user) {
-    res.redirect('/');
-  } else {
-    next();
-  }
-};
+    function requireUser (req, res, next) {
+      if (!req.user) {
+        res.redirect('/');
+      } else {
+        next();
+      }
+    };
 
-function checkUserInDb (req, res, next) {
-  let team = db.get('registeredTeams')
-              .find({email:req.user.emails[0].value})
-              .value();
-  console.log(team);
-  if(team===undefined){
-    res.redirect('/');
-  }else {
-    next();
-  }
-};
+    function checkUserInDb (req, res, next) {
+      let team = db.get('registeredTeams')
+                  .find({email:req.user.emails[0].value})
+                  .value();
+      console.log(team);
+      if(team===undefined){
+        res.redirect('/');
+      }else {
+        next();
+      }
+    };
   
 };
 
