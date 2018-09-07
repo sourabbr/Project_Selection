@@ -45,6 +45,64 @@ app.use('/exports', express.static('exports'));
 app.enable('trust proxy');
 app.use(express_enforces_ssl());
 
+// index route
+app.get('/', function(req, res) {
+  res.sendFile(__dirname + '/views/login.html');
+});
+
+// on clicking "logoff" the cookie is cleared
+app.get('/logoff',
+  function(req, res) {
+    res.clearCookie('google-passport-example');
+    res.redirect('/');
+  }
+);
+
+app.get('/auth/google', passport.authenticate('google'));
+
+app.get('/auth/google/redirect', 
+  passport.authenticate('google', 
+    { successRedirect: '/setcookie', failureRedirect: '/' }
+  )
+);
+
+// on successful auth, a cookie is set before redirecting
+// to the success view
+app.get('/setcookie', requireUser,
+  function(req, res) {
+    if(req.get('Referrer') && req.get('Referrer').indexOf("google.com")!=-1){
+      res.cookie('google-passport-example', new Date());
+      res.redirect('/success');
+    } else {
+       res.redirect('/');
+    }
+  }
+);
+
+// if cookie exists, success. otherwise, user is redirected to index
+app.get('/success', requireLogin,
+  function(req, res) {
+    res.sendFile(__dirname + '/views/index.html');
+  }
+);
+
+function requireLogin (req, res, next) {
+  if (!req.cookies['google-passport-example']) {
+    res.redirect('/');
+  } else {
+    next();
+  }
+};
+
+function requireUser (req, res, next) {
+  if (!req.user) {
+    res.redirect('/');
+  } else {
+    next();
+  }
+};
+
+
 controller(app, io);
 const listener = server.listen(process.env.PORT, function () {
     console.log('Listening on port ' + listener.address().port);

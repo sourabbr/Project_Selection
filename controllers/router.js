@@ -2,9 +2,6 @@ const path = require("path");
 const exec = require('child_process').exec;
 module.exports = function (app) {
 
-    app.get("/", function (request, response) {
-        response.sendFile(path.join(__dirname, '../views/login.html'));
-    });
 
     app.get("/admin", function (request, response) {
         response.sendFile(path.join(__dirname, '../views/admin.html'));
