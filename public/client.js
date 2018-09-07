@@ -80,22 +80,18 @@ function displayAlert(message, type = 'info') {
 }
 function loadState(state) {
     var email=getCookie('email');
+    var team=[];
     if(!email){
       alert("Email not valid");
       return;
     }
-    console.log(state.registeredTeams);
     for(var i=0; i<state.registeredTeams.length; i++){
       if(state.registeredTeams[i].email==email){
-        console.log(state.registeredTeams[i].team);
-      }
-      else{
-        alert("Email not valid");
-        return;
+        team=state.registeredTeams[i].team;
       }
     }
     var $team = $('textarea#team-members');
-    $team.val()=
+    $team.val(team.join("\n"));
     $('#projectSelectionForm').html('');
     $('#takenProjectsList').html('');
     var project,guide;
