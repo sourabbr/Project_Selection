@@ -81,7 +81,18 @@ function displayAlert(message, type = 'info') {
 function loadState(state) {
     var email=getCookie('email');
     if(!email){
-      alert("Em")
+      alert("Email not valid");
+      return;
+    }
+    console.log(state.registeredTeams);
+    for(var i=0; i<state.registeredTeams.length; i++){
+      if(state.registeredTeams[i].email==window.email){
+        console.log(state.registeredTeams[i].team);
+      }
+      else{
+        alert("Email not valid");
+        return;
+      }
     }
     $('#projectSelectionForm').html('');
     $('#takenProjectsList').html('');
