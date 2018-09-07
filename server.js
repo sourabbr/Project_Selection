@@ -13,6 +13,7 @@ function(token, tokenSecret, profile, cb) {
 }));
 passport.serializeUser(function(user, done) {
   done(null, user);
+  console.log(user);
 });
 passport.deserializeUser(function(obj, done) {
   done(null, obj);
@@ -53,7 +54,7 @@ app.get('/', function(req, res) {
 // on clicking "logoff" the cookie is cleared
 app.get('/logoff',
   function(req, res) {
-    res.clearCookie('google-passport-example');
+    res.clearCookie('accessed-email');
     res.redirect('/');
   }
 );
@@ -71,7 +72,7 @@ app.get('/auth/google/redirect',
 app.get('/setcookie', requireUser,
   function(req, res) {
     if(req.get('Referrer') && req.get('Referrer').indexOf("google.com")!=-1){
-      res.cookie('google-passport-example', new Date());
+      res.cookie('accessed-email', new Date());
       res.redirect('/success');
     } else {
        res.redirect('/');
@@ -87,7 +88,7 @@ app.get('/success', requireLogin,
 );
 
 function requireLogin (req, res, next) {
-  if (!req.cookies['google-passport-example']) {
+  if (!req.cookies['accessed-email']) {
     res.redirect('/');
   } else {
     next();
