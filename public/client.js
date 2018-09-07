@@ -64,6 +64,7 @@ function displayAlert(message, type = 'info') {
         .scrollTo();
 }
 function loadState(state) {
+    
     $('#projectSelectionForm').html('');
     $('#takenProjectsList').html('');
     var project,guide;
