@@ -40,6 +40,21 @@ function hash(name) {
         return '__' + ('000' + c.toString(16)).slice(-4);
     });
 }
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 function getUnique(array, key) {
     return array.reduce(function (carry, item) {
         if (item[key] && !~carry.indexOf(item[key])) carry.push(item[key]);
@@ -64,7 +79,10 @@ function displayAlert(message, type = 'info') {
         .scrollTo();
 }
 function loadState(state) {
-    
+    var email=getCookie('email');
+    if(!email){
+      alert("Em")
+    }
     $('#projectSelectionForm').html('');
     $('#takenProjectsList').html('');
     var project,guide;

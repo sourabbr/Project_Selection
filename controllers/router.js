@@ -6,7 +6,7 @@ module.exports = function (app, db) {
     // to the success view
     app.get('/setcookie', requireUser, checkUserInDb,
       function(req, res) {
-        res.cookie('accessed-email', req.user.emails[0].value);
+        res.cookie('email', req.user.emails[0].value);
         console.log(req.user.emails[0].value);
         console.log("check");
         res.redirect('/success');
@@ -16,7 +16,7 @@ module.exports = function (app, db) {
     // if cookie exists, success. otherwise, user is redirected to index
     app.get('/success', requireLogin,
       function(req, res) {
-        if (!req.cookies['accessed-email']) {
+        if (!req.cookies['email']) {
           res.redirect('/');
         } else {
           res.sendFile(path.join(__dirname, '../views/index.html'));
@@ -44,7 +44,7 @@ module.exports = function (app, db) {
     });
   
     function requireLogin (req, res, next) {
-      if (!req.cookies['accessed-email']) {
+      if (!req.cookies['email']) {
         res.redirect('/');
       } else {
         next();
