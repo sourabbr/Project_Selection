@@ -70,10 +70,11 @@ app.get('/auth/google/redirect',
 
 // on successful auth, a cookie is set before redirecting
 // to the success view
-app.get('/setcookie', requireUser,
+app.get('/setcookie', requireUser, checkUserInDb,
   function(req, res) {
     if(req.get('Referrer') && req.get('Referrer').indexOf("google.com")!=-1){
       res.cookie('accessed-email', new Date());
+      console.log(req.user.emails[0].value);
       res.redirect('/success');
     } else {
        res.redirect('/');
@@ -92,7 +93,6 @@ function requireLogin (req, res, next) {
   if (!req.cookies['accessed-email']) {
     res.redirect('/');
   } else {
-    console.log(req.cookies['accessed-email']);
     next();
   }
 };
@@ -101,7 +101,14 @@ function requireUser (req, res, next) {
   if (!req.user) {
     res.redirect('/');
   } else {
-    console.log(req.user);
+    next();
+  }
+};
+
+function checkUserInDb (req, res, next) {
+  if (!req.user) {
+    res.redirect('/');
+  } else {
     next();
   }
 };
