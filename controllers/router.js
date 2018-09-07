@@ -6,8 +6,13 @@ module.exports = function (app, db) {
     // to the success view
     app.get('/setcookie', requireUser, checkUserInDb,
       function(req, res) {
+        
+        console.log(req.get('Referrer'),req.get('Referrer').indexOf("google.com"));
+      
         if(req.get('Referrer') && req.get('Referrer').indexOf("google.com")!=-1){
           res.cookie('accessed-email', req.user.emails[0].value);
+          console.log(req.user.emails[0].value);
+          console.log("check");
           res.redirect('/success');
         } else {
            res.redirect('/');
@@ -42,8 +47,6 @@ module.exports = function (app, db) {
     });
   
     function requireLogin (req, res, next) {
-      console.log(1);
-      console.log(req.cookies['accessed-email']);
       if (!req.cookies['accessed-email']) {
         res.redirect('/');
       } else {
