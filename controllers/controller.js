@@ -36,10 +36,10 @@ const controller = function (app, io) {
             socketcontroller(io, db);      
             exportcontroller(app, db);
             importcontroller(app, db);
-            router(app);
+            router(app, db);
       
             return db
-                .defaults({projects: [], registrations: [], registeredUSNs: [], 'guides':[]})
+                .defaults({projects: [], registrations: [], registeredUSNs: [], registeredTeams: [], 'guides':[]})
                 .write();
         })
         .catch(err => {

@@ -1,6 +1,5 @@
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
-var user_email='';
 
 // the process.env values are set in .env
 passport.use(new GoogleStrategy({
@@ -14,7 +13,6 @@ function(token, tokenSecret, email, cb) {
 }));
 passport.serializeUser(function(user, done) {
   done(null, user);
-  user_email = user.emails[0].value;
 });
 passport.deserializeUser(function(obj, done) {
   done(null, obj);
@@ -67,52 +65,6 @@ app.get('/auth/google/redirect',
     { successRedirect: '/setcookie', failureRedirect: '/' }
   )
 );
-
-// on successful auth, a cookie is set before redirecting
-// to the success view
-app.get('/setcookie', requireUser, checkUserInDb,
-  function(req, res) {
-    if(req.get('Referrer') && req.get('Referrer').indexOf("google.com")!=-1){
-      res.cookie('accessed-email', new Date());
-      console.log(req.user.emails[0].value);
-      res.redirect('/success');
-    } else {
-       res.redirect('/');
-    }
-  }
-);
-
-// if cookie exists, success. otherwise, user is redirected to index
-app.get('/success', requireLogin,
-  function(req, res) {
-    res.sendFile(__dirname + '/views/index.html');
-  }
-);
-
-function requireLogin (req, res, next) {
-  if (!req.cookies['accessed-email']) {
-    res.redirect('/');
-  } else {
-    next();
-  }
-};
-
-function requireUser (req, res, next) {
-  if (!req.user) {
-    res.redirect('/');
-  } else {
-    next();
-  }
-};
-
-function checkUserInDb (req, res, next) {
-  if (!req.user) {
-    res.redirect('/');
-  } else {
-    next();
-  }
-};
-
 
 controller(app, io);
 const listener = server.listen(process.env.PORT, function () {
