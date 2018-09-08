@@ -88,21 +88,35 @@ function loadState(state) {
     for(var i=0; i<state.registeredTeams.length; i++){
       if(state.registeredTeams[i].email==email){
         team=state.registeredTeams[i].team;
+        if(state.registered)
+          REGISTRATION_COMPLETE=true;
       }
     }
+    for (project of state.registrations) {
+      $(` <li style="display: none;">${project.title}
+        <br><small>Team: ${project.teamMembers.join(', ')}</small>
+        </li>
+      `).prependTo('ul#takenProjectsList').show(500);
+    }
+    if (REGISTRATION_COMPLETE){
+      $('input').remove();
+      $('textarea').attr('disabled', 'disabled');
+      return;
+    }
+  
     var $team = $('textarea#team-members');
     $team.val(team.join("\n"));
     $('#projectSelectionForm').html('');
     $('#takenProjectsList').html('');
     var project,guide;
-    for(var i=1;i<=3;i++)
-    $(`<div style="display: none;" class="select">
+    for(var i=1;i<=3;i++){
+      $(`<div style="display: none;" class="select">
          <label>Choice ${i}:</label>
          <select class="form-control selection projectSelectionOption" id="projectselectoption${i}">
           <option disabled selected value> -- select a project -- </option>
           </select></div>`)
                 .appendTo(`#projectSelectionForm`).show(500);
-
+    }
     for (guide of getUnique(state.projects, 'guide')) {
         // $(`<hr><h6 style="display: none;">Guide: ${guide}</h6>
      $(`<optgroup value="${guide}" class="${hash(guide)}"></optgroup>`)
@@ -114,20 +128,7 @@ function loadState(state) {
             $(`<option class="${hash(project.title)}" value="${project.title}">${project.title}</option>`)
                 .appendTo(`optgroup.${hash(project.guide)}`);
         }
-    }
-
-    if (REGISTRATION_COMPLETE){
-      $('input').remove();
-      $('textarea').attr('disabled', 'disabled');
-    }
-
-    for (project of state.registrations) {
-      $(` <li style="display: none;">${project.title}
-        <br><small>Team: ${project.teamMembers.join(', ')}</small>
-        </li>
-      `).prependTo('ul#takenProjectsList').show(500);
-    }
-  
+    }  
 }
 
 function addProject(project) {
