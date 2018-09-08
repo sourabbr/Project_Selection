@@ -3,7 +3,7 @@
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Sound Regeneration using GAN's",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
@@ -23,7 +23,7 @@
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "An efficient algorithm to recognize the License plate of the vehicle.",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
@@ -221,26 +221,6 @@
       "available": 1
     },
     {
-      "guide": "Ms. SHILPA .D",
-      "title": "Low-Dose CT Image Denoising using novelfilter",
-      "available": 1
-    },
-    {
-      "guide": "Ms. SHILPA .D",
-      "title": "Human Identification from Freestyle Walks using Posture-Based Gait Feature",
-      "available": 1
-    },
-    {
-      "guide": "Ms. SHILPA .D",
-      "title": "Harnessing Multi-source Data about Public Sentiments and Activities for Informed Design",
-      "available": 1
-    },
-    {
-      "guide": "Ms. SHILPA .D",
-      "title": "Top-down parsing for Neural Network Exchange Format (NNEF) in TensorFlow-based deep learning computation",
-      "available": 1
-    },
-    {
       "guide": "Ms. SONALI JOYCE LOBO",
       "title": "Avoiding Excessive Power Consumption by avoiding security Attacks in Networks ",
       "available": 1
@@ -258,26 +238,6 @@
     {
       "guide": "Ms. SONALI JOYCE LOBO",
       "title": "An implementation of energy aware and secure routing protocol in Wirless sensor/adhoc networks",
-      "available": 1
-    },
-    {
-      "guide": "Ms. POOJA K SWAMY",
-      "title": "Computer Simulation of Discrete Human-Machine Interaction for Providing Reliability and Cybersecurity of Critical Systems",
-      "available": 1
-    },
-    {
-      "guide": "Ms. POOJA K SWAMY",
-      "title": "Cooperative Key Generation For Data Dissemination in Cyber-Physical Systems",
-      "available": 1
-    },
-    {
-      "guide": "Ms. POOJA K SWAMY",
-      "title": "Beyond PKI: Enhanced Authentication in Vehicular Networks via MIMO",
-      "available": 1
-    },
-    {
-      "guide": "Ms. POOJA K SWAMY",
-      "title": " Intrusion Detection and Prevention Based on State Context and Hierarchical Trust in Wireless Sensor Networks",
       "available": 1
     },
     {
@@ -421,46 +381,6 @@
       "available": 1
     },
     {
-      "guide": "Ms. DIVYA M.D",
-      "title": "Implement a trace based branch prediction simulator.",
-      "available": 1
-    },
-    {
-      "guide": "Ms. DIVYA M.D",
-      "title": "Implement a trace based cache simulator. ",
-      "available": 1
-    },
-    {
-      "guide": "Ms. DIVYA M.D",
-      "title": "Implement and evaluate cache replacement algorithms",
-      "available": 1
-    },
-    {
-      "guide": "Ms. DIVYA M.D",
-      "title": "Implement and evaluate cache prefetching algorithms",
-      "available": 1
-    },
-    {
-      "guide": "Ms. THILOTHAME .S.D",
-      "title": "Breast cancer detection",
-      "available": 1
-    },
-    {
-      "guide": "Ms. THILOTHAME .S.D",
-      "title": "dual energy CT reconstruction using guided media image filtering",
-      "available": 1
-    },
-    {
-      "guide": "Ms. THILOTHAME .S.D",
-      "title": "cardiac scinitigraphic image segmentation techniques",
-      "available": 1
-    },
-    {
-      "guide": "Ms. THILOTHAME .S.D",
-      "title": "segmentation of ultrasound medical images using image processing techniques",
-      "available": 1
-    },
-    {
       "guide": "Mr. MUZAMEEL AHMED",
       "title": "Contour Based Shape Retrieval and Recognition",
       "available": 1
@@ -501,54 +421,8 @@
       "available": 1
     }
   ],
-  "registrations": [
-    {
-      "Timestamp": "9/8/2018, 2:05:13 PM",
-      "IP": "49.206.14.83,::ffff:10.10.10.247,::ffff:10.10.10.231",
-      "title": "Sound Regeneration using GAN's",
-      "guide": "Ms. SHARON CHRISTA I.L",
-      "choice1": "Sound Regeneration using GAN's",
-      "guide1": "Ms. SHARON CHRISTA I.L",
-      "choice2": "An efficient algorithm to recognize the License plate of the vehicle.",
-      "guide2": "Ms. KRUPASHANKARI .S.S",
-      "choice3": "Intelligent theft managment system using image processing technique",
-      "guide3": "Mr. DHEEMANTH URS",
-      "teamMembers": [
-        "1DS15IS901",
-        "1DS15IS902",
-        "1DS15IS903",
-        "1DS15IS904"
-      ]
-    },
-    {
-      "Timestamp": "9/8/2018, 2:05:13 PM",
-      "IP": "119.161.97.122,::ffff:10.10.11.196,::ffff:10.10.10.231",
-      "title": "An efficient algorithm to recognize the License plate of the vehicle.",
-      "guide": "Ms. KRUPASHANKARI .S.S",
-      "choice1": "Sound Regeneration using GAN's",
-      "guide1": "Ms. SHARON CHRISTA I.L",
-      "choice2": "An efficient algorithm to recognize the License plate of the vehicle.",
-      "guide2": "Ms. KRUPASHANKARI .S.S",
-      "choice3": "Intelligent theft managment system using image processing technique",
-      "guide3": "Mr. DHEEMANTH URS",
-      "teamMembers": [
-        "1DS15IS061",
-        "1DS15IS089",
-        "1DS15IS101",
-        "1DS15IS104"
-      ]
-    }
-  ],
-  "registeredUSNs": [
-    "1DS15IS901",
-    "1DS15IS902",
-    "1DS15IS903",
-    "1DS15IS904",
-    "1DS15IS061",
-    "1DS15IS089",
-    "1DS15IS101",
-    "1DS15IS104"
-  ],
+  "registrations": [],
+  "registeredUSNs": [],
   "registeredTeams": [
     {
       "email": "nischal@nthacks.com",
@@ -873,15 +747,15 @@
   "guides": [
     {
       "name": "Ms. SHARON CHRISTA I.L",
-      "registeredCount": 1
+      "registeredCount": 0
     },
     {
       "name": "Ms. KRUPASHANKARI .S.S",
-      "registeredCount": 1
+      "registeredCount": 0
     },
     {
       "name": "Mr. DHEEMANTH URS",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Mr. SURESHKUMAR M.",
@@ -913,27 +787,19 @@
     },
     {
       "name": "Ms. MADHURA J.",
-      "registeredCount": 0
-    },
-    {
-      "name": "Ms. SHILPA .D",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Ms. SONALI JOYCE LOBO",
-      "registeredCount": 0
-    },
-    {
-      "name": "Ms. POOJA K SWAMY",
       "registeredCount": 1
     },
     {
       "name": "Ms. BINDU BHARGAVI S.M",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Ms. SHALINI K.B",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Ms. VAIDEHI M",
@@ -954,14 +820,6 @@
     {
       "name": "Ms. REKHA JAYARAM",
       "registeredCount": 0
-    },
-    {
-      "name": "Ms. DIVYA M.D",
-      "registeredCount": 1
-    },
-    {
-      "name": "Ms. THILOTHAME .S.D",
-      "registeredCount": 1
     },
     {
       "name": "Mr. MUZAMEEL AHMED",
