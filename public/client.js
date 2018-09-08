@@ -146,7 +146,7 @@ function removeProject(project) {
         //$(`.${hash(project.title)}:selected`).parent().parent().val('')
       }
     }
-    $project.prop("disabled", true);
+    $project.attr("disabled","disabled");
     // $project.hide(500, function () {
     //   $(this).remove();
     // });
