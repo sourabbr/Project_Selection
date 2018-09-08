@@ -23,7 +23,7 @@
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "An efficient algorithm to recognize the License plate of the vehicle.",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
@@ -398,31 +398,99 @@
     {
       "guide": "Mr. MUZAMEEL AHMED",
       "title": "Resource Allocation in Mobile Cloud Computing using Optimizations Technique ",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. RAMAMOHAN BABU K. N",
       "title": "Virtual Lab",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. RAMAMOHAN BABU K. N",
       "title": "Cloud Set up for Department",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. RAMAMOHAN BABU K. N",
       "title": "Network Security in Mobile Networks",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. RAMAMOHAN BABU K. N",
       "title": "Pothole detection using IoT",
-      "available": 1
+      "available": 0
     }
   ],
-  "registrations": [],
-  "registeredUSNs": [],
+  "registrations": [
+    {
+      "Timestamp": "9/8/2018, 7:32:15 PM",
+      "email": "afridihs43@gmail.com",
+      "title": "Virtual Lab",
+      "guide": "Dr. RAMAMOHAN BABU K. N",
+      "choice1": "Virtual Lab",
+      "guide1": "Dr. RAMAMOHAN BABU K. N",
+      "choice2": "Cloud Set up for Department",
+      "guide2": "Dr. RAMAMOHAN BABU K. N",
+      "choice3": "Network Security in Mobile Networks",
+      "guide3": "Dr. RAMAMOHAN BABU K. N",
+      "teamMembers": [
+        "1DS15IS901",
+        "1DS15IS902",
+        "1DS15IS903",
+        "1DS15IS904"
+      ]
+    },
+    {
+      "Timestamp": "9/8/2018, 7:32:55 PM",
+      "email": "nischal@nthacks.com",
+      "title": "Resource Allocation in Mobile Cloud Computing using Optimizations Technique ",
+      "guide": "Mr. MUZAMEEL AHMED",
+      "choice1": "Resource Allocation in Mobile Cloud Computing using Optimizations Technique ",
+      "guide1": "Mr. MUZAMEEL AHMED",
+      "choice2": "A novel method for securing SDN",
+      "guide2": "Ms. PRATHIMA MABEL J.",
+      "choice3": "Automatic  Signboard detection system by the vehicle",
+      "guide3": "Dr. RAJESHWARI .J",
+      "teamMembers": [
+        "1DS15IS801",
+        "1DS15IS802",
+        "1DS15IS803",
+        "1DS15IS804"
+      ]
+    },
+    {
+      "Timestamp": "9/8/2018, 7:33:52 PM",
+      "email": "sourabbr@gmail.com",
+      "title": "An efficient algorithm to recognize the License plate of the vehicle.",
+      "guide": "Ms. KRUPASHANKARI .S.S",
+      "choice1": "An efficient algorithm to recognize the License plate of the vehicle.",
+      "guide1": "Ms. KRUPASHANKARI .S.S",
+      "choice2": "Offline signature verification system",
+      "guide2": "Ms. KRUPASHANKARI .S.S",
+      "choice3": "Intelligent theft managment system using image processing technique",
+      "guide3": "Mr. DHEEMANTH URS",
+      "teamMembers": [
+        "1DS15IS061",
+        "1DS15IS089",
+        "1DS15IS101",
+        "1DS15IS104"
+      ]
+    }
+  ],
+  "registeredUSNs": [
+    "1DS15IS901",
+    "1DS15IS902",
+    "1DS15IS903",
+    "1DS15IS904",
+    "1DS15IS801",
+    "1DS15IS802",
+    "1DS15IS803",
+    "1DS15IS804",
+    "1DS15IS061",
+    "1DS15IS089",
+    "1DS15IS101",
+    "1DS15IS104"
+  ],
   "registeredTeams": [
     {
       "email": "afridihs43@gmail.com",
@@ -432,7 +500,7 @@
         "1DS15IS903",
         "1DS15IS904"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "nischal@nthacks.com",
@@ -442,7 +510,7 @@
         "1DS15IS803",
         "1DS15IS804"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "bhanuv510@gmail.com",
@@ -682,7 +750,7 @@
         "1DS15IS101",
         "1DS15IS104"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "hkpin2@gmail.com",
@@ -797,7 +865,7 @@
     },
     {
       "name": "Ms. KRUPASHANKARI .S.S",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Mr. DHEEMANTH URS",
@@ -869,11 +937,11 @@
     },
     {
       "name": "Mr. MUZAMEEL AHMED",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Dr. RAMAMOHAN BABU K. N",
-      "registeredCount": 1
+      "registeredCount": 2
     }
   ]
 }
