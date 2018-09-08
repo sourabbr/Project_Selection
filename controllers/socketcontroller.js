@@ -7,7 +7,7 @@ let socketcontroller = (io, db) => {
         const headers = socket.handshake.headers;
         console.log("User connected : [ IP: %s, PORTS: %s]", headers['x-forwarded-for'], headers['x-forwarded-port']);
 
-        io.to(`${socket.id}`).emit('loadState', db.getState());
+        socket.emit('loadState', db.getState());
 
         socket.on('message', message => {
             message = message.trim();
@@ -53,7 +53,7 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
   let usnList = db.get("registeredUSNs").value();
   for (let usn of teamMembers) {
       if (usnList.includes(usn)) {
-          io.to(`${socket.id}`).emit('displayAlert', `${usn} already registered`, 'danger');
+          socket.emit('displayAlert', `${usn} already registered`, 'danger');
           return;
       }
   }
@@ -117,13 +117,14 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
       console.log(guide.name+" done");
     }
     
-    io.emit('takenProject', {...project,teamMembers});
-    io.to(`${socket.id}`).emit('successfullyRegistered',project.title);
+    socket.broadcast.emit('takenProject', {...project,teamMembers});
+    //io.to(`${socket.id}`).emit('successfullyRegistered',project.title);
+    socket.emit('successfullyRegistered',project.title);
     success=true;
     return;
  
   }
-  io.to(`${socket.id}`).emit('displayAlert','');
+  socket.emit('displayAlert','Unfortunately, none of your choices are available, pick new set of choices','danger');
             
 }
 module.exports = socketcontroller;
