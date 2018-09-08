@@ -97,30 +97,30 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
       .push(...teamMembers) 
       .write();
 
-
+    guide.registeredCount+=1;
+    
     await db.get('guides')
       .find({name:project.guide})
-      .assign({registeredCount:})
-      .write()
-      .then(async(guide)=>{
-        console.log(guide);
-        if (guide.registeredCount == MAX_REGISTRATION_COUNT){
-          await db.get("projects")
-          .filter({guide:guide.name})
-          .each(proj=>{
-            proj.available=0;
-            io.emit('removeProject',proj);
-          })
-          .write()                                  
-          .then(()=>console.log(guide.name+" done"))
-          .catch(err=>console.error(err));
-        }
-        io.emit('takenProject', {...project,teamMembers});
-        io.to(`${socket.id}`).emit('successfullyRegistered',project.title);
-        success=true;
-        return;
+      .assign({registeredCount:guide.registeredCount})
+      .write();
+    
+    console.log(guide);
+    
+    if (guide.registeredCount == MAX_REGISTRATION_COUNT){
+      await db.get("projects")
+      .filter({guide:guide.name})
+      .each(proj=>{
+        proj.available=0;
+        io.emit('removeProject',proj);
       })
-
+      .write();
+      console.log(guide.name+" done");
+    }
+    io.emit('takenProject', {...project,teamMembers});
+    io.to(`${socket.id}`).emit('successfullyRegistered',project.title);
+    success=true;
+    return;
+   
  
   }
   
