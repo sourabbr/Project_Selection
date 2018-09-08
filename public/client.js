@@ -143,12 +143,13 @@ function removeProject(project) {
     for(var i=0;i<3;++i){
       if($project[i].selected){
         displayAlert(`Choice ${i+1} has now been taken. If you have not yet submitted please pick a new choice`,'info');
-        $(`.${hash(project.title)}:selected`).parent().parent().val('')
+        //$(`.${hash(project.title)}:selected`).parent().parent().val('')
       }
     }
-    $project.hide(500, function () {
-      $(this).remove();
-    });
+    $project.prop("disabled", true);
+    // $project.hide(500, function () {
+    //   $(this).remove();
+    // });
 }
 
 
