@@ -3,22 +3,22 @@
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Sound Regeneration using GAN's",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Blockchain in PDS and rural industries",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Secured certificates and marksheets using blockchain",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Live object detection in videos using CNN",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
@@ -421,8 +421,98 @@
       "available": 1
     }
   ],
-  "registrations": [],
-  "registeredUSNs": [],
+  "registrations": [
+    {
+      "Timestamp": "9/8/2018, 3:33:45 PM",
+      "IP": "49.206.14.83,::ffff:10.10.11.196,::ffff:10.10.10.53",
+      "title": "Sound Regeneration using GAN's",
+      "guide": "Ms. SHARON CHRISTA I.L",
+      "choice1": "Sound Regeneration using GAN's",
+      "guide1": "Ms. SHARON CHRISTA I.L",
+      "choice2": "Blockchain in PDS and rural industries",
+      "guide2": "Ms. SHARON CHRISTA I.L",
+      "choice3": "Secured certificates and marksheets using blockchain",
+      "guide3": "Ms. SHARON CHRISTA I.L",
+      "teamMembers": [
+        "1DS15IS901",
+        "1DS15IS902",
+        "1DS15IS903",
+        "1DS15IS904"
+      ]
+    },
+    {
+      "Timestamp": "9/8/2018, 3:35:07 PM",
+      "IP": "49.206.14.83,::ffff:10.10.11.196,::ffff:10.10.10.53",
+      "title": "Blockchain in PDS and rural industries",
+      "guide": "Ms. SHARON CHRISTA I.L",
+      "choice1": "Blockchain in PDS and rural industries",
+      "guide1": "Ms. SHARON CHRISTA I.L",
+      "choice2": "Secured certificates and marksheets using blockchain",
+      "guide2": "Ms. SHARON CHRISTA I.L",
+      "choice3": "Live object detection in videos using CNN",
+      "guide3": "Ms. SHARON CHRISTA I.L",
+      "teamMembers": [
+        "1DS15IS911",
+        "1DS15IS912",
+        "1DS15IS913",
+        "1DS15IS914"
+      ]
+    },
+    {
+      "Timestamp": "9/8/2018, 3:35:14 PM",
+      "IP": "49.206.14.83,::ffff:10.10.11.196,::ffff:10.10.10.53",
+      "title": "Secured certificates and marksheets using blockchain",
+      "guide": "Ms. SHARON CHRISTA I.L",
+      "choice1": "Blockchain in PDS and rural industries",
+      "guide1": "Ms. SHARON CHRISTA I.L",
+      "choice2": "Secured certificates and marksheets using blockchain",
+      "guide2": "Ms. SHARON CHRISTA I.L",
+      "choice3": "Live object detection in videos using CNN",
+      "guide3": "Ms. SHARON CHRISTA I.L",
+      "teamMembers": [
+        "1DS15IS801",
+        "1DS15IS802",
+        "1DS15IS803",
+        "1DS15IS804"
+      ]
+    },
+    {
+      "Timestamp": "9/8/2018, 3:35:14 PM",
+      "IP": "49.206.14.83,::ffff:10.10.11.196,::ffff:10.10.10.53",
+      "title": "Live object detection in videos using CNN",
+      "guide": "Ms. SHARON CHRISTA I.L",
+      "choice1": "Blockchain in PDS and rural industries",
+      "guide1": "Ms. SHARON CHRISTA I.L",
+      "choice2": "Secured certificates and marksheets using blockchain",
+      "guide2": "Ms. SHARON CHRISTA I.L",
+      "choice3": "Live object detection in videos using CNN",
+      "guide3": "Ms. SHARON CHRISTA I.L",
+      "teamMembers": [
+        "1DS15IS801",
+        "1DS15IS802",
+        "1DS15IS803",
+        "1DS15IS804"
+      ]
+    }
+  ],
+  "registeredUSNs": [
+    "1DS15IS901",
+    "1DS15IS902",
+    "1DS15IS903",
+    "1DS15IS904",
+    "1DS15IS911",
+    "1DS15IS912",
+    "1DS15IS913",
+    "1DS15IS914",
+    "1DS15IS801",
+    "1DS15IS802",
+    "1DS15IS803",
+    "1DS15IS804",
+    "1DS15IS801",
+    "1DS15IS802",
+    "1DS15IS803",
+    "1DS15IS804"
+  ],
   "registeredTeams": [
     {
       "email": "nischal@nthacks.com",
@@ -756,7 +846,7 @@
   "guides": [
     {
       "name": "Ms. SHARON CHRISTA I.L",
-      "registeredCount": 0
+      "registeredCount": 2
     },
     {
       "name": "Ms. KRUPASHANKARI .S.S",
