@@ -90,48 +90,47 @@ function loadState(state) {
       if(state.registeredTeams[i].email==email){
         team=state.registeredTeams[i].team;
         if(state.registered)
-          REGISTRATION_COMPLETE=true;
+          window.REGISTRATION_COMPLETE=true;
       }
     }
+   
+    var $team = $('textarea#team-members');
+    $team.val(team.join("\n"));
+    $('#projectSelectionForm').html('');
+    $('#takenProjectsList').html('');
     for (project of state.registrations) {
       $(` <li style="display: none;">${project.title}
         <!--<br><small>Team: ${project.teamMembers.join(', ')}</small>-->
         </li>
       `).prependTo('ul#takenProjectsList').show(500);
     }
-    if (REGISTRATION_COMPLETE){
-      $('input').remove();
-      $('textarea').attr('disabled', 'disabled');
-      return;
-    }
   
-    var $team = $('textarea#team-members');
-    $team.val(team.join("\n"));
-    $('#projectSelectionForm').html('');
-    $('#takenProjectsList').html('');
-    var project,guide;
-    for(var i=1;i<=3;i++){
-      $(`<div style="display: none;" class="select">
-         <label>Choice ${i}:</label>
-         <select class="form-control selection projectSelectionOption" id="projectselectoption${i}">
-          <option disabled selected value> -- select a project -- </option>
-          </select></div>`)
-                .appendTo(`#projectSelectionForm`).show(500);
-    }
-    for (guide of getUnique(state.projects, 'guide')) {
-        // $(`<hr><h6 style="display: none;">Guide: ${guide}</h6>
-     $(`<optgroup value="${guide}" class="${hash(guide)}"></optgroup>`)
-            .appendTo('.projectSelectionOption');
-    }
+    if (!REGISTRATION_COMPLETE){
+      var project,guide;
+      for(var i=1;i<=3;i++){
+        $(`<div style="display: none;" class="select">
+           <label>Choice ${i}:</label>
+           <select class="form-control selection projectSelectionOption" id="projectselectoption${i}">
+            <option disabled selected value> -- select a project -- </option>
+            </select></div>`)
+                  .appendTo(`#projectSelectionForm`).show(500);
+      }
 
-    for (project of state.projects) {
-        if (project.available) {
-            $(`<option class="${hash(project.title)}" value="${project.title}">${project.title}</option>`)
-                .appendTo(`optgroup.${hash(project.guide)}`);
-        }
-    }  
+      for (guide of getUnique(state.projects, 'guide')) {
+          // $(`<hr><h6 style="display: none;">Guide: ${guide}</h6>
+       $(`<optgroup value="${guide}" class="${hash(guide)}"></optgroup>`)
+              .appendTo('.projectSelectionOption');
+      }
+
+      for (project of state.projects) {
+          if (project.available) {
+              $(`<option class="${hash(project.title)}" value="${project.title}">${project.title}</option>`)
+                  .appendTo(`optgroup.${hash(project.guide)}`);
+          }
+      }  
+
+    }
 }
-
 function addProject(project) {
   $(`<option class="${hash(project.title)}" value="${project.title}">${project.title}</option>`)
       .appendTo(`optgroup.${hash(project.guide)}`);
