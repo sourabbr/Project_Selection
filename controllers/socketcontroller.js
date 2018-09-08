@@ -74,11 +74,15 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
                                       .find({title:project.title})
                                       .value();
     if(existingRegistration)
-        continue;
+      continue;
     
     let guide = await db.get('guides')
                         .find({name:project.guide})
                         .value();
+    
+    if(guide.registeredCount >= MAX_REGISTRATION_COUNT)
+      continue;
+
     
     await db.get("registrations")
       .push({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project,...choices,teamMembers})
