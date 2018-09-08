@@ -68,8 +68,13 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
     var project=projects[i];
     if(success)
       return;
+    var existingRegistration = await db.get("registrations")
+                                .find({title:project.title})
+                                .value();
+    if(existingRegistration)
+      continue;
     await db.get("registrations")
-      .insertIfNotExists({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project,...choices,teamMembers})
+      .push({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project,...choices,teamMembers})
       .write()
       .then(async() => {
           // if (err==="alreadyExists") {
