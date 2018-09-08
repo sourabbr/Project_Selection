@@ -23,22 +23,22 @@
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "An efficient algorithm to recognize the License plate of the vehicle.",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "Text Detection in Images Using Python",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "Offline signature verification system",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "Image Compression Using Wavelet Approach",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. DHEEMANTH URS",
@@ -493,6 +493,42 @@
         "1DS15IS803",
         "1DS15IS804"
       ]
+    },
+    {
+      "Timestamp": "9/8/2018, 4:55:45 PM",
+      "IP": "49.206.14.83,::ffff:10.10.10.247,::ffff:10.10.10.231",
+      "title": "An efficient algorithm to recognize the License plate of the vehicle.",
+      "guide": "Ms. KRUPASHANKARI .S.S",
+      "choice1": "An efficient algorithm to recognize the License plate of the vehicle.",
+      "guide1": "Ms. KRUPASHANKARI .S.S",
+      "choice2": "Offline signature verification system",
+      "guide2": "Ms. KRUPASHANKARI .S.S",
+      "choice3": "Paperless tickets for indian transportation system",
+      "guide3": "Mr. DHEEMANTH URS",
+      "teamMembers": [
+        "1DS15IS921",
+        "1DS15IS922",
+        "1DS15IS923",
+        "1DS15IS924"
+      ]
+    },
+    {
+      "Timestamp": "9/8/2018, 4:57:46 PM",
+      "IP": "49.206.14.83,::ffff:10.10.10.247,::ffff:10.10.10.254",
+      "title": "Text Detection in Images Using Python",
+      "guide": "Ms. KRUPASHANKARI .S.S",
+      "choice1": "Text Detection in Images Using Python",
+      "guide1": "Ms. KRUPASHANKARI .S.S",
+      "choice2": "Offline signature verification system",
+      "guide2": "Ms. KRUPASHANKARI .S.S",
+      "choice3": "Image Compression Using Wavelet Approach",
+      "guide3": "Ms. KRUPASHANKARI .S.S",
+      "teamMembers": [
+        "1DS15IS841",
+        "1DS15IS842",
+        "1DS15IS843",
+        "1DS15IS844"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -511,7 +547,15 @@
     "1DS15IS801",
     "1DS15IS802",
     "1DS15IS803",
-    "1DS15IS804"
+    "1DS15IS804",
+    "1DS15IS921",
+    "1DS15IS922",
+    "1DS15IS923",
+    "1DS15IS924",
+    "1DS15IS841",
+    "1DS15IS842",
+    "1DS15IS843",
+    "1DS15IS844"
   ],
   "registeredTeams": [
     {
@@ -850,7 +894,7 @@
     },
     {
       "name": "Ms. KRUPASHANKARI .S.S",
-      "registeredCount": 0
+      "registeredCount": 2
     },
     {
       "name": "Mr. DHEEMANTH URS",

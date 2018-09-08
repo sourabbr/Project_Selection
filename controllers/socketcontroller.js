@@ -99,7 +99,7 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
 
     guide.registeredCount+=1;
     
-    await db.get('guides')
+    await db.get("guides")
       .find({name:project.guide})
       .assign({registeredCount:guide.registeredCount})
       .write();
@@ -116,14 +116,14 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
       .write();
       console.log(guide.name+" done");
     }
+    
     io.emit('takenProject', {...project,teamMembers});
     io.to(`${socket.id}`).emit('successfullyRegistered',project.title);
     success=true;
     return;
-   
  
   }
-  
+  io.to(`${socket.id}`).emit('displayAlert','');
             
 }
 module.exports = socketcontroller;
