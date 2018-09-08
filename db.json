@@ -43,22 +43,22 @@
     {
       "guide": "Mr. DHEEMANTH URS",
       "title": "Intelligent theft managment system using image processing technique",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. DHEEMANTH URS",
       "title": "Automatic patient enrolment software for hospitals",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. DHEEMANTH URS",
       "title": "Make way for ambulance a mobile application",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. DHEEMANTH URS",
       "title": "Paperless tickets for indian transportation system",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. SURESHKUMAR M.",
@@ -421,8 +421,32 @@
       "available": 1
     }
   ],
-  "registrations": [],
-  "registeredUSNs": [],
+  "registrations": [
+    {
+      "Timestamp": "9/8/2018, 6:18:35 PM",
+      "IP": "49.206.14.83,::ffff:10.10.11.196,::ffff:10.10.10.254",
+      "title": "Paperless tickets for indian transportation system",
+      "guide": "Mr. DHEEMANTH URS",
+      "choice1": "Paperless tickets for indian transportation system",
+      "guide1": "Mr. DHEEMANTH URS",
+      "choice2": "Automatic patient enrolment software for hospitals",
+      "guide2": "Mr. DHEEMANTH URS",
+      "choice3": "Tracking multiple objects using deep learning techniques",
+      "guide3": "Ms. LATHA A.P.",
+      "teamMembers": [
+        "1DS15IS907",
+        "1DS15IS919",
+        "1DS15IS922",
+        "1DS15IS925"
+      ]
+    }
+  ],
+  "registeredUSNs": [
+    "1DS15IS907",
+    "1DS15IS919",
+    "1DS15IS922",
+    "1DS15IS925"
+  ],
   "registeredTeams": [
     {
       "email": "nischal@nthacks.com",
@@ -811,7 +835,7 @@
     },
     {
       "name": "Mr. DHEEMANTH URS",
-      "registeredCount": 1
+      "registeredCount": 2
     },
     {
       "name": "Mr. SURESHKUMAR M.",

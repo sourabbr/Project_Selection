@@ -94,7 +94,7 @@ function loadState(state) {
     }
     for (project of state.registrations) {
       $(` <li style="display: none;">${project.title}
-        <br><small>Team: ${project.teamMembers.join(', ')}</small>
+        <!--<br><small>Team: ${project.teamMembers.join(', ')}</small>-->
         </li>
       `).prependTo('ul#takenProjectsList').show(500);
     }
@@ -157,14 +157,14 @@ function removeProject(project) {
 function takenProject(project) {
     removeProject(project);
     $(`<li style="display: none;">${project.title}
-        <br><small>Team: ${project.teamMembers.join(', ')}
+        <!--<br><small>Team: ${project.teamMembers.join(', ')}-->
         </li></small>`)
       .prependTo('ul#takenProjectsList').show(500);
 }
 
 
 function successfullyRegistered(project) {
-    $('input').hide(500, function () {
+    $('select').hide(500, function () {
         $(this).remove();
         $('textarea').attr('disabled', 'disabled');
         REGISTRATION_COMPLETE = true;
