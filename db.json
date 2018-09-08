@@ -425,6 +425,16 @@
   "registeredUSNs": [],
   "registeredTeams": [
     {
+      "email": "sourabbr2@gmail.com",
+      "team": [
+        "1DS15IS901",
+        "1DS15IS902",
+        "1DS15IS903",
+        "1DS15IS904"
+      ],
+      "registered": 0
+    },
+    {
       "email": "bhanuv510@gmail.com",
       "team": [
         "1DS15IS007",
