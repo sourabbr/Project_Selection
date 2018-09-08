@@ -69,10 +69,11 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
     if(success)
       return;
     var existingRegistration = await db.get("registrations")
-                                .find({title:project.title})
-                                .value();
+                                      .find({title:project.title})
+                                      .value();
     if(existingRegistration)
-      continue;
+        continue;
+    
     await db.get("registrations")
       .push({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project,...choices,teamMembers})
       .write()
@@ -92,29 +93,33 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
                       .push(...teamMembers) 
                       .write()
                       .then(async() => {
-                          await db.get('guides')
+                          let guide = await db.get('guides')
                             .find({name:project.guide})
-                            .update('registeredCount', n => n + 1)
-                            .write()
-                            .then(async(guide)=>{
-                              console.log(guide);
-                              if (guide.registeredCount >= MAX_REGISTRATION_COUNT){
-                                await db.get("projects")
-                                .filter({guide:guide.name})
-                                .each(proj=>{
-                                  proj.available=0;
-                                  io.emit('removeProject',proj);
-                                })
-                                .write()                                  
-                                .then(()=>console.log(guide.name+" done"))
-                                .catch(err=>console.error(err));
-                                
-                              }
-                              io.emit('takenProject', {...project,teamMembers});
-                              io.to(`${socket.id}`).emit('successfullyRegistered',project.title);
-                              success=true
-                              return;
-                            })
+                            .value();
+                          if(guide.registeredCount < MAX_REGISTRATION_COUNT){
+                            await db.get('guides')
+                              .find({name:project.guide})
+                              .update('registeredCount', n => n + 1)
+                              .write()
+                              .then(async(guide)=>{
+                                console.log(guide);
+                                if (guide.registeredCount == MAX_REGISTRATION_COUNT){
+                                  await db.get("projects")
+                                  .filter({guide:guide.name})
+                                  .each(proj=>{
+                                    proj.available=0;
+                                    io.emit('removeProject',proj);
+                                  })
+                                  .write()                                  
+                                  .then(()=>console.log(guide.name+" done"))
+                                  .catch(err=>console.error(err));
+                                }
+                                io.emit('takenProject', {...project,teamMembers});
+                                io.to(`${socket.id}`).emit('successfullyRegistered',project.title);
+                                success=true;
+                                return;
+                              })
+                          }
                          
                       })
                       .catch(err=>console.error(err));

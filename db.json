@@ -3,42 +3,42 @@
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Sound Regeneration using GAN's",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Blockchain in PDS and rural industries",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Secured certificates and marksheets using blockchain",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Live object detection in videos using CNN",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "An efficient algorithm to recognize the License plate of the vehicle.",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "Text Detection in Images Using Python",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "Offline signature verification system",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "Image Compression Using Wavelet Approach",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Mr. DHEEMANTH URS",
@@ -421,120 +421,8 @@
       "available": 1
     }
   ],
-  "registrations": [
-    {
-      "Timestamp": "9/8/2018, 2:59:37 PM",
-      "IP": "49.206.14.83,::ffff:10.10.11.196,::ffff:10.10.10.15",
-      "title": "Sound Regeneration using GAN's",
-      "guide": "Ms. SHARON CHRISTA I.L",
-      "choice1": "Sound Regeneration using GAN's",
-      "guide1": "Ms. SHARON CHRISTA I.L",
-      "choice2": "Blockchain in PDS and rural industries",
-      "guide2": "Ms. SHARON CHRISTA I.L",
-      "choice3": "Secured certificates and marksheets using blockchain",
-      "guide3": "Ms. SHARON CHRISTA I.L",
-      "teamMembers": [
-        "1DS15IS801",
-        "1DS15IS802",
-        "1DS15IS803",
-        "1DS15IS804"
-      ]
-    },
-    {
-      "Timestamp": "9/8/2018, 3:00:03 PM",
-      "IP": "49.206.14.83,::ffff:10.10.11.196,::ffff:10.10.10.31",
-      "title": "Blockchain in PDS and rural industries",
-      "guide": "Ms. SHARON CHRISTA I.L",
-      "choice1": "Sound Regeneration using GAN's",
-      "guide1": "Ms. SHARON CHRISTA I.L",
-      "choice2": "Blockchain in PDS and rural industries",
-      "guide2": "Ms. SHARON CHRISTA I.L",
-      "choice3": "Secured certificates and marksheets using blockchain",
-      "guide3": "Ms. SHARON CHRISTA I.L",
-      "teamMembers": [
-        "1DS15IS901",
-        "1DS15IS902",
-        "1DS15IS903",
-        "1DS15IS904"
-      ]
-    },
-    {
-      "Timestamp": "9/8/2018, 3:02:04 PM",
-      "IP": "49.206.14.83,::ffff:10.10.10.247,::ffff:10.10.10.15",
-      "title": "An efficient algorithm to recognize the License plate of the vehicle.",
-      "guide": "Ms. KRUPASHANKARI .S.S",
-      "choice1": "An efficient algorithm to recognize the License plate of the vehicle.",
-      "guide1": "Ms. KRUPASHANKARI .S.S",
-      "choice2": "Text Detection in Images Using Python",
-      "guide2": "Ms. KRUPASHANKARI .S.S",
-      "choice3": "Offline signature verification system",
-      "guide3": "Ms. KRUPASHANKARI .S.S",
-      "teamMembers": [
-        "1DS15IS811",
-        "1DS15IS812",
-        "1DS15IS813",
-        "1DS15IS814"
-      ]
-    },
-    {
-      "Timestamp": "9/8/2018, 3:03:03 PM",
-      "IP": "49.206.14.83,::ffff:10.10.11.196,::ffff:10.10.10.254",
-      "title": "Text Detection in Images Using Python",
-      "guide": "Ms. KRUPASHANKARI .S.S",
-      "choice1": "Text Detection in Images Using Python",
-      "guide1": "Ms. KRUPASHANKARI .S.S",
-      "choice2": "Offline signature verification system",
-      "guide2": "Ms. KRUPASHANKARI .S.S",
-      "choice3": "Image Compression Using Wavelet Approach",
-      "guide3": "Ms. KRUPASHANKARI .S.S",
-      "teamMembers": [
-        "1DS15IS821",
-        "1DS15IS822",
-        "1DS15IS823",
-        "1DS15IS824"
-      ]
-    },
-    {
-      "Timestamp": "9/8/2018, 3:03:28 PM",
-      "IP": "49.206.14.83,::ffff:10.10.10.247,::ffff:10.10.10.53",
-      "title": "Offline signature verification system",
-      "guide": "Ms. KRUPASHANKARI .S.S",
-      "choice1": "Text Detection in Images Using Python",
-      "guide1": "Ms. KRUPASHANKARI .S.S",
-      "choice2": "Offline signature verification system",
-      "guide2": "Ms. KRUPASHANKARI .S.S",
-      "choice3": "Image Compression Using Wavelet Approach",
-      "guide3": "Ms. KRUPASHANKARI .S.S",
-      "teamMembers": [
-        "1DS15IS911",
-        "1DS15IS912",
-        "1DS15IS913",
-        "1DS15IS914"
-      ]
-    }
-  ],
-  "registeredUSNs": [
-    "1DS15IS801",
-    "1DS15IS802",
-    "1DS15IS803",
-    "1DS15IS804",
-    "1DS15IS901",
-    "1DS15IS902",
-    "1DS15IS903",
-    "1DS15IS904",
-    "1DS15IS811",
-    "1DS15IS812",
-    "1DS15IS813",
-    "1DS15IS814",
-    "1DS15IS821",
-    "1DS15IS822",
-    "1DS15IS823",
-    "1DS15IS824",
-    "1DS15IS911",
-    "1DS15IS912",
-    "1DS15IS913",
-    "1DS15IS914"
-  ],
+  "registrations": [],
+  "registeredUSNs": [],
   "registeredTeams": [
     {
       "email": "nischal@nthacks.com",
@@ -868,11 +756,11 @@
   "guides": [
     {
       "name": "Ms. SHARON CHRISTA I.L",
-      "registeredCount": 2
+      "registeredCount": 0
     },
     {
       "name": "Ms. KRUPASHANKARI .S.S",
-      "registeredCount": 3
+      "registeredCount": 0
     },
     {
       "name": "Mr. DHEEMANTH URS",
