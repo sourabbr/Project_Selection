@@ -65,7 +65,7 @@ module.exports = function (app, db) {
                   .value();
       console.log(team);
       if(team===undefined){
-        res.redirect('/');
+        res.redirect('/invalid');
       }else {
         next();
       }

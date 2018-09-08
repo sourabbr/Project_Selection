@@ -43,22 +43,22 @@
     {
       "guide": "Mr. DHEEMANTH URS",
       "title": "Intelligent theft managment system using image processing technique",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Mr. DHEEMANTH URS",
       "title": "Automatic patient enrolment software for hospitals",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Mr. DHEEMANTH URS",
       "title": "Make way for ambulance a mobile application",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Mr. DHEEMANTH URS",
       "title": "Paperless tickets for indian transportation system",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Mr. SURESHKUMAR M.",
@@ -153,7 +153,7 @@
     {
       "guide": "Ms. CHANDRAKALA B.M.",
       "title": "automatic street lighting using IOT",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. CHANDRAKALA B.M.",
@@ -421,63 +421,9 @@
       "available": 1
     }
   ],
-  "registrations": [
-    {
-      "Timestamp": "9/8/2018, 6:43:51 PM",
-      "email": "nischal@nthacks.com",
-      "title": "automatic street lighting using IOT",
-      "guide": "Ms. CHANDRAKALA B.M.",
-      "choice1": "automatic street lighting using IOT",
-      "guide1": "Ms. CHANDRAKALA B.M.",
-      "choice2": "Blockchain in PDS and rural industries",
-      "guide2": "Ms. SHARON CHRISTA I.L",
-      "choice3": "Advance Predictive Machine learning model using deep learning",
-      "guide3": "Dr. SUNANDA DIXIT",
-      "teamMembers": [
-        "1DS15IS907",
-        "1DS15IS919",
-        "1DS15IS922",
-        "1DS15IS925"
-      ]
-    }
-  ],
-  "registeredUSNs": [
-    "1DS15IS907",
-    "1DS15IS919",
-    "1DS15IS922",
-    "1DS15IS925"
-  ],
+  "registrations": [],
+  "registeredUSNs": [],
   "registeredTeams": [
-    {
-      "email": "nischal@nthacks.com",
-      "team": [
-        "1DS15IS907",
-        "1DS15IS919",
-        "1DS15IS922",
-        "1DS15IS925"
-      ],
-      "registered": 1
-    },
-    {
-      "email": "divide2300by33@gmail.com",
-      "team": [
-        "1DS15IS807",
-        "1DS15IS819",
-        "1DS15IS822",
-        "1DS15IS825"
-      ],
-      "registered": 0
-    },
-    {
-      "email": "nischaltonthanahal@gmail.com",
-      "team": [
-        "1DS15IS707",
-        "1DS15IS719",
-        "1DS15IS722",
-        "1DS15IS725"
-      ],
-      "registered": 0
-    },
     {
       "email": "bhanuv510@gmail.com",
       "team": [
@@ -835,7 +781,7 @@
     },
     {
       "name": "Mr. DHEEMANTH URS",
-      "registeredCount": 2
+      "registeredCount": 1
     },
     {
       "name": "Mr. SURESHKUMAR M.",
@@ -855,7 +801,7 @@
     },
     {
       "name": "Ms. CHANDRAKALA B.M.",
-      "registeredCount": 1
+      "registeredCount": 0
     },
     {
       "name": "Ms. LATHA A.P.",
