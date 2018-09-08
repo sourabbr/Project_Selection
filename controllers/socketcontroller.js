@@ -108,6 +108,7 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
                                 .write()                                  
                                 .then(()=>console.log(guide.name+" done"))
                                 .catch(err=>console.error(err));
+                                
                               }
                               io.emit('takenProject', {...project,teamMembers});
                               io.to(`${socket.id}`).emit('successfullyRegistered',project.title);
