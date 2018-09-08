@@ -176,6 +176,7 @@ function successfullyRegistered(project) {
 
 
 function tryRegistration(event) {
+    var email=getCookie('email');
     event.preventDefault();
     var $team = $('textarea#team-members');
     if ($team.val().trim().length === 0) {
@@ -226,6 +227,6 @@ function tryRegistration(event) {
     
     var projects=[{title:title1, guide:guide1}, {title:title2, guide:guide2}, {title:title3, guide:guide3}];
     console.log(projects);
-    socket.emit('registerProject', projects, teamMembers);
+    socket.emit('registerProject', projects, teamMembers, email);
 }
 

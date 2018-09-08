@@ -37,8 +37,8 @@ let socketcontroller = (io, db) => {
             
         });
   
-        socket.on('registerProject', (projects,teamMembers)=>{
-            tryRegisterProject(projects,teamMembers,db,io,socket,headers);
+        socket.on('registerProject', (projects,teamMembers,email)=>{
+            tryRegisterProject(projects,teamMembers,db,io,socket,headers,email);
         });
         
         socket.on('disconnect', () => {
@@ -48,7 +48,7 @@ let socketcontroller = (io, db) => {
     });
   
 };
-const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => { 
+const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers,email) => { 
   try{
     let usnList = db.get("registeredUSNs").value();
     for (let usn of teamMembers) {
@@ -85,7 +85,7 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
 
 
       await db.get("registrations")
-        .push({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project,...choices,teamMembers})
+        .push({Timestamp: new Date().toLocaleString(),email,...project,...choices,teamMembers})
         .write();
 
       await db.get("projects")
