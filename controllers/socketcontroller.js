@@ -66,24 +66,24 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
   for(var i=0;i<projects.length;i++)
   {
     var project=projects[i];
+    
     if(success)
       return;
-    var existingRegistration = await db.get("registrations")
+    
+    let existingRegistration = await db.get("registrations")
                                       .find({title:project.title})
                                       .value();
     if(existingRegistration)
         continue;
     
+    let guide = await db.get('guides')
+                        .find({name:project.guide})
+                        .value();
+    
     await db.get("registrations")
       .push({Timestamp: new Date().toLocaleString(),IP:headers['x-forwarded-for'],...project,...choices,teamMembers})
       .write()
       .then(async() => {
-          // if (err==="alreadyExists") {
-          //     console.log("Error");
-          //     console.log(err);
-          //     io.to(`${socket.id}`).emit('displayAlert', `Project ${project.title} already taken`, 'danger');
-          //     return;
-          // }
           await  db.get("projects")
                 .find({title: project.title})
                 .assign({available: 0})
@@ -93,9 +93,9 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers) => {
                       .push(...teamMembers) 
                       .write()
                       .then(async() => {
-                          let guide = await db.get('guides')
-                            .find({name:project.guide})
-                            .value();
+                          // let guide = await db.get('guides')
+                          //   .find({name:project.guide})
+                          //   .value();
                           if(guide.registeredCount < MAX_REGISTRATION_COUNT){
                             await db.get('guides')
                               .find({name:project.guide})
