@@ -9,12 +9,12 @@ module.exports = function (app, db) {
         res.cookie('email', req.user.emails[0].value);
         console.log(req.user.emails[0].value);
         console.log("check");
-        res.redirect('/success');
+        res.redirect('/projectSelection');
       }
     );
 
     // if cookie exists, success. otherwise, user is redirected to index
-    app.get('/success', requireLogin,
+    app.get('/projectSelection', requireLogin,
       function(req, res) {
         if (!req.cookies['email']) {
           res.redirect('/');
