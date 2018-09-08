@@ -120,6 +120,12 @@ const tryRegisterProject = async(projects,teamMembers,db,io,socket,headers,email
       io.emit('takenProject', {...project,teamMembers});
       //io.to(`${socket.id}`).emit('successfullyRegistered',project.title);
       socket.emit('successfullyRegistered',project.title);
+      
+      await db.get("registeredTeams")
+              .find({email:email})
+              .assign({registered:1})
+              .write();
+      
       success=true;
       return;
 

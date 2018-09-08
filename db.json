@@ -421,32 +421,8 @@
       "available": 1
     }
   ],
-  "registrations": [
-    {
-      "Timestamp": "9/8/2018, 6:18:35 PM",
-      "IP": "49.206.14.83,::ffff:10.10.11.196,::ffff:10.10.10.254",
-      "title": "Paperless tickets for indian transportation system",
-      "guide": "Mr. DHEEMANTH URS",
-      "choice1": "Paperless tickets for indian transportation system",
-      "guide1": "Mr. DHEEMANTH URS",
-      "choice2": "Automatic patient enrolment software for hospitals",
-      "guide2": "Mr. DHEEMANTH URS",
-      "choice3": "Tracking multiple objects using deep learning techniques",
-      "guide3": "Ms. LATHA A.P.",
-      "teamMembers": [
-        "1DS15IS907",
-        "1DS15IS919",
-        "1DS15IS922",
-        "1DS15IS925"
-      ]
-    }
-  ],
-  "registeredUSNs": [
-    "1DS15IS907",
-    "1DS15IS919",
-    "1DS15IS922",
-    "1DS15IS925"
-  ],
+  "registrations": [],
+  "registeredUSNs": [],
   "registeredTeams": [
     {
       "email": "nischal@nthacks.com",

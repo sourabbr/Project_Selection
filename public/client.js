@@ -85,6 +85,7 @@ function loadState(state) {
       alert("Email not valid");
       return;
     }
+    window.state=state;
     for(var i=0; i<state.registeredTeams.length; i++){
       if(state.registeredTeams[i].email==email){
         team=state.registeredTeams[i].team;
