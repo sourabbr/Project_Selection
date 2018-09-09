@@ -21,7 +21,7 @@ passport.deserializeUser(function(obj, done) {
 
 const express = require('express');
 const http = require('http');
-//const express_enforces_ssl = require('express-enforces-ssl');
+const express_enforces_ssl = require('express-enforces-ssl'); 
 const controller = require("./controllers/controller");
 
 const app = express();
@@ -43,7 +43,9 @@ const io = require('socket.io')(server);
 app.use(express.static('public'));
 app.use('/exports', express.static('exports'));
 app.enable('trust proxy');
-//app.use(express_enforces_ssl());
+
+if(process.env.USE_SSL_GLITCH)
+  app.use(express_enforces_ssl()); //FOR GLITCH ONLY
 
 controller(app, io);
 
