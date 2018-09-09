@@ -283,17 +283,17 @@
     {
       "guide": "Ms. VAIDEHI M",
       "title": "Load Balancing in Virtualized  Cloud Environment to Minimize the Energy Utilization",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. VAIDEHI M",
       "title": "Reliable Scheduling Algorithm to Enhance Effective performance of the Multi source cloud ",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. VAIDEHI M",
       "title": "Drought prediction using wireless sensor networks",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. VAIDEHI M",
@@ -398,7 +398,7 @@
     {
       "guide": "Mr. MUZAMEEL AHMED",
       "title": "Resource Allocation in Mobile Cloud Computing using Optimizations Technique ",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. RAMAMOHAN BABU K. N",
@@ -884,6 +884,42 @@
         "1DS15IS803",
         "1DS15IS804"
       ]
+    },
+    {
+      "Timestamp": "9/9/2018, 6:48:42 AM",
+      "email": "vanipriyanka271997@gmail.com",
+      "title": "Resource Allocation in Mobile Cloud Computing using Optimizations Technique ",
+      "guide": "Mr. MUZAMEEL AHMED",
+      "choice1": "Resource Allocation in Mobile Cloud Computing using Optimizations Technique ",
+      "guide1": "Mr. MUZAMEEL AHMED",
+      "choice2": "Resource migration and server consolidation approaches in cloud computing environment.",
+      "guide2": "Ms. RADHIKA T. V.",
+      "choice3": "A Security Routing Protocol for Internet of Things Based on RPL",
+      "guide3": "Ms. SHALINI K.B",
+      "teamMembers": [
+        "1DS15IS093",
+        "1DS15IS117",
+        "1DS15IS127",
+        "1DS15IS055"
+      ]
+    },
+    {
+      "Timestamp": "9/9/2018, 6:56:46 AM",
+      "email": "sandhyashankar256@gmail.com",
+      "title": "Drought prediction using wireless sensor networks",
+      "guide": "Ms. VAIDEHI M",
+      "choice1": "Drought prediction using wireless sensor networks",
+      "guide1": "Ms. VAIDEHI M",
+      "choice2": "Resource migration and server consolidation approaches in cloud computing environment.",
+      "guide2": "Ms. RADHIKA T. V.",
+      "choice3": "Priority based optimal resource reservation mechanism in constrained Networks for IOT applications",
+      "guide3": "Ms. SHALINI K.B",
+      "teamMembers": [
+        "1DS15IS082",
+        "1DS15IS069",
+        "1DS15IS071",
+        "1DS15IS087"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -985,7 +1021,15 @@
     "1DS15IS801",
     "1DS15IS802",
     "1DS15IS803",
-    "1DS15IS804"
+    "1DS15IS804",
+    "1DS15IS093",
+    "1DS15IS117",
+    "1DS15IS127",
+    "1DS15IS055",
+    "1DS15IS082",
+    "1DS15IS069",
+    "1DS15IS071",
+    "1DS15IS087"
   ],
   "registeredTeams": [
     {
@@ -1066,7 +1110,7 @@
         "1DS15IS071",
         "1DS15IS087"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "snigdha.snigz@gmail.com",
@@ -1096,7 +1140,7 @@
         "1DS15IS127",
         "1DS15IS055"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "svmasdhruthi@gmail.com",
@@ -1413,7 +1457,7 @@
     },
     {
       "name": "Ms. VAIDEHI M",
-      "registeredCount": 1
+      "registeredCount": 2
     },
     {
       "name": "Ms. SAHANA M.P",
@@ -1433,7 +1477,7 @@
     },
     {
       "name": "Mr. MUZAMEEL AHMED",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Dr. RAMAMOHAN BABU K. N",
