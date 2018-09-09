@@ -83,17 +83,17 @@
     {
       "guide": "Ms. RADHIKA T. V.",
       "title": "Dynamic resource allocation and scheduling techniques/algorithms in cloud computing environment",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. RADHIKA T. V.",
       "title": "Resource migration and server consolidation approaches in cloud computing environment.",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. RADHIKA T. V.",
       "title": "Distributed computing technologies and security issues in Big Data analytics",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. RADHIKA T. V.",
@@ -885,6 +885,24 @@
         "1DS15IS091",
         "1DS15IS120"
       ]
+    },
+    {
+      "Timestamp": "9/9/2018, 8:01:23 AM",
+      "email": "meghanabk97pro@gmail.com",
+      "title": "Dynamic resource allocation and scheduling techniques/algorithms in cloud computing environment",
+      "guide": "Ms. RADHIKA T. V.",
+      "choice1": "Dynamic resource allocation and scheduling techniques/algorithms in cloud computing environment",
+      "guide1": "Ms. RADHIKA T. V.",
+      "choice2": "smartphone app develops an instant translation of a Indian street sign",
+      "guide2": "Ms. LATHA A.P.",
+      "choice3": "Contour Based Shape Retrieval and Recognition",
+      "guide3": "Mr. MUZAMEEL AHMED",
+      "teamMembers": [
+        "1DS15IS050",
+        "1DS15IS051",
+        "1DS15IS013",
+        "1DS15IS064"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -987,7 +1005,11 @@
     "1DS15IS100",
     "1DS15IS096",
     "1DS15IS091",
-    "1DS15IS120"
+    "1DS15IS120",
+    "1DS15IS050",
+    "1DS15IS051",
+    "1DS15IS013",
+    "1DS15IS064"
   ],
   "registeredTeams": [
     {
@@ -1168,7 +1190,7 @@
         "1DS15IS013",
         "1DS15IS064"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "shrutikavandakudri@gmail.com",
@@ -1375,7 +1397,7 @@
     },
     {
       "name": "Ms. RADHIKA T. V.",
-      "registeredCount": 1
+      "registeredCount": 2
     },
     {
       "name": "Ms. BHAVANI K.",
