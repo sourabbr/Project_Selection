@@ -175,6 +175,7 @@ function successfullyRegistered(project) {
         window.REGISTRATION_COMPLETE = true;
     });
     setTimeout(function () {
+        $(`Successfully Registered Project: <strong>${project}</strong>`).appendTo('ul#takenProjectsList').show(500);
         displayAlert(`Successfully Registered Project: <strong>${project}</strong>`, 'success');
     }, 1000);
 }

@@ -51,6 +51,8 @@ controller(app, io);
 
 // index route
 app.get('/', function(req, res) {
+  res.send("Selection over");
+  return;
   res.sendFile(__dirname + '/views/login.html');
 });
 
