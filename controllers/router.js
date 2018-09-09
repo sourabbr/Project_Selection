@@ -28,7 +28,7 @@ module.exports = function (app, db) {
     });
     
     app.get("/forbidden", function (request, response) {
-        response.send("Please use Chrome or any webkit browser. Firefox is not supported. If you are using chrome, you are seeing this because devtools is open.");
+        response.send("Please use only Chrome or Safari for the mock round. Firefox/Edge is not supported. If you are using chrome, you are seeing this because devtools is open.");
     }); 
   
     app.get("/resetRegistrations", function (request,response) {

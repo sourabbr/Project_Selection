@@ -83,6 +83,7 @@
             </div>
         </div>
         <label><strong>Step 3: </strong> Submit your choice</label><br><br>
+        <div style="display:none" id="alreadySubmitted" class="alert alert-success">You have already submitted a registration</div>
         <input type="submit" class="btn btn-info form-control">
     </form>
     <hr><br>
@@ -114,16 +115,16 @@
 // var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 // var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
 // if(isChrome||isSafari){
-  jdetects.create({
-    once: true,
-    label: "You are not allowed to view the source",
-    onchange: function(status) {
-      if(status==='on'){
-        document.body.innerHTML='';
-        window.location='/forbidden';
-      }
-    }
-  }); 
+  // jdetects.create({
+  //   once: true,
+  //   label: "You are not allowed to view the source",
+  //   onchange: function(status) {
+  //     if(status==='on'){
+  //       document.body.innerHTML='';
+  //       window.location='/forbidden';
+  //     }
+  //   }
+  // }); 
 // } 
 </script>
 </body>

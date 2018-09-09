@@ -107,6 +107,7 @@ function loadState(state) {
     if (REGISTRATION_COMPLETE){
       $('input').remove();
       $('textarea').attr('disabled','disabled');
+      $('#alreadySubmitted').show(500);
       //$('#projectSelectionForm').html('Already registered');
       //return;
     }
@@ -168,7 +169,7 @@ function takenProject(project) {
 
 
 function successfullyRegistered(project) {
-    $('select').hide(500, function () {
+    $('input').hide(500, function () {
         $(this).remove();
         $('textarea').attr('disabled', 'disabled');
         window.REGISTRATION_COMPLETE = true;
