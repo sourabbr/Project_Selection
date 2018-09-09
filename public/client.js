@@ -89,7 +89,7 @@ function loadState(state) {
       if(state.registeredTeams[i].email==email){
         team=state.registeredTeams[i].team;
         if(state.registeredTeams[i].registered)
-          REGISTRATION_COMPLETE=true;
+          window.REGISTRATION_COMPLETE=true;
       }
     }
    
@@ -107,8 +107,8 @@ function loadState(state) {
     if (REGISTRATION_COMPLETE){
       $('input').remove();
       $('textarea').attr('disabled','disabled');
-      $('#projectSelectionForm').html('Already registered');
-      return;
+      //$('#projectSelectionForm').html('Already registered');
+      //return;
     }
     var project,guide;
     for(var i=1;i<=3;i++){
@@ -141,13 +141,13 @@ function addProject(project) {
 }
 
 function removeProject(project) {
-    console.log("Removing project");
-    console.log(project);
+    //console.log("Removing project");
+    //console.log(project);
     var doRemove=true;
     var $project=$(`.${hash(project.title)}`);
     for(var i=0;i<3;++i){
       if($project[i].selected){
-        displayAlert(`Choice ${i+1} has now been taken. If you have not yet submitted please pick a new choice`,'info');
+        displayAlert(`Choice ${i+1} has now been taken. If you have not yet submitted you may want to pick a new choice`,'info');
         //$(`.${hash(project.title)}:selected`).parent().parent().val('')
       }
     }
@@ -171,7 +171,7 @@ function successfullyRegistered(project) {
     $('select').hide(500, function () {
         $(this).remove();
         $('textarea').attr('disabled', 'disabled');
-        REGISTRATION_COMPLETE = true;
+        window.REGISTRATION_COMPLETE = true;
     });
     setTimeout(function () {
         displayAlert(`Successfully Registered Project: <strong>${project}</strong>`, 'success');
@@ -182,6 +182,10 @@ function successfullyRegistered(project) {
 function tryRegistration(event) {
     var email=getCookie('email');
     event.preventDefault();
+    if(window.REGISTRATION_COMPLETE){
+      displayAlert('You have already submitted a registration');
+      return;
+    }
     var $team = $('textarea#team-members');
     if ($team.val().trim().length === 0) {
         $team.focus();
