@@ -23,7 +23,7 @@
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "An efficient algorithm to recognize the License plate of the vehicle.",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
@@ -33,12 +33,12 @@
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "Offline signature verification system",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. KRUPASHANKARI .S.S",
       "title": "Image Compression Using Wavelet Approach",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. DHEEMANTH URS",
@@ -68,17 +68,17 @@
     {
       "guide": "Mr. SURESHKUMAR M.",
       "title": "Customer behavior prediction using web usage mining",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. SURESHKUMAR M.",
       "title": "Diabetes prediction using data mining",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Mr. SURESHKUMAR M.",
       "title": "Matrix based shoulder surfing security system",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. RADHIKA T. V.",
@@ -98,7 +98,7 @@
     {
       "guide": "Ms. RADHIKA T. V.",
       "title": "Big Data analytics for scientific computing",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. BHAVANI K.",
@@ -123,22 +123,22 @@
     {
       "guide": "Dr. SUMA V.",
       "title": "Automation of Agricultural Process",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. SUMA V.",
       "title": "IOT for women safety",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. SUMA V.",
       "title": "Enhancement of Software Quality through Predictive model ",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. SUMA V.",
       "title": "IOT for better living style ",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. CHANDRAKALA B.M.",
@@ -148,27 +148,27 @@
     {
       "guide": "Ms. CHANDRAKALA B.M.",
       "title": "Web based library management system using angular and springboot",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. CHANDRAKALA B.M.",
       "title": "automatic street lighting using IOT",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. CHANDRAKALA B.M.",
       "title": "automatic control of geyser using arduino and raspbery pi",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. LATHA A.P.",
       "title": "smartphone app develops an instant translation of a Indian street sign",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. LATHA A.P.",
       "title": "Tracking multiple objects using deep learning techniques",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. LATHA A.P.",
@@ -178,7 +178,7 @@
     {
       "guide": "Ms. LATHA A.P.",
       "title": "Anomaly detection in ATM ",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. SUNANDA DIXIT",
@@ -203,42 +203,42 @@
     {
       "guide": "Ms. MADHURA J.",
       "title": "Novel apprach for denoising images using hybrid filters",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. MADHURA J.",
       "title": "Detection and Characterization of Subsolid Juxta-pleural Lung Nodule from CT Images",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. MADHURA J.",
       "title": "Chatbots in educational system",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. MADHURA J.",
       "title": "Design of Biometric Recognition Software Based on Image Processing",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SONALI JOYCE LOBO",
       "title": "Avoiding Excessive Power Consumption by avoiding security Attacks in Networks ",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SONALI JOYCE LOBO",
       "title": "Computer network security issues and measures to avoid it",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SONALI JOYCE LOBO",
       "title": "An implementation of reliable routing protocol in Wirless sensor/adhoc networks",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SONALI JOYCE LOBO",
       "title": "An implementation of energy aware and secure routing protocol in Wirless sensor/adhoc networks",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. BINDU BHARGAVI S.M",
@@ -298,7 +298,7 @@
     {
       "guide": "Ms. VAIDEHI M",
       "title": "An Efficient and Secured Data Storage technique  in  cloud",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SAHANA M.P",
@@ -323,22 +323,22 @@
     {
       "guide": "Dr. RAJESHWARI .J",
       "title": "Automatic  Signboard detection system by the vehicle",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. RAJESHWARI .J",
       "title": "Reducing the accidents based on pedestrian detection system ",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. RAJESHWARI .J",
       "title": "Agricultural Plant disease prediction system",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Dr. RAJESHWARI .J",
       "title": "Application of remote sensing images for natural disaster mitigation",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. PRATHIMA MABEL J.",
@@ -673,6 +673,217 @@
         "1DS15IS048",
         "1DS15IS063"
       ]
+    },
+    {
+      "Timestamp": "9/9/2018, 6:36:36 AM",
+      "email": "surajguru83@gmail.com",
+      "title": "IOT for better living style ",
+      "guide": "Dr. SUMA V.",
+      "choice1": "IOT for better living style ",
+      "guide1": "Dr. SUMA V.",
+      "choice2": "Design of Biometric Recognition Software Based on Image Processing",
+      "guide2": "Ms. MADHURA J.",
+      "choice3": "Image Compression Using Wavelet Approach",
+      "guide3": "Ms. KRUPASHANKARI .S.S",
+      "teamMembers": [
+        "1DS15IS108",
+        "1DS15IS113",
+        "1DS15IS086"
+      ]
+    },
+    {
+      "Timestamp": "9/9/2018, 6:36:49 AM",
+      "email": "gururaj.nadig50@gmail.com",
+      "title": "Web based library management system using angular and springboot",
+      "guide": "Ms. CHANDRAKALA B.M.",
+      "choice1": "Web based library management system using angular and springboot",
+      "guide1": "Ms. CHANDRAKALA B.M.",
+      "choice2": "Automation of Agricultural Process",
+      "guide2": "Dr. SUMA V.",
+      "choice3": "Diabetes prediction using data mining",
+      "guide3": "Mr. SURESHKUMAR M.",
+      "teamMembers": [
+        "1DS16IS403",
+        "1DS16IS402",
+        "1DS15IS058"
+      ]
+    },
+    {
+      "Timestamp": "9/9/2018, 6:37:55 AM",
+      "email": "bhatdev97@gmail.com",
+      "title": "IOT for women safety",
+      "guide": "Dr. SUMA V.",
+      "choice1": "IOT for women safety",
+      "guide1": "Dr. SUMA V.",
+      "choice2": "Automatic  Signboard detection system by the vehicle",
+      "guide2": "Dr. RAJESHWARI .J",
+      "choice3": "Priority based optimal resource reservation mechanism in constrained Networks for IOT applications",
+      "guide3": "Ms. SHALINI K.B",
+      "teamMembers": [
+        "1DS15IS130",
+        "1DS15IS083",
+        "1DS15IS079"
+      ]
+    },
+    {
+      "Timestamp": "9/9/2018, 6:38:09 AM",
+      "email": "hkpin2@gmail.com",
+      "title": "Design of Biometric Recognition Software Based on Image Processing",
+      "guide": "Ms. MADHURA J.",
+      "choice1": "Design of Biometric Recognition Software Based on Image Processing",
+      "guide1": "Ms. MADHURA J.",
+      "choice2": "Enhancement of Software Quality through Predictive model ",
+      "guide2": "Dr. SUMA V.",
+      "choice3": "Chatbots in educational system",
+      "guide3": "Ms. MADHURA J.",
+      "teamMembers": [
+        "1DS15IS031",
+        "1DS15IS032",
+        "1DS15IS041",
+        "1DS15IS014"
+      ]
+    },
+    {
+      "Timestamp": "9/9/2018, 6:38:37 AM",
+      "email": "swapnil.shobhit@gmail.com",
+      "title": "Image Compression Using Wavelet Approach",
+      "guide": "Ms. KRUPASHANKARI .S.S",
+      "choice1": "Image Compression Using Wavelet Approach",
+      "guide1": "Ms. KRUPASHANKARI .S.S",
+      "choice2": "Detection and Characterization of Subsolid Juxta-pleural Lung Nodule from CT Images",
+      "guide2": "Ms. MADHURA J.",
+      "choice3": "Dynamic Clustering-Based Method for Shape Recognition and Retrieval",
+      "guide3": "Mr. MUZAMEEL AHMED",
+      "teamMembers": [
+        "1DS15IS111",
+        "1DS15IS103",
+        "1DS15IS109",
+        "1DS15IS110"
+      ]
+    },
+    {
+      "Timestamp": "9/9/2018, 6:38:47 AM",
+      "email": "josh.ananya14@gmail.com",
+      "title": "Big Data analytics for scientific computing",
+      "guide": "Ms. RADHIKA T. V.",
+      "choice1": "Big Data analytics for scientific computing",
+      "guide1": "Ms. RADHIKA T. V.",
+      "choice2": "Diabetes prediction using data mining",
+      "guide2": "Mr. SURESHKUMAR M.",
+      "choice3": "Distributed computing technologies and security issues in Big Data analytics",
+      "guide3": "Ms. RADHIKA T. V.",
+      "teamMembers": [
+        "1DS15IS072",
+        "1DS15IS078",
+        "1DS15IS090",
+        "1DS15IS128"
+      ]
+    },
+    {
+      "Timestamp": "9/9/2018, 6:39:02 AM",
+      "email": "deepikahathwar@gmail.com",
+      "title": "Diabetes prediction using data mining",
+      "guide": "Mr. SURESHKUMAR M.",
+      "choice1": "automatic street lighting using IOT",
+      "guide1": "Ms. CHANDRAKALA B.M.",
+      "choice2": "Diabetes prediction using data mining",
+      "guide2": "Mr. SURESHKUMAR M.",
+      "choice3": "Chatbots in educational system",
+      "guide3": "Ms. MADHURA J.",
+      "teamMembers": [
+        "1DS15IS005",
+        "1DS15IS024",
+        "1DS15IS036",
+        "1DS15IS052"
+      ]
+    },
+    {
+      "Timestamp": "9/9/2018, 6:39:17 AM",
+      "email": "ks.sanjetha@gmail.com",
+      "title": "smartphone app develops an instant translation of a Indian street sign",
+      "guide": "Ms. LATHA A.P.",
+      "choice1": "Offline signature verification system",
+      "guide1": "Ms. KRUPASHANKARI .S.S",
+      "choice2": "smartphone app develops an instant translation of a Indian street sign",
+      "guide2": "Ms. LATHA A.P.",
+      "choice3": "Anomaly detection in ATM ",
+      "guide3": "Ms. LATHA A.P.",
+      "teamMembers": [
+        "1DS15IS129",
+        "1DS15IS039",
+        "1DS15IS045",
+        "1DS15IS056"
+      ]
+    },
+    {
+      "Timestamp": "9/9/2018, 6:39:41 AM",
+      "email": "trivenipujar27@gmail.com",
+      "title": "Automatic  Signboard detection system by the vehicle",
+      "guide": "Dr. RAJESHWARI .J",
+      "choice1": "Automatic  Signboard detection system by the vehicle",
+      "guide1": "Dr. RAJESHWARI .J",
+      "choice2": "IOT for women safety",
+      "guide2": "Dr. SUMA V.",
+      "choice3": "Customer behavior prediction using web usage mining",
+      "guide3": "Mr. SURESHKUMAR M.",
+      "teamMembers": [
+        "1DS15IS070",
+        "1DS15IS073",
+        "1DS15IS106",
+        "1DS15IS114"
+      ]
+    },
+    {
+      "Timestamp": "9/9/2018, 6:39:51 AM",
+      "email": "ramyashekar675@gmail.com",
+      "title": "Avoiding Excessive Power Consumption by avoiding security Attacks in Networks ",
+      "guide": "Ms. SONALI JOYCE LOBO",
+      "choice1": "IOT for better living style ",
+      "guide1": "Dr. SUMA V.",
+      "choice2": "Avoiding Excessive Power Consumption by avoiding security Attacks in Networks ",
+      "guide2": "Ms. SONALI JOYCE LOBO",
+      "choice3": "Constructing a Global Social Service Network for Better Quality of Web Service Discovery",
+      "guide3": "Ms. SHALINI K.B",
+      "teamMembers": [
+        "1DS16IS400",
+        "1DS16IS401",
+        "1DS16IS413"
+      ]
+    },
+    {
+      "Timestamp": "9/9/2018, 6:44:26 AM",
+      "email": "109amisha.96@gmail.com",
+      "title": "Agricultural Plant disease prediction system",
+      "guide": "Dr. RAJESHWARI .J",
+      "choice1": "Agricultural Plant disease prediction system",
+      "guide1": "Dr. RAJESHWARI .J",
+      "choice2": "Distributed computing technologies and security issues in Big Data analytics",
+      "guide2": "Ms. RADHIKA T. V.",
+      "choice3": "Reducing the accidents based on pedestrian detection system ",
+      "guide3": "Dr. RAJESHWARI .J",
+      "teamMembers": [
+        "1DS15IS006",
+        "1DS15IS008",
+        "1DS15IS009"
+      ]
+    },
+    {
+      "Timestamp": "9/9/2018, 6:45:54 AM",
+      "email": "nischal@nthacks.com",
+      "title": "An Efficient and Secured Data Storage technique  in  cloud",
+      "guide": "Ms. VAIDEHI M",
+      "choice1": "Agricultural Plant disease prediction system",
+      "guide1": "Dr. RAJESHWARI .J",
+      "choice2": "An Efficient and Secured Data Storage technique  in  cloud",
+      "guide2": "Ms. VAIDEHI M",
+      "choice3": "Constructing a Global Social Service Network for Better Quality of Web Service Discovery",
+      "guide3": "Ms. SHALINI K.B",
+      "teamMembers": [
+        "1DS15IS801",
+        "1DS15IS802",
+        "1DS15IS803",
+        "1DS15IS804"
+      ]
     }
   ],
   "registeredUSNs": [
@@ -731,7 +942,50 @@
     "1DS15IS043",
     "1DS15IS047",
     "1DS15IS048",
-    "1DS15IS063"
+    "1DS15IS063",
+    "1DS15IS108",
+    "1DS15IS113",
+    "1DS15IS086",
+    "1DS16IS403",
+    "1DS16IS402",
+    "1DS15IS058",
+    "1DS15IS130",
+    "1DS15IS083",
+    "1DS15IS079",
+    "1DS15IS031",
+    "1DS15IS032",
+    "1DS15IS041",
+    "1DS15IS014",
+    "1DS15IS111",
+    "1DS15IS103",
+    "1DS15IS109",
+    "1DS15IS110",
+    "1DS15IS072",
+    "1DS15IS078",
+    "1DS15IS090",
+    "1DS15IS128",
+    "1DS15IS005",
+    "1DS15IS024",
+    "1DS15IS036",
+    "1DS15IS052",
+    "1DS15IS129",
+    "1DS15IS039",
+    "1DS15IS045",
+    "1DS15IS056",
+    "1DS15IS070",
+    "1DS15IS073",
+    "1DS15IS106",
+    "1DS15IS114",
+    "1DS16IS400",
+    "1DS16IS401",
+    "1DS16IS413",
+    "1DS15IS006",
+    "1DS15IS008",
+    "1DS15IS009",
+    "1DS15IS801",
+    "1DS15IS802",
+    "1DS15IS803",
+    "1DS15IS804"
   ],
   "registeredTeams": [
     {
@@ -752,7 +1006,7 @@
         "1DS15IS803",
         "1DS15IS804"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "bhanuv510@gmail.com",
@@ -772,7 +1026,7 @@
         "1DS15IS106",
         "1DS15IS114"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "josh.ananya14@gmail.com",
@@ -782,7 +1036,7 @@
         "1DS15IS090",
         "1DS15IS128"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "ray.niharika01@gmail.com",
@@ -872,7 +1126,7 @@
         "1DS15IS109",
         "1DS15IS110"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "gauravroy99@gmail.com",
@@ -982,7 +1236,7 @@
         "1DS15IS036",
         "1DS15IS052"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "sourabbr@gmail.com",
@@ -1002,7 +1256,7 @@
         "1DS15IS041",
         "1DS15IS014"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "gururaj.nadig50@gmail.com",
@@ -1011,7 +1265,7 @@
         "1DS16IS402",
         "1DS15IS058"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "siddharthraval2998@gmail.com",
@@ -1030,7 +1284,7 @@
         "1DS16IS401",
         "1DS16IS413"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "109amisha.96@gmail.com",
@@ -1039,7 +1293,7 @@
         "1DS15IS008",
         "1DS15IS009"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "hariprabhanjan75@gmail.com",
@@ -1078,7 +1332,7 @@
         "1DS15IS083",
         "1DS15IS079"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "surajguru83@gmail.com",
@@ -1087,7 +1341,7 @@
         "1DS15IS113",
         "1DS15IS086"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "ks.sanjetha@gmail.com",
@@ -1097,7 +1351,7 @@
         "1DS15IS045",
         "1DS15IS056"
       ],
-      "registered": 0
+      "registered": 1
     }
   ],
   "guides": [
@@ -1107,7 +1361,7 @@
     },
     {
       "name": "Ms. KRUPASHANKARI .S.S",
-      "registeredCount": 1
+      "registeredCount": 2
     },
     {
       "name": "Mr. DHEEMANTH URS",
@@ -1115,11 +1369,11 @@
     },
     {
       "name": "Mr. SURESHKUMAR M.",
-      "registeredCount": 1
+      "registeredCount": 2
     },
     {
       "name": "Ms. RADHIKA T. V.",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Ms. BHAVANI K.",
@@ -1127,15 +1381,15 @@
     },
     {
       "name": "Dr. SUMA V.",
-      "registeredCount": 0
+      "registeredCount": 2
     },
     {
       "name": "Ms. CHANDRAKALA B.M.",
-      "registeredCount": 1
+      "registeredCount": 2
     },
     {
       "name": "Ms. LATHA A.P.",
-      "registeredCount": 1
+      "registeredCount": 2
     },
     {
       "name": "Dr. SUNANDA DIXIT",
@@ -1143,11 +1397,11 @@
     },
     {
       "name": "Ms. MADHURA J.",
-      "registeredCount": 1
+      "registeredCount": 2
     },
     {
       "name": "Ms. SONALI JOYCE LOBO",
-      "registeredCount": 1
+      "registeredCount": 2
     },
     {
       "name": "Ms. BINDU BHARGAVI S.M",
@@ -1159,7 +1413,7 @@
     },
     {
       "name": "Ms. VAIDEHI M",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Ms. SAHANA M.P",
@@ -1167,7 +1421,7 @@
     },
     {
       "name": "Dr. RAJESHWARI .J",
-      "registeredCount": 0
+      "registeredCount": 2
     },
     {
       "name": "Ms. PRATHIMA MABEL J.",
