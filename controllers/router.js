@@ -23,12 +23,12 @@ module.exports = function (app, db) {
         }        
       }
     );
-    app.get("/admin", function (request, response) {
+    app.get("/admin01110011", function (request, response) {
         response.sendFile(path.join(__dirname, '../views/admin.html'));
     });
     
     app.get("/forbidden", function (request, response) {
-        response.send("You are not allowed to view the source");
+        response.send("Please use Chrome or any webkit browser. Firefox is not supported. If you are using chrome, you are seeing this because devtools is open.");
     }); 
   
     app.get("/resetRegistrations", function (request,response) {
