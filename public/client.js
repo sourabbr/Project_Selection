@@ -174,8 +174,8 @@ function successfullyRegistered(project) {
         $('textarea').attr('disabled', 'disabled');
         window.REGISTRATION_COMPLETE = true;
     });
+    $('#registeredProjectTitle').html(`Your allotted project is: <strong>${project}</strong>`).show(500);
     setTimeout(function () {
-        $(`Successfully Registered Project: <strong>${project}</strong>`).appendTo('ul#takenProjectsList').show(500);
         displayAlert(`Successfully Registered Project: <strong>${project}</strong>`, 'success');
     }, 1000);
 }
