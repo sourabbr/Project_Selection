@@ -9,7 +9,7 @@ const export_xlsx = (response, db) => {
     let sheet = file.addSheet('Sheet1');
 
     let header = sheet.addRow(); //headers for the columns
-    for (let column of ['Timestamp','IP','Project Title','Guide','Choice 1','Guide 1','Choice 2','Guide 2','Choice 3','Guide 3','USN1','USN2','USN3','USN4']) {
+    for (let column of ['Timestamp','Email','Allotted Project Title','Guide','Choice 1','Guide 1','Choice 2','Guide 2','Choice 3','Guide 3','USN1','USN2','USN3','USN4']) {
         let heading = header.addCell();
         heading.value = column;
     }
