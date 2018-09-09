@@ -3,7 +3,7 @@
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Sound Regeneration using GAN's",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
@@ -421,32 +421,8 @@
       "available": 1
     }
   ],
-  "registrations": [
-    {
-      "Timestamp": "9/9/2018, 5:58:55 AM",
-      "email": "nischal@nthacks.com",
-      "title": "Sound Regeneration using GAN's",
-      "guide": "Ms. SHARON CHRISTA I.L",
-      "choice1": "Sound Regeneration using GAN's",
-      "guide1": "Ms. SHARON CHRISTA I.L",
-      "choice2": "Intelligent theft managment system using image processing technique",
-      "guide2": "Mr. DHEEMANTH URS",
-      "choice3": "3D model construction using multiple 2 D images",
-      "guide3": "Dr. SUNANDA DIXIT",
-      "teamMembers": [
-        "1DS15IS801",
-        "1DS15IS802",
-        "1DS15IS803",
-        "1DS15IS804"
-      ]
-    }
-  ],
-  "registeredUSNs": [
-    "1DS15IS801",
-    "1DS15IS802",
-    "1DS15IS803",
-    "1DS15IS804"
-  ],
+  "registrations": [],
+  "registeredUSNs": [],
   "registeredTeams": [
     {
       "email": "afridihs43@gmail.com",
@@ -466,7 +442,7 @@
         "1DS15IS803",
         "1DS15IS804"
       ],
-      "registered": 1
+      "registered": 0
     },
     {
       "email": "bhanuv510@gmail.com",
@@ -817,7 +793,7 @@
   "guides": [
     {
       "name": "Ms. SHARON CHRISTA I.L",
-      "registeredCount": 1
+      "registeredCount": 0
     },
     {
       "name": "Ms. KRUPASHANKARI .S.S",
