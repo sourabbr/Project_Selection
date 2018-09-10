@@ -4,8 +4,8 @@ var GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 // the process.env values are set in .env
 passport.use(new GoogleStrategy({
-  clientID: '968726232427-h0ebj90sa7vngdigprl1e9r4lsjftrhd.apps.googleusercontent.com',
-  clientSecret: 'inApVun16x24KVuLxrdv0MQP',
+  clientID: '566278457985-suta4soahcq0ct9jq8cq46rllctdg8g7.apps.googleusercontent.com', //'968726232427-h0ebj90sa7vngdigprl1e9r4lsjftrhd.apps.googleusercontent.com',
+  clientSecret:'5qsEB-mpMJBPYl8T8EuuXryH', //'inApVun16x24KVuLxrdv0MQP',
   callbackURL: '/auth/google/redirect',
   scope: ['profile','email']
 },
