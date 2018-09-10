@@ -113,12 +113,9 @@
 <script src="/client.js" async defer></script>
 <script src="/jdetects.min.js"></script>
 <script>
-// var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-// var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
-// if(!isChrome&&!isSafari){
-//   alert("Only CHROME or SAFARI browser will work during mock allotment.");
-// }
-// if(isChrome||isSafari){
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+if(isChrome||isSafari){
   jdetects.create({
     once: true,
     label: "You are not allowed to view the source",
@@ -129,7 +126,7 @@
       }
     }
   }); 
-// } 
+} 
 </script>
 </body>
 </html>

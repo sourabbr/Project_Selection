@@ -423,16 +423,16 @@
   ],
   "registrations": [
     {
-      "Timestamp": "9/10/2018, 3:27:08 PM",
+      "Timestamp": "9/10/2018, 3:42:22 PM",
       "email": "nischal@nthacks.com",
       "title": "Sound Regeneration using GAN's",
       "guide": "Ms. SHARON CHRISTA I.L",
       "choice1": "Sound Regeneration using GAN's",
       "guide1": "Ms. SHARON CHRISTA I.L",
-      "choice2": "classification genre of songs",
-      "guide2": "Ms. LATHA A.P.",
-      "choice3": "Advance Predictive Machine learning model using deep learning",
-      "guide3": "Dr. SUNANDA DIXIT",
+      "choice2": "An efficient algorithm to recognize the License plate of the vehicle.",
+      "guide2": "Ms. KRUPASHANKARI .S.S",
+      "choice3": "Detecting fraud apps using sentiment analysis",
+      "guide3": "Mr. SURESHKUMAR M.",
       "teamMembers": [
         "1DS15IS061",
         "1DS15IS089",
