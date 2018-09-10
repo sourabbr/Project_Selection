@@ -3,7 +3,7 @@
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Sound Regeneration using GAN's",
-      "available": 1
+      "available": 0
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
@@ -421,8 +421,32 @@
       "available": 1
     }
   ],
-  "registrations": [],
-  "registeredUSNs": [],
+  "registrations": [
+    {
+      "Timestamp": "9/10/2018, 3:27:08 PM",
+      "email": "nischal@nthacks.com",
+      "title": "Sound Regeneration using GAN's",
+      "guide": "Ms. SHARON CHRISTA I.L",
+      "choice1": "Sound Regeneration using GAN's",
+      "guide1": "Ms. SHARON CHRISTA I.L",
+      "choice2": "classification genre of songs",
+      "guide2": "Ms. LATHA A.P.",
+      "choice3": "Advance Predictive Machine learning model using deep learning",
+      "guide3": "Dr. SUNANDA DIXIT",
+      "teamMembers": [
+        "1DS15IS061",
+        "1DS15IS089",
+        "1DS15IS101",
+        "1DS15IS104"
+      ]
+    }
+  ],
+  "registeredUSNs": [
+    "1DS15IS061",
+    "1DS15IS089",
+    "1DS15IS101",
+    "1DS15IS104"
+  ],
   "registeredTeams": [
     {
       "email": "nischal@nthacks.com",
@@ -432,7 +456,7 @@
         "1DS15IS101",
         "1DS15IS104"
       ],
-      "registered": 0
+      "registered": 1
     },
     {
       "email": "bhanuv510@gmail.com",
@@ -783,7 +807,7 @@
   "guides": [
     {
       "name": "Ms. SHARON CHRISTA I.L",
-      "registeredCount": 0
+      "registeredCount": 1
     },
     {
       "name": "Ms. KRUPASHANKARI .S.S",

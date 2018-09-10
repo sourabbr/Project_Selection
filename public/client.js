@@ -112,7 +112,7 @@ function loadState(state) {
       $('input').remove();
       $('textarea').attr('disabled','disabled');
       $('#alreadySubmitted').show(500);
-      $('#registeredProjectTitle').html(`Your allotted project is: <strong>${project}</strong>`).show(500);
+      $('#registeredProjectTitle').html(`Your allotted project is: <strong>${alreadyRegisteredProjectTitle}</strong>`).show(500);
       //$('#projectSelectionForm').html('Already registered');
       //return;
     }
