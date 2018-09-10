@@ -143,7 +143,7 @@
     {
       "guide": "Ms. CHANDRAKALA B.M.",
       "title": "cloud integrated smart attendance system",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. CHANDRAKALA B.M.",
@@ -421,32 +421,8 @@
       "available": 1
     }
   ],
-  "registrations": [
-    {
-      "Timestamp": "9/10/2018, 5:05:59 PM",
-      "email": "varsha.magaji303@gmail.com",
-      "title": "cloud integrated smart attendance system",
-      "guide": "Ms. CHANDRAKALA B.M.",
-      "choice1": "cloud integrated smart attendance system",
-      "guide1": "Ms. CHANDRAKALA B.M.",
-      "choice2": "IOT for women safety",
-      "guide2": "Dr. SUMA V.",
-      "choice3": "Paperless tickets for indian transportation system",
-      "guide3": "Mr. DHEEMANTH URS",
-      "teamMembers": [
-        "1DS15IS044",
-        "1DS15IS011",
-        "1DS15IS059",
-        "1DS15IS033"
-      ]
-    }
-  ],
-  "registeredUSNs": [
-    "1DS15IS044",
-    "1DS15IS011",
-    "1DS15IS059",
-    "1DS15IS033"
-  ],
+  "registrations": [],
+  "registeredUSNs": [],
   "registeredTeams": [
     {
       "email": "nischal@nthacks.com",
@@ -763,7 +739,7 @@
         "1DS15IS059",
         "1DS15IS033"
       ],
-      "registered": 1
+      "registered": 0
     },
     {
       "email": "nishekhgowda143@gmail.com",
@@ -835,7 +811,7 @@
     },
     {
       "name": "Ms. CHANDRAKALA B.M.",
-      "registeredCount": 1
+      "registeredCount": 0
     },
     {
       "name": "Ms. LATHA A.P.",

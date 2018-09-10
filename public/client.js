@@ -67,7 +67,7 @@ function validateUSN(usn) {
     return pattern.test(usn);
 }
 
-function displayAlert(message, type = 'info') {
+function displayAlert(message, type = 'danger') {
     $('#alerts').html('');
     $(`<div class="alert alert-${type} alert-dismissible fade show" style="display:none">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
