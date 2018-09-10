@@ -55,7 +55,7 @@ const export_xlsx = (response, db) => {
 };
 
 module.exports = (app, db) => {
-    app.get("/export", function (request, response) {
+    app.get("/export01110011", function (request, response) {
         export_xlsx(response, db);
     });
 };

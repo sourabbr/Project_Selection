@@ -10,11 +10,11 @@ with open('2018-19 Project Groups - Sheet1.csv', newline='') as csv_file:
            ][1:]
 
 registeredTeams = [{
-    "email": row[1],
+    "email": row[1].strip(),
     "team": [
-        usn
+        usn.strip()
         for usn in row[2:]
-        if usn
+        if usn.strip()
     ],
     "registered": 0
 } for row in rows]
