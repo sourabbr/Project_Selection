@@ -120,7 +120,7 @@ function loadState(state) {
     }
     var project,guide;
     for(var i=1;i<=3;i++){
-      $(`<div style="display: none;" class="select">
+      $(`<div style="display: none;padding:5px" class="select">
          <label>Choice ${i}:</label>
          <select class="form-control selection projectSelectionOption" id="projectselectoption${i}">
           <option disabled selected value> -- select a project -- </option>
