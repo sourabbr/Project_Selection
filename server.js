@@ -1,3 +1,4 @@
+const ENABLED = true;
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
 
@@ -51,9 +52,12 @@ controller(app, io);
 
 // index route
 app.get('/', function(req, res) {
-  res.send("Selection over");
-  return;
-  res.sendFile(__dirname + '/views/login.html');
+  if(ENABLED){
+    res.sendFile(__dirname + '/views/login.html');
+  }
+  else{
+    res.send("Selection over");
+  }
 });
 
 // on clicking "logoff" the cookie is cleared
