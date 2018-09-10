@@ -80,14 +80,16 @@ function displayAlert(message, type = 'info') {
 }
 function loadState(state) {
     var email=getCookie('email');
+    var displayName=getCookie('displayName');
     var team=[];
     var alreadyRegisteredProjectTitle;
     if(!email){
       alert("Email not valid");
       return;
     }
+    $('#displayName').html(`<kbd>${displayName}</kbd>`);
     for(var i=0; i<state.registeredTeams.length; i++){
-      if(state.registeredTeams[i].email==email){
+      if(state.registeredTeams[i].email===email){
         team=state.registeredTeams[i].team;
         if(state.registeredTeams[i].registered)
           window.REGISTRATION_COMPLETE=true;

@@ -7,8 +7,8 @@ module.exports = function (app, db) {
     app.get('/setcookie', requireUser, checkUserInDb,
       function(req, res) {
         res.cookie('email', req.user.emails[0].value);
+        res.cookie('displayName', req.user.displayName);
         console.log(req.user.emails[0].value);
-        console.log("check");
         res.redirect('/projectSelection');
       }
     );

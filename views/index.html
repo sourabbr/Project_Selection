@@ -36,14 +36,15 @@
       </div>
   </div>
     <hr>
-    <center><p style="color:#046c8e;font-size:180%;">DEPARTMENT OF INFORMATION SCIENCE AND ENGINEERING</p></center>
-    <h4><small>Welcome to</small> Project Allotment <small>for Final Year ISE Students (UG Batch 2015-19) </small></h4>
-    <p>Please follow the steps to register your team and submit your project choices</p>
-    <div class="alert alert-warning">
+    <center><p style="color:#046c8e;font-size:180%;">DEPARTMENT OF INFORMATION SCIENCE AND ENGINEERING</p>
+  <h4><small>Welcome to</small> Project Allotment <small>for Final Year ISE Students (UG Batch 2015-19) </small></h4>
+    <span id="displayName"></span>
+    <p>Please follow the steps to register your project choices</p></center>
+    <div class="alert alert-warning"  style="text-align:center">
       <small><strong>Verify all your details</strong> before clicking the submit button. 
         <strong>Submissions cannot be modified</strong>.<br>
       Final project assignments are up to the coordinators and respective guides.<br>
-      Allotment is done on <strong>first-come-first-serve</strong> basis (whoever submits first). Your IP address and timestamp are being recorded</small>
+      Allotment is done on <strong>first-come-first-serve</strong> basis (whoever <strong>submits</strong> first). Your IP address and timestamp are being recorded</small>
     </div>
     <hr>
     <form action="">
@@ -113,20 +114,20 @@
 <script src="/client.js" async defer></script>
 <script src="/jdetects.min.js"></script>
 <script>
-var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
-if(isChrome||isSafari){
-  jdetects.create({
-    once: true,
-    label: "You are not allowed to view the source",
-    onchange: function(status) {
-      if(status==='on'){
-        document.body.innerHTML='';
-        window.location='/forbidden';
-      }
-    }
-  }); 
-} 
+// var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+// var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+// if(isChrome||isSafari){
+//   jdetects.create({
+//     once: true,
+//     label: "You are not allowed to view the source",
+//     onchange: function(status) {
+//       if(status==='on'){
+//         document.body.innerHTML='';
+//         window.location='/forbidden';
+//       }
+//     }
+//   }); 
+// } 
 </script>
 </body>
 </html>
