@@ -3,7 +3,7 @@
     {
       "guide": "Ms. SHARON CHRISTA I.L",
       "title": "Sound Regeneration using GAN's",
-      "available": 0
+      "available": 1
     },
     {
       "guide": "Ms. SHARON CHRISTA I.L",
@@ -421,32 +421,8 @@
       "available": 1
     }
   ],
-  "registrations": [
-    {
-      "Timestamp": "9/10/2018, 3:42:22 PM",
-      "email": "nischal@nthacks.com",
-      "title": "Sound Regeneration using GAN's",
-      "guide": "Ms. SHARON CHRISTA I.L",
-      "choice1": "Sound Regeneration using GAN's",
-      "guide1": "Ms. SHARON CHRISTA I.L",
-      "choice2": "An efficient algorithm to recognize the License plate of the vehicle.",
-      "guide2": "Ms. KRUPASHANKARI .S.S",
-      "choice3": "Detecting fraud apps using sentiment analysis",
-      "guide3": "Mr. SURESHKUMAR M.",
-      "teamMembers": [
-        "1DS15IS061",
-        "1DS15IS089",
-        "1DS15IS101",
-        "1DS15IS104"
-      ]
-    }
-  ],
-  "registeredUSNs": [
-    "1DS15IS061",
-    "1DS15IS089",
-    "1DS15IS101",
-    "1DS15IS104"
-  ],
+  "registrations": [],
+  "registeredUSNs": [],
   "registeredTeams": [
     {
       "email": "nischal@nthacks.com",
@@ -456,7 +432,7 @@
         "1DS15IS101",
         "1DS15IS104"
       ],
-      "registered": 1
+      "registered": 0
     },
     {
       "email": "bhanuv510@gmail.com",
@@ -807,7 +783,7 @@
   "guides": [
     {
       "name": "Ms. SHARON CHRISTA I.L",
-      "registeredCount": 1
+      "registeredCount": 0
     },
     {
       "name": "Ms. KRUPASHANKARI .S.S",
