@@ -81,6 +81,7 @@ function displayAlert(message, type = 'info') {
 function loadState(state) {
     var email=getCookie('email');
     var team=[];
+    var alreadyRegisteredProjectTitle;
     if(!email){
       alert("Email not valid");
       return;
@@ -102,15 +103,15 @@ function loadState(state) {
         <!--<br><small>Team: ${project.teamMembers.join(', ')}</small>-->
         </li>
       `).prependTo('ul#takenProjectsList').show(500);
+      if (window.REGISTRATION_COMPLETE && project.email == email){
+        alreadyRegisteredProjectTitle=project.title;
+      }
     }
   
-    if (REGISTRATION_COMPLETE){
+    if (window.REGISTRATION_COMPLETE){
       $('input').remove();
       $('textarea').attr('disabled','disabled');
       $('#alreadySubmitted').show(500);
-      for (project of state.registrations) {
-        
-      }
       $('#registeredProjectTitle').html(`Your allotted project is: <strong>${project}</strong>`).show(500);
       //$('#projectSelectionForm').html('Already registered');
       //return;
