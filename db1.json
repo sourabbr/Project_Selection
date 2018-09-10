@@ -425,22 +425,12 @@
   "registeredUSNs": [],
   "registeredTeams": [
     {
-      "email": "afridihs43@gmail.com",
-      "team": [
-        "1DS15IS901",
-        "1DS15IS902",
-        "1DS15IS903",
-        "1DS15IS904"
-      ],
-      "registered": 0
-    },
-    {
       "email": "nischal@nthacks.com",
       "team": [
-        "1DS15IS801",
-        "1DS15IS802",
-        "1DS15IS803",
-        "1DS15IS804"
+        "1DS15IS061",
+        "1DS15IS089",
+        "1DS15IS101",
+        "1DS15IS104"
       ],
       "registered": 0
     },
